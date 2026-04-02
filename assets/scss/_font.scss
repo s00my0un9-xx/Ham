@@ -1,22 +1,28 @@
-$font-playfair : 'Playfair Display', serif;
-$font-noto     : 'Noto Serif', serif;
-$font-inter    : 'Inter', sans-serif;
+body {
+    font-family: "Noto Serif", serif;
+    letter-spacing: -1%;
+    font-size: 1rem;
+}
 
 // size
 .title-60 {
     font-size: 3.75rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-50 {
     font-size: 3.125rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-38 {
     font-size: 2.375rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-32 {
     font-size: 2rem;
+    font-family: "Playfair Display", serif;
 }
 
 .body-32 {
@@ -47,12 +53,12 @@ $font-inter    : 'Inter', sans-serif;
     font-size: 1.125rem;
 }
 
-.body-17 {
-    font-size: 1.0625rem;
-}
-
 .body-16 {
     font-size: 1rem;
+}
+
+.body-17 {
+    font-size: 1.0625rem;
 }
 
 .body-15 {
@@ -83,7 +89,7 @@ $font-inter    : 'Inter', sans-serif;
 
 .sources {
     font-size: 0.75rem;
-    font-family: $font-inter;
+    font-family: "Inter", sans-serif;
 }
 
 // weight
@@ -91,7 +97,7 @@ $font-inter    : 'Inter', sans-serif;
     font-weight: bold;
 }
 
-.fw-bold {
+.fw-medium {
     font-weight: 500;
 }
 
@@ -100,10 +106,6 @@ $font-inter    : 'Inter', sans-serif;
 }
 
 // 자간
-.ls-m1 {
-    letter-spacing: -1%;
-}
-
 .ls-8 {
     letter-spacing: 8%;
 }
