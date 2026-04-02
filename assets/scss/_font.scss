@@ -1,3 +1,113 @@
 $font-playfair : 'Playfair Display', serif;
 $font-noto     : 'Noto Serif', serif;
 $font-inter    : 'Inter', sans-serif;
+
+// size
+.title-60 {
+    font-size: 3.75rem;
+}
+
+.title-50 {
+    font-size: 3.125rem;
+}
+
+.title-38 {
+    font-size: 2.375rem;
+}
+
+.title-32 {
+    font-size: 2rem;
+}
+
+.body-32 {
+    font-size: 2rem;
+}
+
+.body-30 {
+    font-size: 1.875rem;
+}
+
+.body-26 {
+    font-size: 1.625rem;
+}
+
+.body-24 {
+    font-size: 1.5rem;
+}
+
+.body-22 {
+    font-size: 1.375rem;
+}
+
+.body-20 {
+    font-size: 1.25rem;
+}
+
+.body-18 {
+    font-size: 1.125rem;
+}
+
+.body-17 {
+    font-size: 1.0625rem;
+}
+
+.body-16 {
+    font-size: 1rem;
+}
+
+.body-15 {
+    font-size: 1.5rem;
+}
+
+.body-15 {
+    font-size: 0.9375rem;
+}
+
+.body-14 {
+    font-size: 0.875rem;
+}
+
+.body-12 {
+    font-size: 0.75rem;
+}
+
+.link-16 {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.link-14 {
+    font-size: 0.875rem;
+    text-decoration: underline;
+}
+
+.sources {
+    font-size: 0.75rem;
+    font-family: $font-inter;
+}
+
+// weight
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-bold {
+    font-weight: 500;
+}
+
+.fs-italic {
+    font-style: italic;
+}
+
+// 자간
+.ls-m1 {
+    letter-spacing: -1%;
+}
+
+.ls-8 {
+    letter-spacing: 8%;
+}
+
+.ls-m17 {
+    letter-spacing: -17%;
+}
