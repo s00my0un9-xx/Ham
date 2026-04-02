@@ -16,3 +16,15 @@ $point-color: #74724c;
 // disable color
 $disable-main-color : #929292;
 $disable-sub-color : #b3b3b3;
+
+//reponsive
+$pc: 1592px;
+$tablet: 768px;
+$mobile: 402px;
+
+$FormBox: (
+    lg: 56px,
+    lg-down : 48px,
+    sm: 32px,
+    ex-sm: 16px,
+);
