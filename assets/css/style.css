@@ -1,5 +1,7 @@
 body {
   font-family: "Noto Serif", serif;
+  letter-spacing: -1%;
+  font-size: 1rem;
 }
 
 .title-60 {
@@ -50,12 +52,12 @@ body {
   font-size: 1.125rem;
 }
 
-.body-17 {
-  font-size: 1.0625rem;
-}
-
 .body-16 {
   font-size: 1rem;
+}
+
+.body-17 {
+  font-size: 1.0625rem;
 }
 
 .body-15 {
@@ -99,10 +101,6 @@ body {
 
 .fs-italic {
   font-style: italic;
-}
-
-.ls-m1 {
-  letter-spacing: -1%;
 }
 
 .ls-8 {
