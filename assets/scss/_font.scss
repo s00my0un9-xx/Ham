@@ -1,22 +1,26 @@
-$font-playfair : 'Playfair Display', serif;
-$font-noto     : 'Noto Serif', serif;
-$font-inter    : 'Inter', sans-serif;
+body {
+    font-family: "Noto Serif", serif;
+}
 
 // size
 .title-60 {
     font-size: 3.75rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-50 {
     font-size: 3.125rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-38 {
     font-size: 2.375rem;
+    font-family: "Playfair Display", serif;
 }
 
 .title-32 {
     font-size: 2rem;
+    font-family: "Playfair Display", serif;
 }
 
 .body-32 {
@@ -83,7 +87,7 @@ $font-inter    : 'Inter', sans-serif;
 
 .sources {
     font-size: 0.75rem;
-    font-family: $font-inter;
+    font-family: "Inter", sans-serif;
 }
 
 // weight
@@ -91,7 +95,7 @@ $font-inter    : 'Inter', sans-serif;
     font-weight: bold;
 }
 
-.fw-bold {
+.fw-medium {
     font-weight: 500;
 }
 
