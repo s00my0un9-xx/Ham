@@ -337,5 +337,21 @@ fieldset {
 .header__logo a img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+.container {
+  width: 1592px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 704px;
+  }
+}
+@media (max-width: 402px) {
+  .container {
+    width: 362px;
+  }
 }
