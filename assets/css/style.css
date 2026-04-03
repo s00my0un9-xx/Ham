@@ -355,6 +355,8 @@ fieldset {
   width: 100%;
   max-width: 99.5rem;
   margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -380,15 +382,23 @@ fieldset {
   color: #fff;
   z-index: 10;
 }
-.header .pc.py-40.d-flex {
+.header .header-container {
+  width: 100%;
+  max-width: 99.5rem;
+  padding: 0 2rem;
+}
+.header .header-container.d-flex {
   justify-content: space-between;
   align-items: center;
-  padding-right: 4.9375rem;
-  padding-left: 4.9375rem;
-  background-color: #333;
+}
+.header__nav {
+  min-width: 0;
+}
+.header__logo {
+  width: 15rem;
 }
 .header__logo a {
-  width: 15rem;
+  width: 100%;
   display: block;
 }
 .header__logo a img {
@@ -396,11 +406,28 @@ fieldset {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header .header__menu a {
+.header__menu a {
   padding-bottom: 0.125rem;
+  display: block;
 }
-.header .header__menu:hover a {
+.header__menu:hover a {
   border-bottom: 1px solid #fff;
+}
+.header__mo-menu {
+  display: none;
+}
+.header__mo-logo a {
+  width: 12.5rem;
+  display: block;
+}
+.header__mo-logo a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__mo-logo-wrap.d-flex {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
