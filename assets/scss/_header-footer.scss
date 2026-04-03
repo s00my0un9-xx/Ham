@@ -4,22 +4,35 @@
 // header
 .header {
     width: 100%;
+    // height: rem(100);
     position: fixed;
     background-color: transparent;
     color: var.$text-white;
+    // background-color: #333;
     z-index: 10;
 
     // pc
-    .pc.py-40.d-flex {
+    .header-container {
+        width: 100%;
+        max-width: rem(1592);
+        padding: 0 rem(32);
+    }
+
+    .header-container.d-flex {
         justify-content: space-between;
         align-items: center;
-        padding-right: rem(79);
-        padding-left: rem(79);
-        background-color: #333;
+    }
+
+    &__nav {
+        min-width: 0;
+    }
+
+    &__logo {
+        width: rem(240);
     }
 
     &__logo a {
-       width: rem(240);
+       width: 100%;
        display: block;
     
        img {
@@ -28,17 +41,33 @@
        }
     }
 
-    .header__menu a {
+    &__menu a {
         padding-bottom: rem(2);
+        display: block;
     }
 
-    .header__menu:hover a {
+    &__menu:hover a {
         border-bottom: 1px solid var.$text-white;
     }
 
     // mo
     &__mo-menu {
         display: none;
+    }
+
+    &__mo-logo a {
+        width: rem(200);
+        display: block;
+    }
+
+    &__mo-logo a img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__mo-logo-wrap.d-flex {
+        justify-content: space-between;
+        align-items: center;
     }
 
 }

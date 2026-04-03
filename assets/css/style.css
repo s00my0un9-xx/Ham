@@ -355,6 +355,8 @@ fieldset {
   width: 100%;
   max-width: 99.5rem;
   margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -380,15 +382,23 @@ fieldset {
   color: #fff;
   z-index: 10;
 }
-.header .pc.py-40.d-flex {
+.header .header-container {
+  width: 100%;
+  max-width: 99.5rem;
+  padding: 0 2rem;
+}
+.header .header-container.d-flex {
   justify-content: space-between;
   align-items: center;
-  padding-right: 4.9375rem;
-  padding-left: 4.9375rem;
-  background-color: #333;
+}
+.header__nav {
+  min-width: 0;
+}
+.header__logo {
+  width: 15rem;
 }
 .header__logo a {
-  width: 15rem;
+  width: 100%;
   display: block;
 }
 .header__logo a img {
@@ -396,14 +406,28 @@ fieldset {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header .header__menu a {
+.header__menu a {
   padding-bottom: 0.125rem;
+  display: block;
 }
-.header .header__menu:hover a {
+.header__menu:hover a {
   border-bottom: 1px solid #fff;
 }
 .header__mo-menu {
   display: none;
+}
+.header__mo-logo a {
+  width: 12.5rem;
+  display: block;
+}
+.header__mo-logo a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__mo-logo-wrap.d-flex {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
@@ -422,48 +446,6 @@ fieldset {
   }
 }
 
-.tab.type-tab {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 32px;
-}
-.tab.type-tab li a {
-  text-decoration: none;
-  color: #a79f90;
-  transition: color 0.2s ease;
-}
-.tab.type-tab li:hover a, .tab.type-tab li.type-on a {
-  color: #74724c;
-  text-decoration: underline;
-}
-
-.btn-prev,
-.btn-next {
-  cursor: pointer;
-}
-.btn-prev rect,
-.btn-next rect {
-  fill: #74724c;
-  transition: fill 0.2s ease;
-}
-.btn-prev:hover rect,
-.btn-next:hover rect {
-  fill: #26211d;
-}
-
-.btn-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: inherit;
-}
-.btn-more svg {
-  transition: transform 0.3s ease;
-}
-.btn-more:hover svg {
-  transform: translateX(6px);
 .type-card {
   position: relative;
 }
@@ -623,4 +605,48 @@ fieldset {
 }
 .food-card__makgeolli {
   font-size: 1.125rem;
+}
+
+.tab.type-tab {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 32px;
+}
+.tab.type-tab li a {
+  text-decoration: none;
+  color: #a79f90;
+  transition: color 0.2s ease;
+}
+.tab.type-tab li:hover a, .tab.type-tab li.type-on a {
+  color: #74724c;
+  text-decoration: underline;
+}
+
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+}
+.btn-prev rect,
+.btn-next rect {
+  fill: #74724c;
+  transition: fill 0.2s ease;
+}
+.btn-prev:hover rect,
+.btn-next:hover rect {
+  fill: #26211d;
+}
+
+.btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.btn-more svg {
+  transition: transform 0.3s ease;
+}
+.btn-more:hover svg {
+  transform: translateX(6px);
 }

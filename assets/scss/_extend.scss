@@ -221,6 +221,8 @@
     width: 100%;
     max-width: rem(1592);
     margin: 0 auto;
+    padding-right: rem(32);
+    padding-left: rem(32);
 }
 
 @media(max-width: 768px) {
