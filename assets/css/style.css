@@ -369,7 +369,8 @@ fieldset {
   .container-362 {
     width: 100%;
     max-width: 22.625rem;
-    padding: 1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 }
 .header {

@@ -217,7 +217,6 @@
     gap: rem(3);
 }
 
-
 .container-1592{
     width: 100%;
     max-width: rem(1592);
@@ -237,6 +236,7 @@
     .container-362{
         width: 100%;
         max-width: rem(362);
-        padding: rem(20);
+        padding-right: rem(20);
+        padding-left: rem(20);
     }
 }
