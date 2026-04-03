@@ -319,27 +319,6 @@ fieldset {
   display: flex;
 }
 
-.header {
-  width: 100%;
-  position: fixed;
-  background-color: transparent;
-  color: #fff;
-}
-.header .pc.py-40.d-flex {
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-}
-.header__logo a {
-  width: 15rem;
-  display: block;
-}
-.header__logo a img {
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
 .container {
   width: 1592px;
   margin: 0 auto;
