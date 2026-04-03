@@ -402,6 +402,9 @@ fieldset {
 .header .header__menu:hover a {
   border-bottom: 1px solid #fff;
 }
+.header__mo-menu {
+  display: none;
+}
 
 .container {
   width: 1592px;
@@ -417,4 +420,48 @@ fieldset {
   .container {
     width: 362px;
   }
+}
+
+.tab.type-tab {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 32px;
+}
+.tab.type-tab li a {
+  text-decoration: none;
+  color: #a79f90;
+  transition: color 0.2s ease;
+}
+.tab.type-tab li:hover a, .tab.type-tab li.type-on a {
+  color: #74724c;
+  text-decoration: underline;
+}
+
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+}
+.btn-prev rect,
+.btn-next rect {
+  fill: #74724c;
+  transition: fill 0.2s ease;
+}
+.btn-prev:hover rect,
+.btn-next:hover rect {
+  fill: #26211d;
+}
+
+.btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.btn-more svg {
+  transition: transform 0.3s ease;
+}
+.btn-more:hover svg {
+  transform: translateX(6px);
 }

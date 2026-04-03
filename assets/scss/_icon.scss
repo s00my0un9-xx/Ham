@@ -1,0 +1,54 @@
+@use 'var' as *;
+.tab.type-tab {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 32px;
+
+    li {
+        a {
+            text-decoration: none;
+            color: $main-sub-color;
+            transition: color 0.2s ease;
+        }
+
+        &:hover a,
+        &.type-on a {
+            color: $point-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.btn-prev,
+.btn-next {
+    cursor: pointer;
+
+    rect {
+        fill: $point-color;
+        transition: fill 0.2s ease;
+    }
+
+    &:hover rect {
+        fill: $main-fourth-color;
+    }
+}
+
+.btn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+
+    svg {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        svg {
+            transform: translateX(6px);
+        }
+    }
+}
+  
