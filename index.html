@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <!-- header -->
     <header class="header">
-        <div class="pc">
+        <!-- pc -->
+        <div class="pc py-40 py-16 d-flex">
             <h1 class="header__logo">
                 <a href="/">
                     <img src="" alt="header logo">
                 </a>
             </h1>
             <nav class="header__nav">
-                <ul class="header__menu-list">
+                <ul class="header__menu-list d-flex">
                     <li class="header__menu">
                         <a href="/">HOME</a>
                     </li>
@@ -34,16 +36,25 @@
                 </ul>
             </nav>
         </div>
-        <div class="header__mo-menu">
+        <!-- ta/mo -->
+        <div class="header__mo-menu py-16">
             <div class="header__mo-logo-wrap">
                 <h1 class="header__mo-logo">
                     <a href="/">
                         <img src="" alt="mo-logo">
                     </a>
                 </h1>
-                <svg></svg>
+                <svg class="mo-menu-btn"></svg>
             </div>
             <nav class="header__mo-nav">
+                <div class="header__mo-logo-wrap">
+                    <h1 class="header__mo-logo">
+                        <a href="/">
+                            <img src="" alt="mo-logo">
+                        </a>
+                    </h1>
+                    <svg class="close-btn"></svg>
+                </div>
                 <ul class="header__mo-menu-list body-24 body-18">
                     <li class="header__mo-menu">
                         <a href="/">HOME</a>
@@ -60,293 +71,328 @@
                 </ul>
             </nav>
         </div>
-        <main>
-            <section class="kv">
-                <video src="" muted autoplay></video>
-                <h2 class="title-60 title-38">Hello, Makgeolli!</h2>
-            </section>
+    </header>
 
-            <section class="info">
-                <div class="info__text-wrap">
-                    <h2 class="title-50 title-38">What is Makgeolli?</h2>
-                    <p class="body-20 body-16">
-                        Makgeolli is Korea's traditional rice wine with a creamy texture and gentle sparkle. <br>
-                        For centuries, it has brought people together over food and good company.
-                    </p>
-                    <a href="#" class="btn-more body-18 body-14">
-                        See More
-                        <svg></svg>
-                    </a>
-                </div>
-                <div class="info__fade-list">
-                    <a href="#" class="fade-img">
-                        <img src="" alt="fade img1">
-                    </a>
-                    <a href="#" class="fade-img">
-                        <img src="" alt="fade img2">
-                    </a>
-                    <a href="#" class="fade-img">
-                        <img src="" alt="fade img3">
-                    </a>
-                    <a href="#" class="fade-img">
-                        <img src="" alt="fade img4">
-                    </a>
-                </div>
-            </section>
-            <section class="layer">
-                <img src="" class="layer-img" alt="">
+    <main>
+        <!-- kv -->
+        <section class="kv">
+            <video src="" muted autoplay></video>
+            <h2 class="title-60 title-38">Hello, Makgeolli!</h2>
+        </section>
 
-                <div class="layer__clear">
-                    <img src="" class="layer__clear-pin" alt="clear pin">
-                    <div class="clear__text">
-                        <p class="body-18 body-14 fw-medium ls-8">The Ref<span class="ls-m17"> </span>ined Layer</p>
-                        <h3 class="title-50 title-32">Clear Rise</h3>
-                        <p class="body-22 body-16">As time passes, the liquid naturally separates, <br> 
-                        creating a clearer, lighter layer with a smoother taste.</p>
-                    </div>
-                </div>
-
-                <div class="layer__cloudy">
-                    <img src="" class="layer__cloudy-pin" alt="cloudy pin">
-                    <div class="cloudy__text">
-                        <p class="body-18 body-14 fw-medium ls-8">The Living Layer</p>
-                        <h3 class="title-50 title-32">Cloudy Depth</h3>
-                        <p class="body-22 body-16">This layer contains rice sediments and active yeast, <br>
-                        giving makgeolli its rich texture and depth of flavor.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="drink">
-                <a href="#">
-                    <img src="" alt="">
+        <!-- info -->
+        <section class="info sec-py100 sec-py60">
+            <div class="info__text-wrap">
+                <h2 class="title-50 title-38">What is Makgeolli?</h2>
+                <p class="body-20 body-16">
+                    Makgeolli is Korea's traditional rice wine with a creamy texture and gentle sparkle. <br>
+                    For centuries, it has brought people together over food and good company.
+                </p>
+                <a href="#" class="btn-more body-18 body-14 d-flex">
+                    See More
+                    <svg></svg>
                 </a>
-                <div class="drink__text-wrap">
-                    <h2 class="title-50 title-32">How to Drink</h2>
-                    <p class="body-20 body-16">
-                        A taste of Korean tradition. <br>
-                        Creamy, gently mixed, and best enjoyed chilled.
+            </div>
+            <div class="info__fade-list">
+                <a href="#" class="fade-img">
+                    <img src="" alt="fade img1">
+                </a>
+                <a href="#" class="fade-img">
+                    <img src="" alt="fade img2">
+                </a>
+                <a href="#" class="fade-img">
+                    <img src="" alt="fade img3">
+                </a>
+                <a href="#" class="fade-img">
+                    <img src="" alt="fade img4">
+                </a>
+            </div>
+        </section>
+
+        <!-- layer -->
+        <section class="layer">
+            <img src="" class="layer-img" alt="">
+
+            <!-- clear -->
+            <div class="layer__clear">
+                <img src="" class="layer__clear-pin" alt="clear pin">
+                <div class="clear__text">
+                    <p class="body-18 body-14 fw-medium ls-8">The Ref<span class="ls-m17"> </span>ined Layer</p>
+                    <h3 class="title-50 title-32">Clear Rise</h3>
+                    <p class="body-22 body-16">
+                        As time passes, the liquid naturally separates, <br> 
+                        creating a clearer, lighter layer with a smoother taste.
                     </p>
-                    <a href="#" class="btn-more body-18 body-14">
-                        See More
-                        <svg></svg>
-                    </a>
                 </div>
-            </section>
-            <section class="type">
-                <div class="type-left">
-                    <h2 class="title-50 title-32">Finding Your Type</h2>
-                    <div class="type-tab-wrap">
-                        <ul class="tab type-tab body-22 body-18">
-                            <li class="type-on"><a href="">Classic</a></li>
-                            <li><a href="">Premium</a></li>
-                        </ul>
-                        <div class="btn-wrap">
-                            <div class="btn-prev">
+            </div>
 
-                            </div>
-                            <div class="btn-next">
+            <!-- cloudy -->
+            <div class="layer__cloudy">
+                <img src="" class="layer__cloudy-pin" alt="cloudy pin">
+                <div class="cloudy__text">
+                    <p class="body-18 body-14 fw-medium ls-8">The Living Layer</p>
+                    <h3 class="title-50 title-32">Cloudy Depth</h3>
+                    <p class="body-22 body-16">
+                        This layer contains rice sediments and active yeast, <br>
+                        giving makgeolli its rich texture and depth of flavor.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                            </div>
+        <!-- drink -->
+        <section class="drink sec-py100 sec-py60">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            <div class="drink__text-wrap">
+                <h2 class="title-50 title-32">How to Drink</h2>
+                <p class="body-20 body-16">
+                    A taste of Korean tradition. <br>
+                    Creamy, gently mixed, and best enjoyed chilled.
+                </p>
+                <a href="#" class="btn-more body-18 body-14 d-flex">
+                    See More
+                    <svg></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- type -->
+        <section class="type sec-py100 sec-py60 d-flex">
+            <!-- tab&btn -->
+            <div class="type-left">
+                <h2 class="title-50 title-32">Finding Your Type</h2>
+                <div class="type-tab-wrap">
+                    <ul class="tab type-tab body-22 body-18 d-flex">
+                        <li class="type-on"><a href="">Classic</a></li>
+                        <li><a href="">Premium</a></li>
+                    </ul>
+                    <div class="btn-wrap d-flex">
+                        <div class="btn-prev">
+                            btn
+                        </div>
+                        <div class="btn-next">
+                            btn
                         </div>
                     </div>
                 </div>
-                <div class="type-right">
-                    <div class="type-classic">
-                        <ul class="type-card-list">
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Kooksoondang</h4>
-                                    <p class="body-20 body-16">A smooth and light makgeolli that complements rich dishes.</p>
-                                    <p class="fw-bold body-16 body-14">6% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Creamy</p>
-                                            <svg></svg>
-                                        </div>
+            </div>
+            <!-- type list -->
+            <div class="type-right">
+                <div class="type-classic">
+                    <ul class="type-card-list d-flex">
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Kooksoondang</h4>
+                                <p class="body-20 body-16">
+                                    A smooth and light makgeolli that complements rich dishes.
+                                </p>
+                                <p class="fw-bold body-16 body-14">6% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Creamy</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©KOOKSOONDANG</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Neurin Maeul</h4>
-                                    <p class="body-20 body-16">Crafted slowly for a mild sweetness and gentle sparkle.</p>
-                                    <p class="fw-bold body-16 body-14">6% ABV</p>
-                                    <div class="type-card__ratingwrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Silky</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©KOOKSOONDANG</p>
+                            </div>
+                        </li>
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Neurin Maeul</h4>
+                                <p class="body-20 body-16">
+                                    Crafted slowly for a mild sweetness and gentle sparkle.
+                                </p>
+                                <p class="fw-bold body-16 body-14">6% ABV</p>
+                                <div class="type-card__ratingwrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Silky</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©BAESANGMYUNBREWERY</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Dalbichyuja</h4>
-                                    <p class="body-20 body-16">A crisp makgeolli infused with vibrant yuja citrus.</p>
-                                    <p class="fw-bold body-16 body-14">6% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Creamy</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©BAESANGMYUNBREWERY</p>
+                            </div>
+                        </li>
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Dalbichyuja</h4>
+                                <p class="body-20 body-16">
+                                    A crisp makgeolli infused with vibrant yuja citrus.
+                                </p>
+                                <p class="fw-bold body-16 body-14">6% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Creamy</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©SEOULJANGSOO</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Jangsu</h4>
-                                    <p class="body-20 body-16">A lightly sparkling makgeolli with a clean, bold first sip.</p>
-                                    <p class="fw-bold body-16 body-14">6% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Creamy</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©SEOULJANGSOO</p>
+                            </div>
+                        </li>
+                         <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Jangsu</h4>
+                                <p class="body-20 body-16">
+                                    A lightly sparkling makgeolli with a clean, bold first sip.
+                                </p>
+                                <p class="fw-bold body-16 body-14">6% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Creamy</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©SEOULJANGSOO</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="type-premium">
-                        <ul class="type-card-list">
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Haechang</h4>
-                                    <p class="body-20 body-16">Rich and full-bodied with a deep, traditional rice flavor.</p>
-                                    <p class="fw-bold body-16 body-14">9% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Creamy</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©SEOULJANGSOO</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="type-premium">
+                    <ul class="type-card-list d-flex">
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Haechang</h4>
+                                <p class="body-20 body-16">
+                                    Rich and full-bodied with a deep, traditional rice flavor.
+                                </p>
+                                <p class="fw-bold body-16 body-14">9% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Creamy</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©HAECHANG</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Fogmag 10</h4>
-                                    <p class="body-20 body-16">A sweet-tangy makgeolli with a creamy, yogurt-like finish.</p>
-                                    <p class="fw-bold body-16 body-14">10% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Thin</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©HAECHANG</p>
+                            </div>
+                        </li>
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Fogmag 10</h4>
+                                <p class="body-20 body-16">
+                                    A sweet-tangy makgeolli with a creamy, yogurt-like finish.
+                                </p>
+                                <p class="fw-bold body-16 body-14">10% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Thin</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
+                            </div>
+                            <div class="type-card__img-wrap">
                                     <img src="" alt="">
                                     <p class="sources">©DALSEONG JUJO</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Ohi Sparkling</h4>
-                                    <p class="body-20 body-16">Champagne-like sparkle with bright omija flavor.</p>
+                            </div>
+                        </li>
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Ohi Sparkling</h4>
+                                <p class="body-20 body-16">
+                                    Champagne-like sparkle with bright omija flavor.
+                                </p>
                                     <p class="fw-bold body-16 body-14">8.5% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Thin</p>
-                                            <svg></svg>
-                                        </div>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Thin</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
+                            </div>
+                            <div class="type-card__img-wrap">
                                     <img src="" alt="">
                                     <p class="sources">©MUNGYOUNG BREWERY</p>
-                                </div>
-                            </li>
-                            <li class="type-card">
-                                <div class="type-card__text">
-                                    <h4 class="body-30 body-24">Moon320 pine nut</h4>
-                                    <p class="body-20 body-16">A makgeolli with sweet, tangy, and nutty pine nut flavors.</p>
-                                    <p class="fw-bold body-16 body-14">12% ABV</p>
-                                    <div class="type-card__rating-wrap">
-                                        <p class="fw-bold body-16 body-14">Mouthfeel</p>
-                                        <div class="type-card__rating">
-                                            <p class="body-16 body-14">Creamy</p>
-                                            <svg></svg>
-                                        </div>
+                            </div>
+                        </li>
+                        <li class="type-card d-flex">
+                            <div class="type-card__text">
+                                <h4 class="body-30 body-24">Moon320 pine nut</h4>
+                                <p class="body-20 body-16">
+                                    A makgeolli with sweet, tangy, and nutty pine nut flavors.
+                                </p>
+                                <p class="fw-bold body-16 body-14">12% ABV</p>
+                                <div class="type-card__rating-wrap">
+                                    <p class="fw-bold body-16 body-14">Mouthfeel</p>
+                                    <div class="type-card__rating">
+                                        <p class="body-16 body-14">Creamy</p>
+                                        <svg></svg>
                                     </div>
                                 </div>
-                                <div class="type-card__img-wrap">
-                                    <img src="" alt="">
-                                    <p class="sources">©MAMASFARM</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                            <div class="type-card__img-wrap">
+                                <img src="" alt="">
+                                <p class="sources">©MAMASFARM</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-
-            <section class="experience">
-                <a href="#">
-                    <img src="" class="experience__img" alt="">
-                </a>
-                <div class="experience__text-wrap">
-                    <h2 class="title-50 title-32">Experience</h2>
-                    <p class="body-24 body-16">
-                        Step inside the brewery and experience how Makgeolli comes to life. <br>
-                        Then enjoy a guided tasting that brings its flavors and story together.
-                    </p>
-                    <a href="#" class="btn-more body-20 body-14">
-                        See More
-                        <svg></svg>
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <h1 class="footer__logo">
-                <a href="/">
-                    <img src="" alt="footer logo">
-                </a>
-            </h1>
-            <div class="footer__content body-16 body-14">
-                <p class="footer__warning fw-bold">Warning: Excessive endurance restores the resilience boost. Surviving pregnancy increases the risk of birth defects.</p>
-                <ul class="footer__content-list">
-                    <li>
-                        <p>ADDRESS :  Fictional Brewing Co, Ltd.</p>
-                        <p>1234 Imaginary-ro, Suite 101 Hanguk-gu, Seoul 01010</p>
-                        <p>Republic of Korea</p>
-                    </li>
-                    <li>
-                        <p>MAIL :
-                            <a href="#">contact@fictionalbrewery.example</a>
-                        </p>
-                    </li>
-                </ul>
-                <p class="footer__copyright">© Fictional Brewing. All Rights Reserved.</p>
             </div>
-        </footer>
-    </header>
+        </section>
+
+            <!-- experience -->
+        <section class="experience d-flex">
+            <a href="#">
+                <img src="" class="experience__img" alt="experience img">
+            </a>
+            <div class="experience__text-wrap sec-py100 sec-py60">
+                <h2 class="title-50 title-32">Experience</h2>
+                <p class="body-24 body-16">
+                    Step inside the brewery and experience how Makgeolli comes to life. <br>
+                    Then enjoy a guided tasting that brings its flavors and story together.
+                </p>
+                <a href="#" class="btn-more body-20 body-14 d-flex">
+                    See More
+                    <svg></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer py-50 py-60">
+        <h1 class="footer__logo">
+            <a href="/">
+                <img src="" alt="footer logo">
+            </a>
+        </h1>
+        <div class="footer__content body-16 body-14">
+            <p class="footer__warning fw-bold">Warning: Excessive endurance restores the resilience boost. Surviving pregnancy increases the risk of birth defects.</p>
+            <ul class="footer__content-list">
+                <li class="d-flex">
+                    <p>ADDRESS :  Fictional Brewing Co, Ltd.</p>
+                    <p>1234 Imaginary-ro, Suite 101 Hanguk-gu, Seoul 01010</p>
+                    <p>Republic of Korea</p>
+                </li>
+                <li>
+                    <p>MAIL :
+                        <a href="#" class="link-16 link-14">contact@fictionalbrewery.example</a>
+                    </p>
+                </li>
+            </ul>
+            <p class="footer__copyright">© Fictional Brewing. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
