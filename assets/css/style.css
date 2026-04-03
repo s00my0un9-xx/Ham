@@ -351,7 +351,7 @@ fieldset {
   gap: 0.1875rem;
 }
 
-.grid-pc {
+.container-1592 {
   display: grid;
   grid-template-columns: repeat(12, 118px);
   gap: 1rem;
@@ -359,7 +359,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.grid-ta {
+.container-704 {
   display: grid;
   grid-template-columns: repeat(6, 104px);
   gap: 1rem;
@@ -368,7 +368,7 @@ fieldset {
   margin: 0 auto;
 }
 
-.grid-mo {
+.container-362 {
   display: grid;
   grid-template-columns: repeat(6, 47px);
   gap: 1rem;
