@@ -1,17 +1,27 @@
+body {
+  font-family: "Noto Serif", serif;
+  letter-spacing: -1%;
+  font-size: 1rem;
+}
+
 .title-60 {
   font-size: 3.75rem;
+  font-family: "Playfair Display", serif;
 }
 
 .title-50 {
   font-size: 3.125rem;
+  font-family: "Playfair Display", serif;
 }
 
 .title-38 {
   font-size: 2.375rem;
+  font-family: "Playfair Display", serif;
 }
 
 .title-32 {
   font-size: 2rem;
+  font-family: "Playfair Display", serif;
 }
 
 .body-32 {
@@ -42,12 +52,12 @@
   font-size: 1.125rem;
 }
 
-.body-17 {
-  font-size: 1.0625rem;
-}
-
 .body-16 {
   font-size: 1rem;
+}
+
+.body-17 {
+  font-size: 1.0625rem;
 }
 
 .body-15 {
@@ -85,16 +95,12 @@
   font-weight: bold;
 }
 
-.fw-bold {
+.fw-medium {
   font-weight: 500;
 }
 
 .fs-italic {
   font-style: italic;
-}
-
-.ls-m1 {
-  letter-spacing: -1%;
 }
 
 .ls-8 {
