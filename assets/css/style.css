@@ -353,6 +353,9 @@ fieldset {
 
 .container-1592 {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 118px);
+  gap: 1rem;
   max-width: 99.5rem;
   margin: 0 auto;
 }
