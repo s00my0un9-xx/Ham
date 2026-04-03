@@ -351,6 +351,32 @@ fieldset {
   gap: 0.1875rem;
 }
 
+.grid-pc {
+  display: grid;
+  grid-template-columns: repeat(12, 118px);
+  gap: 1rem;
+  max-width: 99.5rem;
+  margin: 0 auto;
+}
+
+.grid-ta {
+  display: grid;
+  grid-template-columns: repeat(6, 104px);
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.grid-mo {
+  display: grid;
+  grid-template-columns: repeat(6, 47px);
+  gap: 1rem;
+  padding: 1.25rem;
+  max-width: 25.125rem;
+  margin: 0 auto;
+}
+
 .header {
   width: 100%;
   position: fixed;
