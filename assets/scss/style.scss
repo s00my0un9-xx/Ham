@@ -1,6 +1,7 @@
-@import 'font';
-@import 'var';
-@import 'reset';
-@import 'mixin';
-@import 'extend';
-@import 'main';
+@use 'font';
+@use 'var';
+@use 'reset';
+@use 'mixin';
+@use 'extend';
+@use 'main';
+@use 'card';

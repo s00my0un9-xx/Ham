@@ -1,4 +1,5 @@
-@import 'mixin';
+@use 'var' as *;
+@use 'mixin' as *;
 
 .container {
   width: $container-pc;

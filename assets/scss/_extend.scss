@@ -1,3 +1,5 @@
+@use 'mixin' as *;
+
 // padding y
 .py-60 {
     padding-top: rem(60);
