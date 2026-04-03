@@ -352,31 +352,26 @@ fieldset {
 }
 
 .container-1592 {
-  display: grid;
-  grid-template-columns: repeat(12, 118px);
-  gap: 1rem;
+  width: 100%;
   max-width: 99.5rem;
   margin: 0 auto;
 }
 
-.container-704 {
-  display: grid;
-  grid-template-columns: repeat(6, 104px);
-  gap: 1rem;
-  padding: 2rem;
-  max-width: 48rem;
-  margin: 0 auto;
+@media (max-width: 768px) {
+  .container-704 {
+    width: 100%;
+    max-width: 44rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
-
-.container-362 {
-  display: grid;
-  grid-template-columns: repeat(6, 47px);
-  gap: 1rem;
-  padding: 1.25rem;
-  max-width: 25.125rem;
-  margin: 0 auto;
+@media (max-width: 402px) {
+  .container-362 {
+    width: 100%;
+    max-width: 22.625rem;
+    padding: 1.25rem;
+  }
 }
-
 .header {
   width: 100%;
   position: fixed;
