@@ -9,7 +9,7 @@
     color: var.$text-white;
     z-index: 10;
 
-
+    // pc
     .pc.py-40.d-flex {
         justify-content: space-between;
         align-items: center;
@@ -35,5 +35,7 @@
     .header__menu:hover a {
         border-bottom: 1px solid var.$text-white;
     }
+
+    // mo
     
 }
