@@ -17,7 +17,11 @@ $point-color: #74724c;
 $disable-main-color : #929292;
 $disable-sub-color : #b3b3b3;
 
-//reponsive
-$pc: 1592px;
-$tablet: 768px;
-$mobile: 402px;
+// container
+$container-pc: 1592px;
+$container-ta: 704px;
+$container-mo: 362px;
+
+// breakpoint
+$bp-ta : 768px;
+$bp-mo : 402px;

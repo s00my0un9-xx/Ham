@@ -1,13 +1,16 @@
 @import 'mixin';
 
-@include media($pc){
+.container {
+  width: $container-pc;
+  margin: 0 auto;
+  box-sizing: border-box;
 
+@media (max-width: $bp-ta) {
+    width: $container-ta;
+  }
+
+  @media (max-width: $bp-mo) {
+    width: $container-mo;
+  }
 }
 
-@include media($tablet){
-
-}
-
-@include media($mobile){
-
-}
