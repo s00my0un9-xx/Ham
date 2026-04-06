@@ -1,5 +1,11 @@
 @use 'mixin' as *;
 
+// padding x
+.px-16 {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+}
+
 // padding y
 .py-60 {
     padding-top: rem(60);
@@ -189,6 +195,10 @@
     gap: rem(70);
 }
 
+.gap-60 {
+    gap: rem(60);
+}
+
 .gap-34 {
     gap: rem(34);
 }
@@ -217,7 +227,7 @@
     gap: rem(3);
 }
 
-.container-1592{
+.container{
     width: 100%;
     max-width: rem(1592);
     margin: 0 auto;
@@ -226,18 +236,20 @@
 }
 
 @media(max-width: 768px) {
-    .container-704{
+    .container{
         width: 100%;
-        max-width: rem(704);
+        margin-right: 0;
+        margin-left: 0;
         padding-right: rem(32);
         padding-left: rem(32);
     }
 }
 
 @media(max-width: 402px) {
-    .container-362{
+    .container{
         width: 100%;
-        max-width: rem(362);
+        margin-right: 0;
+        margin-left: 0;
         padding-right: rem(20);
         padding-left: rem(20);
     }

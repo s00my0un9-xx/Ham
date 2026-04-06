@@ -4,7 +4,6 @@
 // header
 .header {
     width: 100%;
-    // height: rem(100);
     position: fixed;
     background-color: transparent;
     color: var.$text-white;
@@ -12,19 +11,10 @@
     z-index: 10;
 
     // pc
-    .header-container {
+    .pc.container.d-flex {
         width: 100%;
-        max-width: rem(1592);
-        padding: 0 rem(32);
-    }
-
-    .header-container.d-flex {
         justify-content: space-between;
         align-items: center;
-    }
-
-    &__nav {
-        min-width: 0;
     }
 
     &__logo {
@@ -41,6 +31,42 @@
        }
     }
 
+    // mo
+    &__mo-menu {
+        // background-color: var.$point-color;
+        background-color: transparent;
+    }
+
+    &__mo-logo {
+        width: rem(140);
+    }
+
+    &__mo-logo a {
+        width: 100%;
+        display: block;
+        
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__mo-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        background-color: var.$point-color;
+        z-index: 12;
+    }
+
+    &__mo-nav.is-open {
+        transform: translateX(0);
+    }
+
     &__menu a {
         padding-bottom: rem(2);
         display: block;
@@ -50,24 +76,49 @@
         border-bottom: 1px solid var.$text-white;
     }
 
-    // mo
     &__mo-menu {
         display: none;
+        width: 100%;
+    }
+
+    &__mo-logo {
+        width: rem(140);
     }
 
     &__mo-logo a {
-        width: rem(200);
-        display: block;
-    }
-
-    &__mo-logo a img {
         width: 100%;
-        object-fit: cover;
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__mo-logo-wrap.d-flex {
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
+    &__mo-menu-list.d-flex {
+        flex-direction: column;
+        margin-top: rem(172);
+    }
+}
+
+@media(max-width:768px){
+    .header {
+        // background-color: var.$point-color;
+        overflow: hidden;
+
+        .pc {
+            display: none;
+        }
+
+        &__mo-menu {
+            display: block;
+        }
+    }
 }
