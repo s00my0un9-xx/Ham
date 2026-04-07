@@ -80,6 +80,63 @@
     .fade-img:first-child {
         display: block;
     }
+}
 
+// layer
+.layer {
+    width: 100%;
+    height: 200vh;
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/layer_img.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+    }
+    
+    .container {
+        position: relative;
+    }
+
+    &__item {
+        position: absolute;
+        opacity: 0;
+        color: $text-white;
+    }
+
+    // clear
+    &__clear {
+        top: 0;
+        left: 0;
+        transform: translateY(150%);
+    }
+
+    .clear__text {
+        align-self: flex-start;
+    }
+
+    &__clear-pin {
+        align-self: flex-end;
+    }
+
+    // cloudy
+    &__cloudy {
+        bottom: 0;
+        right: 0;
+        transform: translateY(530%);
+    }
+
+    .cloudy__text {
+        align-self: flex-start;
+    }
+
+    &__cloudy-pin {
+        align-self: flex-end;
+    }
 
 }

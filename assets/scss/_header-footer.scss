@@ -5,10 +5,16 @@
 .header {
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: transparent;
     color: var.$text-white;
     // background-color: #333;
     z-index: 10;
+
+    .header .scroll {
+        background-color: #131313;
+    }
 
     // pc
     .pc.container.d-flex {

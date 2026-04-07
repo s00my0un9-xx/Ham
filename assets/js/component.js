@@ -1,7 +1,7 @@
 $(function(){
     // menu
     let menuScroll = 750;
-    $(Window).scroll(function(){
+    $(window).scroll(function(){
         let num = $(window).scrollTop();
 
         if(num > menuScroll){
@@ -10,6 +10,7 @@ $(function(){
             $('.header').css("background-color", "")
         }
     })
+
 
     // mo
     $('.mo-menu-btn').on('click', function(){

@@ -34,3 +34,36 @@ $(document).ready(function() {
 
     $('.type-premium').hide();
 });
+
+// layer gsap
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger : ".layer",
+        start: "top 20%",
+        end : "center center",
+        markers: true,
+        scrub : 1,
+        pin : ".layer__inner",
+    }
+})
+
+// clear 등장
+tl.to(".layer__clear", {
+    y : 200,
+    opacity: 1,
+    duration : 0.3
+})
+
+// clear 사라짐
+.to(".layer__clear", {
+    opacity: 0,
+})
+
+// cloudy 등장
+.to(".layer__cloudy", {
+    y: 750,
+    opacity: 1,
+    duration : 0.3
+})

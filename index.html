@@ -146,33 +146,33 @@
         </section>
 
         <!-- layer -->
-        <section class="layer" style="display: none;">
-            <img src="./assets/images/layer_img.png" class="layer-img" alt="layer img">
-
-            <div class="container-1592 container-704 container-362">
-                <!-- clear -->
-                <div class="layer__clear">
-                    <img src="" class="layer__clear-pin" alt="clear pin">
-                    <div class="clear__text">
-                        <p class="body-18 fw-medium ls-8">The Ref<span class="ls-m17"> </span>ined Layer</p>
-                        <h3 class="title-50">Clear Rise</h3>
-                        <p class="body-22">
-                            As time passes, the liquid naturally separates, <br>
-                            creating a clearer, lighter layer with a smoother taste.
-                        </p>
+        <section class="layer">
+            <div class="layer__inner">
+                <div class="container">
+                    <!-- clear -->
+                    <div class="layer__item layer__clear d-flex">
+                        <div class="clear__text">
+                            <p class="body-18 fw-medium ls-8">The Ref<span class="ls-m17"> </span>ined Layer</p>
+                            <h3 class="title-50">Clear Rise</h3>
+                            <p class="body-22">
+                                As time passes, the liquid naturally separates, <br>
+                                creating a clearer, lighter layer with a smoother taste.
+                            </p>
+                        </div>
+                        <img src="./assets/images/clear-pin.png" class="layer__clear-pin" alt="clear pin">
                     </div>
-                </div>
 
-                <!-- cloudy -->
-                <div class="layer__cloudy">
-                    <img src="" class="layer__cloudy-pin" alt="cloudy pin">
-                    <div class="cloudy__text">
-                        <p class="body-18 fw-medium ls-8">The Living Layer</p>
-                        <h3 class="title-50">Cloudy Depth</h3>
-                        <p class="body-22">
-                            This layer contains rice sediments and active yeast, <br>
-                            giving makgeolli its rich texture and depth of flavor.
-                        </p>
+                    <!-- cloudy -->
+                    <div class="layer__item layer__cloudy d-flex gap-16">
+                        <img src="./assets/images/cloudy-pin.png" class="layer__cloudy-pin" alt="cloudy pin">
+                        <div class="cloudy__text">
+                            <p class="body-18 fw-medium ls-8">The Living Layer</p>
+                            <h3 class="title-50">Cloudy Depth</h3>
+                            <p class="body-22">
+                                This layer contains rice sediments and active yeast, <br>
+                                giving makgeolli its rich texture and depth of flavor.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -722,7 +722,9 @@
             </div>
         </div>
     </footer> -->
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/component.js"></script>
     <script src="assets/js/index.js"></script>

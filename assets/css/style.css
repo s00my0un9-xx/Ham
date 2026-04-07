@@ -389,9 +389,14 @@ fieldset {
 .header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: transparent;
   color: #fff;
   z-index: 10;
+}
+.header .header .scroll {
+  background-color: #131313;
 }
 .header .pc.container.d-flex {
   width: 100%;
@@ -540,6 +545,51 @@ fieldset {
 }
 .info .fade-img:first-child {
   display: block;
+}
+
+.layer {
+  width: 100%;
+  height: 200vh;
+}
+.layer__inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/layer_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.layer .container {
+  position: relative;
+}
+.layer__item {
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+}
+.layer__clear {
+  top: 0;
+  left: 0;
+  transform: translateY(150%);
+}
+.layer .clear__text {
+  align-self: flex-start;
+}
+.layer__clear-pin {
+  align-self: flex-end;
+}
+.layer__cloudy {
+  bottom: 0;
+  right: 0;
+  transform: translateY(530%);
+}
+.layer .cloudy__text {
+  align-self: flex-start;
+}
+.layer__cloudy-pin {
+  align-self: flex-end;
 }
 
 .type-card {
