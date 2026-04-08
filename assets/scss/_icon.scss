@@ -15,6 +15,7 @@
         &:hover a,
         &.type-on a {
             color: $point-color;
+            font-weight: bold;
             text-decoration: underline;
         }
     }

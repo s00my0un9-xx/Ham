@@ -630,11 +630,68 @@ body {
   transform: scale(1.1);
 }
 
+.type {
+  width: 100%;
+  background-color: #e9e4de;
+}
+.type-type-left {
+  flex: 1;
+  align-self: center;
+}
+.type .btn-wrap {
+  padding-top: 25rem;
+}
+.type-right {
+  width: 65%;
+  height: 100%;
+  align-self: flex-end;
+}
+.type-classic, .type-premium {
+  overflow: visible;
+}
+.type .swiper {
+  overflow: visible;
+}
+.type .swiper-slide {
+  width: 32.5rem;
+}
+
+.experience {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.experience a {
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.experience a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+  transform: scale(1);
+}
+.experience a:hover img {
+  transform: scale(1.1);
+}
+.experience__text-wrap {
+  width: 50%;
+  padding-right: 3.125rem;
+  padding-left: 3.125rem;
+}
+
 .type-card {
   position: relative;
+  padding-right: 7.5rem;
+  width: 100%;
 }
 .type-card__bg {
-  width: 32.5rem;
+  width: 100%;
   height: 26.875rem;
   background-color: #fff;
   padding: 3.125rem 2.5rem;
@@ -642,7 +699,7 @@ body {
   box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 .type-card__content {
-  width: 18.25rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -804,6 +861,7 @@ body {
 }
 .tab.type-tab li:hover a, .tab.type-tab li.type-on a {
   color: #74724c;
+  font-weight: bold;
   text-decoration: underline;
 }
 

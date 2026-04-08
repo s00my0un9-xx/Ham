@@ -4,10 +4,13 @@
 // type card
 .type-card {
     position: relative;
+    padding-right: rem(120);
+    width: 100%;
 
     // 배경
     &__bg {
-        width: rem(520);
+        // width: rem(520);
+        width: 100%;
         height: rem(430);
         background-color: var.$text-white;
         padding: rem(50) rem(40);
@@ -17,7 +20,8 @@
 
     // 카드 텍스트 콘텐츠
     &__content {
-        width: rem(292);
+        // width: rem(292);
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

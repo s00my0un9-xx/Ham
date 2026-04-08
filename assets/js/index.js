@@ -67,3 +67,18 @@ tl.to(".layer__clear", {
     opacity: 1,
     duration : 0.3
 })
+
+// type slide
+var swiper = new Swiper(".swiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
+      },
+    });
