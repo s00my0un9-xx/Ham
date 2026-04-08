@@ -72,7 +72,7 @@ tl.to(".layer__clear", {
 var swiper = new Swiper(".swiper", {
       slidesPerView: 'auto',
       spaceBetween: 16,
-      centeredSlides: true,
+      centeredSlides: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

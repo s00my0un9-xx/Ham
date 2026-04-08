@@ -634,17 +634,18 @@ body {
   width: 100%;
   background-color: #e9e4de;
 }
-.type-type-left {
+.type-left {
   flex: 1;
   align-self: center;
+  flex: 4;
 }
 .type .btn-wrap {
   padding-top: 25rem;
 }
 .type-right {
-  width: 65%;
-  height: 100%;
   align-self: flex-end;
+  flex: 8;
+  overflow: hidden;
 }
 .type-classic, .type-premium {
   overflow: visible;
@@ -688,7 +689,6 @@ body {
 
 .type-card {
   position: relative;
-  padding-right: 7.5rem;
   width: 100%;
 }
 .type-card__bg {
@@ -705,6 +705,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 5.3125rem;
+  padding-right: 9.5rem;
 }
 .type-card__text {
   width: 100%;

@@ -192,10 +192,10 @@ body{
     width: 100%;
     background-color: $main-primary-color;
 
-
-    &-type-left {
+    &-left {
         flex: 1;
         align-self: center;
+        flex: 4;
     }
 
     .btn-wrap {
@@ -203,9 +203,11 @@ body{
     }
 
     &-right {
-        width: 65%;
-        height: 100%;
+        // width: 66.67%;
+        // height: 100%;
         align-self: flex-end;
+        flex: 8;
+        overflow: hidden;
     }
 
     &-classic, &-premium {

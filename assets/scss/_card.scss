@@ -4,7 +4,7 @@
 // type card
 .type-card {
     position: relative;
-    padding-right: rem(120);
+    // padding-right: rem(120);
     width: 100%;
 
     // 배경
@@ -26,6 +26,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: rem(85);
+        padding-right: rem(152);
     }
 
     &__text {
