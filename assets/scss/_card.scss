@@ -96,20 +96,22 @@
 
     // 막걸리 이미지
     &__img-wrap {
-        width: rem(132);
+        width: rem(150);
         position: absolute;
-        bottom: rem(26);
+        top: rem(22);
         right: rem(40);
+        bottom: auto;
     }
 
     &__img {
         width: 100%;
-        height: rem(440);
+        height: rem(360);
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center bottom;
         }
     }
 
@@ -119,7 +121,7 @@
         margin-top: rem(2);
         color: var.$text-gray;
         text-align: center;
-        word-break: break-all;
+        word-break: keep-all;
     }
 }
 
