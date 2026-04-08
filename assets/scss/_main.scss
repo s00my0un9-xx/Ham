@@ -189,5 +189,34 @@ body{
 
 // type
 .type {
-    
+    width: 100%;
+    background-color: $main-primary-color;
+
+
+    &-type-left {
+        flex: 1;
+        align-self: center;
+    }
+
+    .btn-wrap {
+        padding-top: rem(400);
+    }
+
+    &-right {
+        width: 65%;
+        height: 100%;
+        align-self: flex-end;
+    }
+
+    &-classic, &-premium {
+        overflow: visible;
+    }
+
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: rem(520);
+    }
 }

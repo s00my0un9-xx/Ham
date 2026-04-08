@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -218,14 +220,14 @@
             <div class="container">
                 <!-- tab&btn -->
                 <div class="type-left">
-                    <h2 class="title-50">Finding Your Type</h2>
+                    <h2 class="title-50 pb-24">Finding Your Type</h2>
                     <div class="type-tab-wrap">
                         <ul class="tab type-tab body-22 d-flex">
                             <li class="type-on"><a href="">Classic</a></li>
                             <li><a href="">Premium</a></li>
                         </ul>
                         <div class="btn-wrap d-flex">
-                            <div class="btn-prev">
+                            <div class="btn-prev ">
                                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_950_544)">
@@ -302,9 +304,9 @@
             </div>
             <!-- type list -->
             <div class="type-right">
-                <div class="type-classic">
-                    <ul class="type-card-list d-flex">
-                        <li class="type-card">
+                <div class="type-classic swiper">
+                    <ul class="type-card-list swiper-wrapper">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -348,7 +350,7 @@
                                 <p class="type-card__source">©KOOKSOONDANG</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -392,7 +394,7 @@
                                 <p class="type-card__source">©BAESANGMYUN<br>BREWERY</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -436,7 +438,7 @@
                                 <p class="type-card__source">©SEOULJANGSOO</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -482,9 +484,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="type-premium">
-                    <ul class="type-card-list d-flex">
-                        <li class="type-card">
+                <div class="type-premium swiper">
+                    <ul class="type-card-list swiper-wrapper">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -528,7 +530,7 @@
                                 <p class="type-card__source">©HAECHANG</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -572,7 +574,7 @@
                                 <p class="type-card__source">©DALSEONG JUJO</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -616,7 +618,7 @@
                                 <p class="type-card__source">©MUNGYOUNG<br>BREWERY</p>
                             </div>
                         </li>
-                        <li class="type-card">
+                        <li class="type-card swiper-slide">
                             <div class="type-card__bg">
                                 <div class="type-card__content">
                                     <div class="type-card__text">
@@ -730,6 +732,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/component.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 </html>
