@@ -659,12 +659,11 @@ body {
 .experience {
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-items: stretch;
 }
 .experience a {
   display: block;
-  width: 50%;
-  height: 100%;
+  flex: 0 0 50%;
   overflow: hidden;
 }
 .experience a img {
