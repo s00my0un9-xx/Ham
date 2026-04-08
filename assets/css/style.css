@@ -656,6 +656,35 @@ body {
   width: 32.5rem;
 }
 
+.experience {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.experience a {
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.experience a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+  transform: scale(1);
+}
+.experience a:hover img {
+  transform: scale(1.1);
+}
+.experience__text-wrap {
+  width: 50%;
+  padding-right: 3.125rem;
+  padding-left: 3.125rem;
+}
+
 .type-card {
   position: relative;
   padding-right: 7.5rem;
