@@ -41,8 +41,8 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger : ".layer",
-        start: "top 20%",
-        end : "center center",
+        start: "top 10%",
+        end : "center 45%",
         markers: true,
         scrub : 1,
         pin : ".layer__inner",
@@ -53,7 +53,7 @@ const tl = gsap.timeline({
 tl.to(".layer__clear", {
     y : 200,
     opacity: 1,
-    duration : 0.3
+    duration : 0.9,
 })
 
 // clear 사라짐
@@ -65,7 +65,7 @@ tl.to(".layer__clear", {
 .to(".layer__cloudy", {
     y: 715,
     opacity: 1,
-    duration : 0.3
+    duration : 0.8,
 })
 
 // type slide
