@@ -15,6 +15,11 @@
 //   }
 // }
 
+
+body{
+    overflow-x: hidden;
+}
+
 // kv
 .kv {
     width: 100%;
@@ -84,20 +89,21 @@
 
 // layer
 .layer {
+
     width: 100%;
     height: 200vh;
+    position: relative;
 
-    &__inner {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-image: url(../images/layer_img.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-
-    }
+    // &__inner {
+    //     position: relative;
+    //     width: 100%;
+    //     height: 100vh;
+    //     background-image: url(../images/layer_img.png);
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     overflow: hidden;
+    // }
     
     .container {
         position: relative;

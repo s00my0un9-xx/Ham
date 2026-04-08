@@ -51,7 +51,7 @@ const tl = gsap.timeline({
 
 // clear 등장
 tl.to(".layer__clear", {
-    y : 200,
+    // y : 200,
     opacity: 1,
     duration : 0.3
 })
@@ -63,7 +63,7 @@ tl.to(".layer__clear", {
 
 // cloudy 등장
 .to(".layer__cloudy", {
-    y: 750,
+    // y: 750,
     opacity: 1,
     duration : 0.3
 })
