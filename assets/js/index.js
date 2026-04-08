@@ -45,7 +45,7 @@ const tl = gsap.timeline({
         end : "center center",
         markers: true,
         scrub : 1,
-        pin : ".layer__inner",
+        pin : ".layer__inner",                                                                                                                       
     }
 })
 
