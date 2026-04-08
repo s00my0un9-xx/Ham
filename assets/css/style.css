@@ -489,6 +489,10 @@ fieldset {
     display: block;
   }
 }
+body {
+  overflow-x: hidden;
+}
+
 .kv {
   width: 100%;
   height: 100vh;
@@ -549,25 +553,34 @@ fieldset {
 
 .layer {
   width: 100%;
-  height: 200vh;
+  height: 170vh;
+  position: relative;
+  background-color: #1B1715;
 }
 .layer__inner {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../images/layer_img.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
+}
+.layer__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .layer .container {
   position: relative;
+  width: 100%;
 }
 .layer__item {
   position: absolute;
   opacity: 0;
   color: #fff;
+  padding: 0 2rem;
 }
 .layer__clear {
   top: 0;
@@ -590,6 +603,31 @@ fieldset {
 }
 .layer__cloudy-pin {
   align-self: flex-end;
+}
+
+.drink {
+  background-color: #26211d;
+  color: #fff;
+}
+.drink__img {
+  width: 100%;
+  height: 32.5rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.drink__img a {
+  display: block;
+}
+.drink__img a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+  transform: scale(1);
+}
+.drink__img a:hover img {
+  transform: scale(1.1);
 }
 
 .type-card {
