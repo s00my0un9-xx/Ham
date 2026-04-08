@@ -231,6 +231,7 @@ body{
         width: calc(100% / 2);
         height: 100%;
         overflow: hidden;
+        flex : 0 0 50%;
 
         img {
             display: block;
