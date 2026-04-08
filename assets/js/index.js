@@ -41,11 +41,11 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger : ".layer",
-        start: "top 10%",
-        end : "center 45%",
+        start: "top 9%",
+        end : "center center",
         markers: true,
         scrub : 1,
-        pin : ".layer__inner",                                                                                                                       
+        pin : ".layer__inner",
     }
 })
 
