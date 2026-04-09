@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+        <!-- aos -->
+        <!-- <link rel="stylesheet" href="./assets/css/aos.css"> -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -92,7 +95,8 @@
         <section class="kv">
             <video src="./assets/images/main_kv_video.mp4" muted autoplay loop></video>
             <div class="container kv-container">
-                <div class="kv__title-wrap">
+                <div class="kv__title-wrap" data-aos="fade-left"
+     data-aos-duration="1500">
                     <h2 class="title-60">Hello, Makgeolli!</h2>
                 </div>
                 <div class="kv__content">
@@ -734,6 +738,13 @@
     <script src="./assets/js/component.js"></script>
     <!-- Swiper JS -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <!-- <script src="./assets/js/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/index.js"></script>
+
+     <script>
+        AOS.init();
+     </script>
 </body>
 </html>

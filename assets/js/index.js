@@ -115,3 +115,4 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
         },
     });
 });
+
