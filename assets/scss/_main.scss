@@ -1,22 +1,7 @@
 @use 'var' as *;
 @use 'mixin' as *;
 
-// .container {
-//   width: $container-pc;
-//   margin: 0 auto;
-//   box-sizing: border-box;
-
-// @media (max-width: $bp-ta) {
-//     width: $container-ta;
-//   }
-
-//   @media (max-width: $bp-mo) {
-//     width: $container-mo;
-//   }
-// }
-
-
-body {
+body{
     overflow-x: hidden;
 }
 
@@ -24,33 +9,22 @@ body {
 .kv {
     width: 100%;
     height: 100vh;
-    position: relative;
-
+    
     video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 
-    &-container {
+    -container {
         position: relative;
-        width: 100%;
-        height: 100%;
     }
 
-
-    &__title-wrap {
+    h2 {
         position: absolute;
         top: 50%;
-        left: 0;
-        transform: translateY(-45%);
-        // padding: 0 rem(32);
-    }
-
-    h2 {       
+        left: 15%;
+        transform: translate(-20%, -50%);
         color: $text-white;
         padding: 0 rem(32);
     }
@@ -125,7 +99,7 @@ body {
         // object-fit: cover;
         object-fit: contain;
     }
-
+    
     .container {
         position: relative;
         width: 100%;
@@ -188,7 +162,7 @@ body {
                 height: 100%;
                 object-fit: cover;
                 transition: transform 0.4s ease;
-                transform: scale(1);
+                transform: scale(1);       
             }
         }
 
@@ -204,16 +178,9 @@ body {
     background-color: $main-primary-color;
 
     &-left {
+        flex: 1;
         align-self: center;
-        padding-left: rem(32);
-        width: 35.625%;
-        min-width: 517px;
-        
-        & > div {
-            width: 100%;
-            max-width: 517px;
-            margin-left: auto;
-        }
+        flex: 4;
     }
 
     .btn-wrap {
@@ -224,58 +191,14 @@ body {
         // width: 66.67%;
         // height: 100%;
         align-self: flex-end;
-        flex: 1;
+        flex: 8;
         overflow: hidden;
     }
 
-    &-classic,
-    &-premium {
+    &-classic, &-premium {
         overflow: visible;
     }
 
-    // tab
-    .tab.type-tab {
-        gap: rem(16);
-
-        li {
-            a {
-                display: block;
-                color: $main-sub-color;
-                // transition: color 0.2s ease;
-                position: relative;
-                padding-bottom: rem(7);
-                font-weight: 600;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    background-color: $point-color;
-                    height: rem(4);
-                    border-radius: rem(50);
-                    transition: width 0.3s ease;
-
-                    width: 0;
-                    bottom: 0;
-                }
-            }
-
-            &:hover a,
-            &.type-on a {
-                color: $point-color;
-                font-weight: 700;
-
-                &::before {
-                    width: 100%;
-                }
-
-                &:hover::before {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    // swiper
     .swiper {
         overflow: visible;
     }
@@ -298,7 +221,7 @@ body {
         flex: 0 0 50%;
         overflow: hidden;
 
-        >img {
+        > img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -315,4 +238,27 @@ body {
         padding-right: rem(50);
         padding-left: rem(50);
     }
+}
+
+
+
+@include media($bp-ta){
+    // kv
+    .kv {
+        h2 {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 0 rem(20);
+            width: 100%;
+        }
+
+        &__content {
+            margin-top: rem(-40);
+        }
+    }
+}
+
+@include media($bp-mo){
+    
 }

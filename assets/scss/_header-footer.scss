@@ -89,7 +89,7 @@
         background-color: var.$point-color;
         z-index: 12;
 
-        .is-open {
+        &.is-open {
             transform: translateX(0);
         }
     }
