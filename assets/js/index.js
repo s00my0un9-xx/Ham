@@ -96,7 +96,7 @@ mm.add("(max-width: 768px)", () => {
 // type slide
 document.querySelectorAll(".type .swiper").forEach((element) => {
     new Swiper(element, {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 16,
         centeredSlides: false,
         navigation: {
@@ -104,10 +104,6 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
             prevEl: ".btn-prev",
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 12,
-            },
             403: {
                 slidesPerView: 2,
                 spaceBetween: 16,
