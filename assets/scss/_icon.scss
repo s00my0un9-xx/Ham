@@ -1,25 +1,5 @@
 @use 'var' as *;
-.tab.type-tab {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 32px;
-
-    li {
-        a {
-            text-decoration: none;
-            color: $main-sub-color;
-            transition: color 0.2s ease;
-        }
-
-        &:hover a,
-        &.type-on a {
-            color: $point-color;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    }
-}
+@use 'mixin' as *;
 
 .btn-prev,
 .btn-next {
@@ -48,8 +28,7 @@
 
     &:hover {
         svg {
-            transform: translateX(6px);
+            transform: translateX(rem(6));
         }
     }
 }
-  

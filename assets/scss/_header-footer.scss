@@ -9,10 +9,9 @@
     left: 0;
     background-color: transparent;
     color: var.$text-white;
-    // background-color: #333;
     z-index: 10;
 
-    .header .scroll {
+    .scroll {
         background-color: #131313;
     }
 
@@ -28,13 +27,35 @@
     }
 
     &__logo a {
-       width: 100%;
-       display: block;
-    
-       img {
         width: 100%;
-        object-fit: cover;
-       }
+        display: block;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__menu a {
+        display: block;
+
+        position: relative;
+        padding-bottom: rem(2);
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            height: rem(1);
+
+            width: 0;
+            bottom: 0;
+            transition: 0.3s;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
     }
 
     // mo
@@ -45,15 +66,15 @@
 
     &__mo-logo {
         width: rem(140);
-    }
 
-    &__mo-logo a {
-        width: 100%;
-        display: block;
-        
-        img {
+        a {
             width: 100%;
-            object-fit: cover;
+            display: block;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 
@@ -67,20 +88,13 @@
         transition: transform 0.4s ease;
         background-color: var.$point-color;
         z-index: 12;
+
+        .is-open {
+            transform: translateX(0);
+        }
     }
 
-    &__mo-nav.is-open {
-        transform: translateX(0);
-    }
 
-    &__menu a {
-        padding-bottom: rem(2);
-        display: block;
-    }
-
-    &__menu:hover a {
-        border-bottom: 1px solid var.$text-white;
-    }
 
     &__mo-menu {
         display: none;
@@ -160,7 +174,7 @@
             align-items: center;
             flex-wrap: wrap;
 
-            p + p {
+            p+p {
                 &::before {
                     content: '│';
                     padding: 0 rem(8);
@@ -176,7 +190,7 @@
     }
 }
 
-@media(max-width:1280px){
+@media(max-width:1280px) {
     .header {
         .pc {
             padding-top: rem(20);
@@ -189,7 +203,7 @@
     }
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
     .header {
         // background-color: var.$point-color;
         overflow: hidden;
@@ -204,7 +218,4 @@
     }
 }
 
-@media(max-width:402px){
-
-}
-
+@media(max-width:402px) {}
