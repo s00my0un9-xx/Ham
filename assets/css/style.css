@@ -590,13 +590,15 @@ body {
   left: 0;
   transform: translateY(-45%);
 }
-.kv h2 {
+.kv__title-wrap h2 {
   color: #fff;
   padding: 0 2rem;
 }
 .kv__content {
+  width: 100%;
   text-align: center;
-  margin-top: -3.75rem;
+  position: absolute;
+  top: 94%;
 }
 
 .info {
@@ -794,6 +796,14 @@ body {
   padding-left: 3.125rem;
 }
 
+@media (max-width: 1480px) {
+  .layer__clear-pin {
+    display: none;
+  }
+  .layer__cloudy-pin {
+    display: none;
+  }
+}
 @media (max-width: 1024px) and (min-width: 403px) {
   .experience {
     height: auto;
@@ -827,13 +837,7 @@ body {
 }
 @media (max-width: 768px) {
   .kv h2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 1.25rem;
-    width: 100%;
-  }
-  .kv__content {
-    margin-top: -2.5rem;
+    font-size: 2.375rem;
   }
   .info__fade-list {
     height: 12.5rem;
