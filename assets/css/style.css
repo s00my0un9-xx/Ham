@@ -396,7 +396,7 @@ fieldset {
   color: #fff;
   z-index: 10;
 }
-.header .header .scroll {
+.header .scroll {
   background-color: #131313;
 }
 .header .pc.container.d-flex {
@@ -415,6 +415,23 @@ fieldset {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.header__menu a {
+  display: block;
+  position: relative;
+  padding-bottom: 0.125rem;
+}
+.header__menu a::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 0.0625rem;
+  width: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+.header__menu a:hover::before {
+  width: 100%;
 }
 .header__mo-menu {
   background-color: transparent;
@@ -442,15 +459,8 @@ fieldset {
   background-color: #74724c;
   z-index: 12;
 }
-.header__mo-nav.is-open {
+.header__mo-nav .is-open {
   transform: translateX(0);
-}
-.header__menu a {
-  padding-bottom: 0.125rem;
-  display: block;
-}
-.header__menu:hover a {
-  border-bottom: 1px solid #fff;
 }
 .header__mo-menu {
   display: none;
@@ -712,6 +722,36 @@ body {
 .type-classic, .type-premium {
   overflow: visible;
 }
+.type .tab.type-tab {
+  gap: 1rem;
+}
+.type .tab.type-tab li a {
+  display: block;
+  color: #a79f90;
+  position: relative;
+  padding-bottom: 0.4375rem;
+  font-weight: 600;
+}
+.type .tab.type-tab li a::before {
+  content: "";
+  position: absolute;
+  background-color: #74724c;
+  height: 0.25rem;
+  border-radius: 3.125rem;
+  transition: width 0.3s ease;
+  width: 0;
+  bottom: 0;
+}
+.type .tab.type-tab li:hover a, .type .tab.type-tab li.type-on a {
+  color: #74724c;
+  font-weight: 700;
+}
+.type .tab.type-tab li:hover a::before, .type .tab.type-tab li.type-on a::before {
+  width: 100%;
+}
+.type .tab.type-tab li:hover a:hover::before, .type .tab.type-tab li.type-on a:hover::before {
+  width: 100%;
+}
 .type .swiper {
   overflow: visible;
 }
@@ -913,23 +953,6 @@ body {
   font-size: 1.125rem;
 }
 
-.tab.type-tab {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 32px;
-}
-.tab.type-tab li a {
-  text-decoration: none;
-  color: #a79f90;
-  transition: color 0.2s ease;
-}
-.tab.type-tab li:hover a, .tab.type-tab li.type-on a {
-  color: #74724c;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .btn-prev,
 .btn-next {
   cursor: pointer;
@@ -955,5 +978,5 @@ body {
   transition: transform 0.3s ease;
 }
 .btn-more:hover svg {
-  transform: translateX(6px);
+  transform: translateX(0.375rem);
 }
