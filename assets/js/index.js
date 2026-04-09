@@ -38,47 +38,84 @@ $(document).ready(function() {
 // layer gsap
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger : ".layer",
-        start: "top 9%",
-        end : "center center",
-        markers: true,
-        scrub : 1,
-        pin : ".layer__inner",
-    }
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger : ".layer",
+            start: "top 9%",
+            end : "center center",
+            // markers: true,
+            scrub : 1,
+            pin : ".layer__inner",
+        }
+    })
+
+    tl.to(".layer__clear", {
+        y : 200,
+        opacity: 1,
+        duration : 0.9,
+    })
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+    .to(".layer__cloudy", {
+        y: 715,
+        opacity: 1,
+        duration : 0.8,
+    })
 })
 
-// clear 등장
-tl.to(".layer__clear", {
-    y : 200,
-    opacity: 1,
-    duration : 0.9,
-})
+mm.add("(max-width: 768px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger : ".layer",
+            start: "top top",
+            end : "center center",
+            scrub : 1,
+            pin : ".layer__inner",
+        }
+    })
 
-// clear 사라짐
-.to(".layer__clear", {
-    opacity: 0,
-})
-
-// cloudy 등장
-.to(".layer__cloudy", {
-    y: 715,
-    opacity: 1,
-    duration : 0.8,
+    tl.to(".layer__clear", {
+        y : 200,
+        opacity: 1,
+        duration : 0.9,
+    })
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+    .to(".layer__cloudy", {
+        y: 715,
+        opacity: 1,
+        duration : 0.8,
+    })
 })
 
 // type slide
-var swiper = new Swiper(".swiper", {
-      slidesPerView: 'auto',
-      spaceBetween: 16,
-      centeredSlides: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".btn-next",
-        prevEl: ".btn-prev",
-      },
+document.querySelectorAll(".type .swiper").forEach((element) => {
+    new Swiper(element, {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        centeredSlides: false,
+        navigation: {
+            nextEl: ".btn-next",
+            prevEl: ".btn-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+            },
+            403: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            769: {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+            },
+        },
     });
+});
