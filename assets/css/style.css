@@ -459,7 +459,7 @@ fieldset {
   background-color: #74724c;
   z-index: 12;
 }
-.header__mo-nav .is-open {
+.header__mo-nav.is-open {
   transform: translateX(0);
 }
 .header__mo-menu {
