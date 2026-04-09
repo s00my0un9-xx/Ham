@@ -430,7 +430,14 @@ body{
 
         &-left {
             width: 100%;
+            min-width: 0;
             flex: none;
+
+            > div {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 0 rem(20);
+            }
         }
 
         h2.title-50 {
@@ -491,27 +498,65 @@ body{
 }
 
 @include media($bp-mo){
+// kv
+    .kv {
+        h2 {
+            font-size: rem(38);
+            text-align: center;
+        }
+    }
+
     .type {
+        &-left{
+            padding: 0;
+        }
         &-right {
             padding: rem(40) rem(20) 0;
         }
 
         .swiper {
-            overflow: visible;
+            overflow: hidden;
         }
 
         .swiper-slide {
             width: 100%;
+            height: rem(420);
         }
     }
 
     .experience {
+        height: auto;
+        flex-direction: column;
+
         a {
-            height: rem(220);
+            flex: none;
+            width: 100%;
+            margin-bottom: rem(20);
         }
 
         &__text-wrap {
+            width: 100%;
             padding: rem(32) rem(20) rem(16);
+        }
+
+        h2.title-50 {
+            font-size: rem(32);
+            padding-bottom: rem(20);
+        }
+
+        p.body-24 {
+            font-size: rem(16);
+            line-height: 1.5;
+            padding-bottom: rem(32);
+        }
+
+        .btn-more {
+            font-size: rem(16);
+
+            svg {
+                width: rem(6);
+                height: rem(12);
+            }
         }
     }
 }

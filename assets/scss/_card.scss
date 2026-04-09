@@ -194,7 +194,6 @@
     width: rem(520);
     padding: rem(40);
     border-radius: rem(20);
-    // 추후 삭제
     border: 1px solid var.$main-tri-color;
 
     &__img-wrap {
@@ -264,4 +263,14 @@
     &__makgeolli {
         font-size: rem(18);
     }
+}
+
+@include media(var.$bp-mo){
+.type-card{
+            &__bg {
+            height: 100%;
+            padding: rem(214) rem(22) rem(26);
+            box-sizing: border-box;
+        }
+}
 }

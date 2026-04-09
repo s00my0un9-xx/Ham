@@ -216,6 +216,51 @@
             display: block;
         }
     }
+
+   .footer {
+        padding-top: rem(46);
+        padding-bottom: rem(46);
+
+        &__logo {
+            width: rem(154);
+            height: auto;
+            margin-bottom: rem(32);
+        }
+
+        &__content {
+            gap: rem(12);
+            font-size: rem(14);
+        }
+
+        &__warning {
+            margin-bottom: rem(4);
+            font-size: rem(14);
+            line-height: 1.3;
+        }
+
+        &__content-list {
+            gap: rem(8);
+
+            li {
+                line-height: 1.35;
+            }
+
+            .d-flex {
+                display: block;
+
+                p + p::before {
+                    content: none;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__copyright {
+            margin-top: rem(44);
+            font-size: rem(14);
+            line-height: 1.3;
+        }
+    }
 }
 
 @media(max-width:402px) {}
