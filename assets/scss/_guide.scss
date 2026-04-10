@@ -1,0 +1,24 @@
+@use 'var' as *;
+@use 'mixin' as *;
+
+.kv {
+    background-image: url(../images/guide_kv_img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: $text-white;
+
+    &-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: rem(13);
+    }
+
+}

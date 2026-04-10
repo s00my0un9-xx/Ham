@@ -255,7 +255,7 @@ body{
 
 .experience {
     width: 100%;
-    height: rem(440);
+    height: rem(540);
     align-items: stretch;
 
     a {
@@ -278,8 +278,11 @@ body{
 
     &__text-wrap {
         width: calc(100% / 2);
-        padding-top: rem(100);
-        padding-bottom: rem(100);
+        // padding-top: rem(100);
+        // padding-bottom: rem(100);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding-right: rem(50);
         padding-left: rem(50);
     }
