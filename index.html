@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+        <!-- aos -->
+        <!-- <link rel="stylesheet" href="./assets/css/aos.css"> -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -92,7 +95,10 @@
         <section class="kv">
             <video src="./assets/images/main_kv_video.mp4" muted autoplay loop></video>
             <div class="container kv-container">
-                <h2 class="title-60">Hello, Makgeolli!</h2>
+                <div class="kv__title-wrap" data-aos="fade-up"
+                data-aos-duration="1000">
+                    <h2 class="title-60">Hello, Makgeolli!</h2>
+                </div>
                 <div class="kv__content">
                     <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="kv__scroll">
@@ -107,8 +113,10 @@
         <!-- info -->
         <section class="info sec-py100">
             <div class="container">
-                <div class="info__text-wrap pb-60">
-                    <h2 class="title-50 pb-20">What is Makgeolli?</h2>
+                <h2 class="title-50 pb-20" data-aos="fade-up"
+                data-aos-duration="1000">What is Makgeolli?</h2>
+                <div class="info__text-wrap pb-60" data-aos="fade-up"
+                data-aos-duration="1000">
                     <p class="body-20 pb-60">
                         Makgeolli is Korea's traditional rice wine with a creamy texture and gentle sparkle. <br>
                         For centuries, it has brought people together over food and good company.
@@ -130,7 +138,8 @@
                         </svg>
                     </a>
                 </div>
-                <div class="info__fade-list">
+                <div class="info__fade-list" data-aos="fade-up"
+                data-aos-duration="1000">
                     <a href="#" class="fade-img">
                         <img src="./assets/images/info_img01.png" alt="fade img1">
                     </a>
@@ -184,13 +193,16 @@
         <!-- drink -->
         <section class="drink sec-py100">
             <div class="container">
-                <div class="drink__img">
+                <div class="drink__img" data-aos="fade-up"
+                data-aos-duration="1000">
                     <a href="#">
                         <img src="./assets/images/howtodrink_img.png" alt="drink-img">
                     </a>
                 </div>
-                <div class="drink__text-wrap pt-60">
-                    <h2 class="title-50 pb-20">How to Drink</h2>
+                <h2 class="title-50 pt-60" data-aos="fade-up"
+                data-aos-duration="1000">How to Drink</h2>
+                <div class="drink__text-wrap pt-20" data-aos="fade-up"
+                data-aos-duration="1000">
                     <p class="body-20 pb-60">
                         A taste of Korean tradition. <br>
                         Creamy, gently mixed, and best enjoyed chilled.
@@ -218,9 +230,12 @@
         <!-- type -->
         <section class="type sec-py100 d-flex">
             <!-- tab&btn -->
-            <div class="type-left">
-                    <div class="container">
-                    <h2 class="title-50 pb-24">Finding Your Type</h2>
+            <div class="type-left" data-aos="fade-up"
+                    data-aos-duration="800">
+                <div>
+                    <div class="type__title-wrap">
+                        <h2 class="title-50 pb-24">Finding Your Type</h2>
+                    </div>
                     <div class="type-tab-wrap">
                         <ul class="tab type-tab body-22 d-flex">
                             <li class="type-on"><a href="">Classic</a></li>
@@ -303,7 +318,8 @@
                 </div>
             </div>
             <!-- type list -->
-            <div class="type-right">
+            <div class="type-right" data-aos="fade-up"
+            data-aos-duration="1000" data-aos-delay="300">
                 <div class="type-classic swiper">
                     <ul class="type-card-list swiper-wrapper">
                         <li class="type-card swiper-slide">
@@ -672,7 +688,8 @@
             <a href="#">
                 <img src="./assets/images/experience_img.png" class="experience__img" alt="experience img">
             </a>
-            <div class="experience__text-wrap sec-py100">
+            <div class="experience__text-wrap">
+                <div class="experience__desc-wrap" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                     <h2 class="title-50 pb-20">Experience</h2>
                     <p class="body-24 pb-60">
                         Step inside the brewery and experience how Makgeolli comes to life. <br>
@@ -695,6 +712,7 @@
                         </svg>
                     </a>
                 </div>
+            </div>
         </section>
     </main>
 
@@ -732,6 +750,13 @@
     <script src="./assets/js/component.js"></script>
     <!-- Swiper JS -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <!-- <script src="./assets/js/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/index.js"></script>
+
+     <script>
+        AOS.init();
+     </script>
 </body>
 </html>

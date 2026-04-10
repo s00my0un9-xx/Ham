@@ -124,12 +124,76 @@
     }
 }
 
+@include media(var.$bp-ta) {
+    .type-card {
+        &__bg {
+            height: 100%;
+            padding: rem(230) rem(22) rem(26);
+            box-sizing: border-box;
+        }
+
+        &__content {
+            padding-right: 0;
+            gap: rem(20);
+        }
+
+        &__title {
+            font-size: rem(24);
+            margin-bottom: rem(12);
+        }
+
+        &__desc {
+            font-size: rem(13);
+            line-height: 1.45;
+        }
+
+        &__abv {
+            font-size: rem(13);
+        }
+
+        &__mouthfeel {
+            font-size: rem(13);
+            gap: rem(6);
+            flex-wrap: wrap;
+        }
+
+        &__rating {
+            gap: rem(8);
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &__stars .star {
+            width: rem(15);
+            height: rem(15);
+        }
+
+        &__img-wrap {
+            width: rem(104);
+            bottom: auto;
+            right: auto;
+            top: rem(14);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__img {
+            height: rem(212);
+        }
+
+        &__source {
+            font-size: rem(11);
+            line-height: 1.15;
+            margin-top: rem(4);
+        }
+    }
+}
+
 // food card
 .food-card {
     width: rem(520);
     padding: rem(40);
     border-radius: rem(20);
-    // 추후 삭제
     border: 1px solid var.$main-tri-color;
 
     &__img-wrap {
@@ -199,4 +263,14 @@
     &__makgeolli {
         font-size: rem(18);
     }
+}
+
+@include media(var.$bp-mo){
+.type-card{
+            &__bg {
+            height: 100%;
+            padding: rem(214) rem(22) rem(26);
+            box-sizing: border-box;
+        }
+}
 }

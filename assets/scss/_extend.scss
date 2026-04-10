@@ -180,11 +180,6 @@
     padding-bottom: rem(100);
 }
 
-.sec-py60 {
-    padding-top: rem(60);
-    padding-bottom: rem(60);
-}
-
 // flex
 .d-flex {
     display: flex;
@@ -197,6 +192,10 @@
 
 .gap-60 {
     gap: rem(60);
+}
+
+.gap-40 {
+    gap: rem(40);
 }
 
 .gap-34 {
@@ -235,6 +234,7 @@
     padding-left: rem(32);
 }
 
+
 @media(max-width: 768px) {
     .container{
         width: 100%;
@@ -252,5 +252,10 @@
         margin-left: 0;
         padding-right: rem(20);
         padding-left: rem(20);
+    }
+
+    .sec-py100 {
+        padding-top: rem(60);
+        padding-bottom: rem(60);
     }
 }
