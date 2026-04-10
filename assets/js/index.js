@@ -33,6 +33,25 @@ $(document).ready(function() {
     });
 
     $('.type-premium').hide();
+
+    // aboutmak slide
+    $(window).on("scroll", function () {
+        var section = $(".aboutmak");
+        var imgArea = $(".aboutmak__img-area");
+        var textArea = $(".aboutmak__text-area");
+
+        var triggerPoint = section.offset().top;
+
+        if ($(window).scrollTop() > triggerPoint) {
+            imgArea.stop().animate({ width: "57%" }, 1000);
+
+            textArea.delay(1000).stop().animate(
+                { opacity: 1 },
+                800
+            );
+        }
+    });
+
 });
 
 // layer gsap

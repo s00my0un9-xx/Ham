@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAKYANG/MAKGEOLLI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/MAKGEOLLI-style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <!-- pc -->
+        <div class="pc py-40 container d-flex">
+            <h1 class="header__logo">
+                <a href="/">
+                    <img src="./assets/images/LOGO_wh.png" alt="header logo">
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__menu-list d-flex gap-70">
+                    <li class="header__menu">
+                        <a href="/">HOME</a>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">MAKGEOLLI</a>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">GUIDE</a>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">EXPERIENCE</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <!-- ta/mo -->
+        <div class="header__mo-menu">
+            <div class="container py-16">
+                <div class="header__mo-logo-wrap d-flex">
+                    <h1 class="header__mo-logo">
+                        <a href="/">
+                            <img src="./assets/images/LOGO_wh.png" alt="mo-logo">
+                        </a>
+                    </h1>
+                    <svg class="mo-menu-btn" width="33" height="22" viewBox="0 0 33 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.83334 22C1.31389 22 0.878784 21.824 0.528006 21.472C0.177229 21.12 0.00122854 20.6849 6.32183e-06 20.1666C-0.0012159 19.6484 0.174784 19.2133 0.528006 18.8613C0.881228 18.5093 1.31634 18.3333 1.83334 18.3333H31.1667C31.6861 18.3333 32.1218 18.5093 32.4738 18.8613C32.8258 19.2133 33.0012 19.6484 33 20.1666C32.9988 20.6849 32.8228 21.1206 32.472 21.4738C32.1212 21.827 31.6861 22.0024 31.1667 22H1.83334ZM1.83334 12.8333C1.31389 12.8333 0.878784 12.6573 0.528006 12.3053C0.177229 11.9533 0.00122854 11.5182 6.32183e-06 11C-0.0012159 10.4818 0.174784 10.0467 0.528006 9.69466C0.881228 9.34266 1.31634 9.16666 1.83334 9.16666H31.1667C31.6861 9.16666 32.1218 9.34266 32.4738 9.69466C32.8258 10.0467 33.0012 10.4818 33 11C32.9988 11.5182 32.8228 11.9539 32.472 12.3072C32.1212 12.6604 31.6861 12.8358 31.1667 12.8333H1.83334ZM1.83334 3.66666C1.31389 3.66666 0.878784 3.49066 0.528006 3.13866C0.177229 2.78666 0.00122854 2.35155 6.32183e-06 1.83333C-0.0012159 1.31511 0.174784 0.879999 0.528006 0.528C0.881228 0.176 1.31634 0 1.83334 0H31.1667C31.6861 0 32.1218 0.176 32.4738 0.528C32.8258 0.879999 33.0012 1.31511 33 1.83333C32.9988 2.35155 32.8228 2.78727 32.472 3.1405C32.1212 3.49372 31.6861 3.66911 31.1667 3.66666H1.83334Z"
+                            fill="#F1F4F6" />
+                    </svg>
+                </div>
+                <nav class="header__mo-nav">
+                    <div class="header__mo-logo-wrap d-flex py-16 container">
+                        <h1 class="header__mo-logo">
+                            <a href="/">
+                                <img src="./assets/images/LOGO_wh.png" alt="mo-logo">
+                            </a>
+                        </h1>
+                        <svg class="mo-close-btn" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.85302 12.5055L16.4818 19.1343C16.8335 19.486 17.3106 19.6836 17.808 19.6836C18.3055 19.6836 18.7825 19.486 19.1343 19.1343C19.486 18.7825 19.6836 18.3055 19.6836 17.808C19.6836 17.3106 19.486 16.8335 19.1343 16.4818L12.503 9.85304L19.133 3.22429C19.3071 3.05013 19.4452 2.84338 19.5394 2.61585C19.6335 2.38832 19.682 2.14448 19.6819 1.89823C19.6819 1.65198 19.6333 1.40815 19.539 1.18067C19.4447 0.953185 19.3066 0.746502 19.1324 0.572418C18.9582 0.398334 18.7515 0.26026 18.524 0.166078C18.2964 0.0718962 18.0526 0.0234512 17.8063 0.0235092C17.5601 0.0235673 17.3163 0.0721269 17.0888 0.166416C16.8613 0.260705 16.6546 0.398878 16.4805 0.573043L9.85302 7.20179L3.22427 0.573043C3.05139 0.393882 2.84456 0.250944 2.61585 0.152571C2.38714 0.0541979 2.14113 0.00235861 1.89217 7.86297e-05C1.64321 -0.00220135 1.39629 0.0451232 1.16582 0.139291C0.935343 0.233459 0.725931 0.372585 0.5498 0.54855C0.373669 0.724515 0.234346 0.933796 0.139961 1.16418C0.0455755 1.39457 -0.00198195 1.64144 6.3271e-05 1.8904C0.00210849 2.13936 0.0537152 2.38542 0.151873 2.61423C0.25003 2.84303 0.392773 3.05 0.571771 3.22304L7.20302 9.85304L0.573021 16.483C0.394023 16.6561 0.251281 16.8631 0.153123 17.0919C0.0549657 17.3207 0.0033584 17.5667 0.00131318 17.8157C-0.000732041 18.0646 0.0468254 18.3115 0.141211 18.5419C0.235596 18.7723 0.374919 18.9816 0.55105 19.1575C0.727181 19.3335 0.936593 19.4726 1.16707 19.5668C1.39754 19.661 1.64446 19.7083 1.89342 19.706C2.14238 19.7037 2.38839 19.6519 2.6171 19.5535C2.84581 19.4551 3.05264 19.3122 3.22552 19.133L9.85302 12.5055Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <ul class="header__mo-menu-list container body-24 body-18 d-flex gap-60">
+                        <li class="header__mo-menu">
+                            <a href="/">HOME</a>
+                        </li>
+                        <li class="header__mo-menu">
+                            <a href="#">MAKGEOLLI</a>
+                        </li>
+                        <li class="header__mo-menu">
+                            <a href="#">GUIDE</a>
+                        </li>
+                        <li class="header__mo-menu">
+                            <a href="#">EXPERIENCE</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="makgeolli-header-bg"></div>
+        <div class="aboutmak sec-py100">
+            <div class="container">
+                <h2 class="aboutmak__title title-50 pb-60">
+                    What is Makgeolli?
+                </h2>
+                <div class="aboutmak__content d-flex">
+                    <div class="aboutmak__img-area">
+                        <div class="aboutmak__img">
+                            <img src="./assets/images/history_img01_주사거배.png" alt="">
+                        </div>
+                        <p class="type-card__source">
+                            © Kansong Art Museum (간송미술관)
+                        </p>
+                    </div>
+                    <div class="aboutmak__text-area pb-60">
+                        <div class="aboutmak__title-wrap">
+                            <p class="aboutmak__story-subtitle pb-6">
+                                Health Benefits of Makgeolli
+                            </p>
+                            <h3 class="aboutmak__story-title title-44">
+                                More Than a Drink
+                            </h3>
+                        </div>
+
+                        <div class="aboutmak__desc">
+                            Makgeolli is a traditional Korean rice wine made from fermented rice, water, and a
+                            fermentation starter called nuruk.
+                            <br>
+                            It has a milky appearance and is known for its mild
+                            sweetness, light acidity, and smooth texture.
+                            <br>
+                            Makgeolli usually has a relatively low alcohol content compared to many other alcoholic
+                            drinks, which makes it easy to enjoy.
+                            <br>
+                            Traditionally, makgeolli is served in a bowl rather than a glass and is often shared with
+                            family and friends.
+                            <br>
+                            Today, makgeolli is gaining popularity around the world for its unique flavor and its
+                            naturally occurring probiotics from the fermentation process.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div style="width: 100%; height: 5000px; background-color: antiquewhite;"></div> -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer py-50">
+        <div class="container">
+            <h1 class="footer__logo">
+                <a href="/">
+                    <img src="assets/images/LOGO_wh.png" alt="footer logo">
+                </a>
+            </h1>
+            <div class="footer__content body-16">
+                <p class="footer__warning fw-bold">Warning: Excessive endurance restores the resilience boost. Surviving
+                    pregnancy increases the risk of birth defects.</p>
+                <ul class="footer__content-list">
+                    <li class="d-flex">
+                        <p>ADDRESS : Fictional Brewing Co, Ltd.</p>
+                        <p>1234 Imaginary-ro, Suite 101 Hanguk-gu, Seoul 01010</p>
+                        <p>Republic of Korea</p>
+                    </li>
+                    <li>
+                        <p>MAIL :
+                            <a href="#" class="link-16">contact@fictionalbrewery.example</a>
+                        </p>
+                    </li>
+                </ul>
+                <p class="footer__copyright">© Fictional Brewing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/component.js"></script>
+    <!-- Swiper JS -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <!-- <script src="./assets/js/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/index.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
