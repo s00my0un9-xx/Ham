@@ -1,7 +1,18 @@
 @use 'var' as *;
 @use 'mixin' as *;
 
-.kv {
+.line {
+    a::before {
+        content: "";
+        position: absolute;
+        background-color: $text-white;
+        width: 100%;
+        height: rem(1);
+    }
+}
+
+// kv
+.userkv {
     background-image: url(../images/guide_kv_img.png);
     background-position: center;
     background-size: cover;
@@ -9,16 +20,247 @@
     width: 100%;
     height: 100vh;
     color: $text-white;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
     &-container {
         width: 100%;
         height: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    &__sub-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        gap: rem(13);
+        padding: 0 rem(20);
     }
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+    }
+
+    .sub-content-line {
+        width: rem(1);
+        height: rem(40);
+        background-color: $text-white;
+    }
+    
+
+    &__text-wrap {
+        padding-top: rem(160);
+        padding-bottom: rem(160);
+
+        p {
+            padding-top: rem(13);
+        }
+    }
+}
+
+// guide
+.guide {
+    width: 100%;
+    background-color: $main-primary-color;
+
+    &__content {
+        border-top: 1px solid $text-black;
+    }
+
+    &__text-wrap {
+        width: 50%;
+
+        > p {
+            color: $point-color;
+        }
+    }
+
+    &__list {
+        li {
+            padding: rem(22) 0;
+            border-bottom: 1px solid $text-black;
+            align-items: center;
+        }
+    }
+
+    &__list li:last-child {
+        border-bottom: 0;
+    }
+
+    &__video-wrap {
+        padding: rem(30) 0;
+        width: 50%;
+        aspect-ratio: 16 / 9;
+        border-bottom: 1px solid $text-black;
+        overflow: hidden;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: rem(20);
+        }
+    }
+}
+
+// best
+.best {
+
+    &-tab-wrap {
+        justify-content: space-between;
+    }
+
+    &-tab {
+        gap: rem(24);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            a {
+                display: inline-block;
+                padding-bottom: rem(4);
+                color: rgba($point-color, 0.4);
+                font-weight: 400;
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                transition: color 0.3s, border-color 0.3s;
+            }
+
+            &.type-on a {
+                color: $point-color;
+                font-weight: 700;
+                border-bottom-color: $point-color;
+            }
+        }
+    }
+
+    .btn-mo {
+        display: none;
+    }
+}
+
+// breakpoint
+@media(max-width:1024px) {
+    // kv
+    .userkv {
+        &__text-wrap {
+            padding-top: rem(100);
+            padding-bottom: rem(100);
+
+            h2 {
+                font-size: rem(50);
+            }
+        }
+    }
+
+    // guide
+    .guide {
+        h2 {
+            font-size: rem(40);
+        }
+
+        &__content {
+            flex-direction: column-reverse;
+            border-top: 0;
+            gap: rem(20);
+        }
+
+        &__text-wrap {
+            width: 100%;
+        }
+
+        &__video-wrap {
+            width: 100%;
+            border-bottom: 0;
+            padding: 0;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    // kv
+    .userkv {
+        &__text-wrap {
+            padding-top: rem(40);
+            padding-bottom: rem(40);
+
+            h2 {
+                font-size: rem(38);
+            }
+
+            p {
+                font-size: rem(20);
+            }
+        }
+    }
+
+    // guide
+    .guide {
+        h2 {
+            font-size: rem(32);
+            padding-bottom: rem(40);
+        }
+
+        &__list {
+            li p {
+                font-size: 1rem;
+            }
+
+            .num {
+                font-size: rem(30);
+            }
+        }
+    }
+}
+
+@media(max-width:402px) {
+    // kv
+    .userkv {
+        &__text-wrap {
+            p {
+                font-size: rem(18);
+            }
+        }
+    }
+
+    // guide
+    .guide {
+        h2 {
+            padding-bottom: rem(20);
+        }
+
+        &__list {
+            li p {
+                font-size: 1rem;
+            }
+
+            .num {
+                font-size: rem(30);
+            }
+        }
+    }
 }

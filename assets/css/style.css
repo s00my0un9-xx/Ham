@@ -3,6 +3,7 @@ body {
   font-family: "Noto Serif", serif;
   letter-spacing: -1%;
   font-size: 1rem;
+  color: #26211d;
 }
 
 .title-60 {
@@ -12,6 +13,11 @@ body {
 
 .title-50 {
   font-size: 3.125rem;
+  font-family: "Playfair Display", serif;
+}
+
+.title-50 {
+  font-size: 2.75rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -92,6 +98,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.num {
+  font-size: 2.875rem;
+  font-weight: 700;
+  font-family: "DM Serif Display", serif;
+  color: #74724c;
+}
+
 .fw-bold {
   font-weight: bold;
 }
@@ -110,6 +123,10 @@ body {
 
 .ls-m17 {
   letter-spacing: -17%;
+}
+
+.ls-20 {
+  letter-spacing: 20%;
 }
 
 * {
@@ -316,11 +333,6 @@ fieldset {
   padding-bottom: 6.25rem;
 }
 
-.sec-py60 {
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
-}
-
 .d-flex {
   display: flex;
 }
@@ -331,6 +343,10 @@ fieldset {
 
 .gap-60 {
   gap: 3.75rem;
+}
+
+.gap-40 {
+  gap: 2.5rem;
 }
 
 .gap-34 {
@@ -385,6 +401,10 @@ fieldset {
     margin-left: 0;
     padding-right: 1.25rem;
     padding-left: 1.25rem;
+  }
+  .sec-py100 {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
   }
 }
 .header {
@@ -490,6 +510,10 @@ fieldset {
 .header__mo-menu-list.d-flex {
   flex-direction: column;
   margin-top: 10.75rem;
+}
+.header .mo-menu-btn {
+  border: none;
+  background-color: transparent;
 }
 
 .footer {

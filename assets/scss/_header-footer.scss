@@ -127,6 +127,10 @@
         flex-direction: column;
         margin-top: rem(172);
     }
+    .mo-menu-btn {
+        border: none;
+        background-color: transparent;
+    }
 }
 
 // footer
@@ -264,5 +268,3 @@
         }
     }
 }
-
-@media(max-width:402px) {}

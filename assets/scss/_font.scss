@@ -2,6 +2,7 @@ body {
     font-family: "Noto Serif", serif;
     letter-spacing: -1%;
     font-size: 1rem;
+    color: #26211d;
 }
 
 // size
@@ -12,6 +13,11 @@ body {
 
 .title-50 {
     font-size: 3.125rem;
+    font-family: "Playfair Display", serif;
+}
+
+.title-50 {
+    font-size: 2.75rem;
     font-family: "Playfair Display", serif;
 }
 
@@ -92,6 +98,13 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.num {
+    font-size: 2.875rem;
+    font-weight: 700;
+    font-family: "DM Serif Display", serif;
+    color: #74724c;
+}
+
 // weight
 .fw-bold {
     font-weight: bold;
@@ -112,4 +125,8 @@ body {
 
 .ls-m17 {
     letter-spacing: -17%;
+}
+
+.ls-20 {
+    letter-spacing: 20%;
 }
