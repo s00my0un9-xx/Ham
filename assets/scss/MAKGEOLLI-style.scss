@@ -1,0 +1,65 @@
+@use 'font';
+@use 'var';
+@use 'reset';
+@use 'mixin' as *;
+@use 'extend';
+@use 'header-footer';
+@use 'card';
+@use 'icon';
+@use 'guide';
+
+.header.makgeolli {
+    background-color: var.$text-black;
+}
+
+.makgeolli-header-bg {
+    width: 100%;
+    height: rem(129);
+    background-color: var.$main-fourth-color;
+}
+
+.aboutmak {
+    background-color: var.$main-fourth-color;
+    color: var.$text-beige;
+
+    &__content {
+        width: 100%;
+        height: 100vh;
+        gap: rem(60);
+        justify-content: space-between;
+
+        position: relative;
+    }
+
+    // image area
+    &__img-area {
+        width: 100%;
+        transform: width .6s ease;
+
+        .type-card__source {
+            text-align: left;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: rem(640);
+        border-radius: rem(60) 0 rem(60) 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // text area
+    &__text-area {
+        position: absolute;
+        width: 40%;
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+}
