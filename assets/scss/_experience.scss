@@ -1,0 +1,293 @@
+@use 'var' as *;
+@use 'mixin' as *;
+
+.line {
+    a::before {
+        content: "";
+        position: absolute;
+        background-color: $text-white;
+        width: 100%;
+        height: rem(1);
+    }
+}
+
+// kv
+.userkv {
+    background-image: url(../images/experience_kv_img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: $text-white;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &-container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    &__sub-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 rem(20);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+    }
+
+    .sub-content-line {
+        width: rem(1);
+        height: rem(40);
+        background-color: $text-white;
+    }
+    
+
+    &__text-wrap {
+        padding-top: rem(160);
+        padding-bottom: rem(160);
+
+        p {
+            padding-top: rem(13);
+        }
+    }
+}
+
+.workshop {
+    background-color: $main-primary-color;
+
+    .container {
+        padding: 0;
+    }
+
+    &__title {
+        font-family: "Playfair Display", serif;
+        font-size: rem(50);
+        font-weight: 700;
+        color: $main-fourth-color;
+        margin-bottom: rem(40);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(24);
+    }
+}
+
+.brewery-card {
+    background-color: $text-white;
+    border-radius: rem(12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    // 이미지 박스
+    &__img-wrap {
+        width: 100%;
+        height: rem(200);
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    // 이미지
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover &__img {
+        transform: scale(1.04);
+    }
+
+    // 콘텐츠 박스
+    &__content {
+        padding: rem(20) rem(20) rem(16);
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        flex: 1;
+    }
+
+    // 위치
+    &__location {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        font-size: rem(14);
+        font-family: "Noto Serif", serif;
+        color: $main-tri-color;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        color: $text-black;
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    // 양조장 정보
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+    }
+
+    &__name {
+        font-family: "Playfair Display", serif;
+        font-size: rem(32);
+        font-weight: 700;
+        color: $text-black;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        font-size: rem(18);
+        color: $text-black;
+        line-height: 1.55;
+        word-break: keep-all;
+    }
+
+    // 정보 목록
+    &__info-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+        padding-top: rem(10);
+        flex: 1;
+
+        li {
+            display: flex;
+            gap: rem(8);
+            font-size: rem(18);
+            font-family: "Noto Serif", serif;
+            color: $main-fourth-color;
+            line-height: 1.5;
+        }
+
+        .label {
+            font-weight: 700;
+            min-width: rem(48);
+            color: $main-tri-color;
+            flex-shrink: 0;
+            font-family: "Noto Serif", serif;
+            font-size: rem(18);
+        }
+    }
+
+    // 하단 아이콘 버튼 박스
+    &__info-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(8);
+        padding-top: rem(12);
+        margin-top: auto;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(34);
+        height: rem(34);
+        cursor: pointer;
+
+        &:hover {
+            // background-color: $main-primary-color;
+            // border-color: $main-tri-color;
+        }
+
+        svg {
+            background-color: $point-color;
+            display: block;
+        }
+    }
+}
+
+// =============================================
+// Responsive — Tablet (768px)
+// =============================================
+@include media($bp-ta) {
+    .workshop {
+        &__title {
+            font-size: rem(30);
+            margin-bottom: rem(28);
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(16);
+        }
+    }
+
+    .brewery-card {
+        width: 100%;
+        height: auto;
+
+        &__img-wrap {
+            height: rem(170);
+        }
+
+        &__name {
+            font-size: rem(18);
+        }
+    }
+}
+
+// =============================================
+// Responsive — Mobile (402px)
+// =============================================
+@include media($bp-mo) {
+    .workshop {
+        &__title {
+            font-size: rem(26);
+            margin-bottom: rem(20);
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: rem(16);
+        }
+    }
+
+    .brewery-card {
+        width: 100%;
+        height: auto;
+
+        &__img-wrap {
+            height: rem(200);
+        }
+
+        &__content {
+            padding: rem(16) rem(16) rem(14);
+        }
+    }
+}
