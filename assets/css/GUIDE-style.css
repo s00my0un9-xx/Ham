@@ -1106,6 +1106,9 @@ fieldset {
   .guide h2 {
     font-size: 2.5rem;
   }
+  .guide .num {
+    font-size: 2.5rem;
+  }
   .guide__content {
     flex-direction: column-reverse;
     border-top: 0;
@@ -1123,6 +1126,9 @@ fieldset {
     width: 100%;
     height: 100%;
   }
+  .best__title-wrap .title-50 {
+    font-size: 2.5rem;
+  }
   .best .btn-mo {
     opacity: 1;
   }
@@ -1135,6 +1141,12 @@ fieldset {
   }
   .best-card__img {
     max-width: 100%;
+  }
+  .best-card__text .pt-60 {
+    padding-top: 2.5rem;
+  }
+  .best-classic {
+    gap: 1.25rem;
   }
 }
 @media (max-width: 768px) {
