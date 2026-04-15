@@ -8,6 +8,10 @@
 @use 'icon';
 @use 'guide';
 
+.header.makgeolli {
+    background-color: var.$text-black;
+}
+
 .makgeolli-header-bg {
     width: 100%;
     height: rem(129);
