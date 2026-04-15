@@ -85,9 +85,6 @@
     }
 
     &__title {
-        font-family: "Playfair Display", serif;
-        font-size: rem(50);
-        font-weight: 700;
         color: $main-fourth-color;
         margin-bottom: rem(40);
     }
@@ -96,6 +93,56 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: rem(24);
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        gap: rem(12);
+        margin-top: rem(40);
+
+        .pagination__page {
+            position: relative;
+            background: transparent;
+            border: none;
+            color: $text-gray;
+            font-family: inherit;
+            font-size: rem(28);
+            cursor: pointer;
+            transition: color 0.2s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: rem(-6);
+                transform: translateX(-50%) scaleX(0);
+                width: 100%;
+                height: rem(2);
+                background-color: $point-color;
+                transition: transform 0.2s ease;
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            &:hover {
+                color: $point-color;
+            }
+
+            &:hover::after {
+                transform: translateX(-50%) scaleX(1);
+                opacity: 1;
+            }
+
+            &.is-active {
+                color: $point-color;
+
+                &::after {
+                    transform: translateX(-50%) scaleX(1);
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
@@ -109,21 +156,30 @@
     // 이미지 박스
     &__img-wrap {
         width: 100%;
-        height: rem(200);
-        overflow: hidden;
+        padding: rem(20) rem(20) 0;
         flex-shrink: 0;
     }
 
     // 이미지
     &__img {
-        width: 100%;
-        height: 100%;
+        width: rem(480);
+        height: rem(300);
         object-fit: cover;
+        border-radius: rem(20);
         transition: transform 0.4s ease;
+        display: block;
     }
 
     &:hover &__img {
         transform: scale(1.04);
+    }
+
+    // 출처
+    &__source {
+        font-family: "Inter", sans-serif;
+        color: $text-gray;
+        text-align: center;
+        padding: rem(6) 0 rem(4);
     }
 
     // 콘텐츠 박스
@@ -140,15 +196,12 @@
         display: flex;
         align-items: center;
         gap: rem(6);
-        font-size: rem(14);
-        font-family: "Noto Serif", serif;
-        color: $main-tri-color;
-        font-weight: 500;
         letter-spacing: 0.03em;
         color: $text-black;
 
         svg {
             flex-shrink: 0;
+            cursor: pointer;
         }
     }
 
@@ -160,15 +213,11 @@
     }
 
     &__name {
-        font-family: "Playfair Display", serif;
-        font-size: rem(32);
-        font-weight: 700;
         color: $text-black;
         line-height: 1.2;
     }
 
     &__desc {
-        font-size: rem(18);
         color: $text-black;
         line-height: 1.55;
         word-break: keep-all;
@@ -186,19 +235,14 @@
         li {
             display: flex;
             gap: rem(8);
-            font-size: rem(18);
-            font-family: "Noto Serif", serif;
             color: $main-fourth-color;
             line-height: 1.5;
         }
 
         .label {
-            font-weight: 700;
             min-width: rem(48);
             color: $main-tri-color;
             flex-shrink: 0;
-            font-family: "Noto Serif", serif;
-            font-size: rem(18);
         }
     }
 
@@ -210,6 +254,20 @@
         gap: rem(8);
         padding-top: rem(12);
         margin-top: auto;
+
+        > svg {
+            cursor: pointer;
+        }
+    }
+
+    &__info-icons {
+        display: flex;
+        align-items: center;
+        gap: rem(18);
+
+        svg {
+            cursor: pointer;
+        }
     }
 
     &__btn {
@@ -238,7 +296,6 @@
 @include media($bp-ta) {
     .workshop {
         &__title {
-            font-size: rem(30);
             margin-bottom: rem(28);
         }
 
@@ -255,10 +312,6 @@
         &__img-wrap {
             height: rem(170);
         }
-
-        &__name {
-            font-size: rem(18);
-        }
     }
 }
 
@@ -268,7 +321,6 @@
 @include media($bp-mo) {
     .workshop {
         &__title {
-            font-size: rem(26);
             margin-bottom: rem(20);
         }
 
