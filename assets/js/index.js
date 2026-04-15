@@ -5,6 +5,12 @@ $(document).ready(function () {
         $(this).addClass("active");
     })
 
+    // pagination
+    $('.workshop__pagination').on('click', '.pagination__page', function () {
+        $('.workshop__pagination .pagination__page').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
     // info
     let i = 0
     setInterval(function () {
