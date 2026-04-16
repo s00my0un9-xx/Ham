@@ -23,19 +23,33 @@
     }
 
     &__logo {
-        width: rem(240);
+        width: rem(180);
+        height: rem(30);
     }
 
     &__logo a {
-        width: 100%;
         display: block;
+        width: 100%;
+        height: 100%;
 
-        img {
+        > img {
+            display: block;
             width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
 
+    &__nav {
+        width: rem(522);
+        height: rem(25);
+    }
+
+    &__menu-list {
+        width: 100%;
+        height: 100%;
+    }
+    
     &__menu a {
         display: block;
 
@@ -93,7 +107,7 @@
             display: block;
             width: 100%;
 
-            img {
+            > img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -148,7 +162,7 @@
             width: 100%;
             height: 100%;
 
-            img {
+            > img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
