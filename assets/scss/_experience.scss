@@ -290,6 +290,15 @@
     }
 }
 
+.workshop__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > button{
+        font-size: rem(28);
+    }
+}
+
 // =============================================
 // Responsive — Tablet (768px)
 // =============================================
@@ -314,6 +323,7 @@
         }
     }
 }
+
 
 // =============================================
 // Responsive — Mobile (402px)
