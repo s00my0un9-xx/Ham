@@ -73,9 +73,9 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
 
 
 // gsap
+// layer scroll
 gsap.registerPlugin(ScrollTrigger);
 
-// layer scroll
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 769px)", () => {
@@ -130,20 +130,3 @@ mm.add("(max-width: 768px)", () => {
             duration: 0.8,
         })
 })
-
-// aboutmak scroll
-ScrollTrigger.matchMedia({
-    "(min-width: 1025px)": function () {
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".aboutmak",
-                start: "top top",
-                end: "bottom bottom",
-                pin: true,
-                scrub: false,
-            }
-        })
-            .to(".aboutmak__img-area", { width: "57%", duration: .8, ease: "power2.inOut" })
-            .to(".aboutmak__text-area", { opacity: 1, duration: .8, ease: "power2.inOut" });
-    }
-});
