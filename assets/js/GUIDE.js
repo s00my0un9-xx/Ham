@@ -1,5 +1,5 @@
 $(function(){
-    // tab
+    // best tab
     $('.best-tab li').on('click', function (e) {
         e.preventDefault();
 
@@ -23,7 +23,7 @@ $(function(){
     $('.best-premium').hide();
 });
 
-// mo slide
+// mo best slide
 let swiper = null;
 const container = document.querySelector('.best-list .swiper-wrapper');
 
@@ -36,8 +36,8 @@ function initSwiper(){
         slidesPerView : 1,
         spaceBetween : 20,
         navigation: {
-            nextEl: '.btn-next',
-            prevEl: '.btn-prev',
+            nextEl: '.best-next',
+            prevEl: '.best-prev',
         }
     });
 }
@@ -70,3 +70,114 @@ handleSwiper();
 
 // 리사이즈 대응
 window.addEventListener('resize', handleSwiper);
+
+// pairing tab
+$(function(){
+    $('.pairing-tab li').on('click', function(){
+        $('.pairing-tab li').removeClass('pairing-on');
+        $(this).addClass('pairing-on');
+
+        let idx = $(this).index();
+
+        $('.pairing-list > div').hide();
+        $('.pairing-list > div').eq(idx).show();
+    })
+})
+
+// pairing slide
+let foodSwiper = null;
+
+function initFoodSwiper() {
+  if (foodSwiper) return;
+
+  foodSwiper = new Swiper('.pairing-food', {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".pairing-next",
+      prevEl: ".pairing-prev",
+    },
+    breakpoints: {
+    1025: {
+      slidesPerView: 3,
+      grid: { rows: 2 },
+    },
+    542: {
+      slidesPerView: 2,
+      grid: { rows: 1 },
+    },
+    0: {
+      slidesPerView: 1,
+      grid: { rows: 1 },
+    },
+  },
+  });
+}
+
+function destroyFoodSwiper() {
+  if (foodSwiper) {
+    foodSwiper.destroy(true, true);
+    foodSwiper = null;
+  }
+}
+
+function handleFoodSwiper() {
+  if (window.innerWidth <= 1024) {
+    initFoodSwiper();
+  } else {
+    destroyFoodSwiper();
+  }
+}
+
+handleFoodSwiper();
+window.addEventListener('resize', handleFoodSwiper);
+
+// drink
+let drinkSwiper = null;
+
+function initDrinkSwiper() {
+    if (drinkSwiper) return;
+
+    drinkSwiper = new Swiper('.pairing-drink', {
+        spaceBetween: 16,
+        slidesPerView: 2,
+        navigation : {
+            nextEl: ".pairing-next",
+            prevEl: ".pairing-prev",
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 2,
+                grid: { rows: 3 },
+            },
+            542: {
+                slidesPerView: 2,
+                grid: { rows: 1 },
+            },
+            0: {
+                slidesPerView: 1,
+                grid: { rows: 1 },
+            },
+        }
+    })
+}
+
+// initDrinkSwiper();
+
+function destroyDrinkSwiper() {
+    if(drinkSwiper) {
+        drinkSwiper.destroy(true, true);
+        drinkSwiper = null;
+    }
+}
+
+function handleDrinkSwiper() {
+    if (window.innerWidth <= 1024) {
+        initDrinkSwiper();
+    } else {
+        destroyDrinkSwiper();
+    }
+}
+
+handleDrinkSwiper();
+window.addEventListener('resize', handleDrinkSwiper);

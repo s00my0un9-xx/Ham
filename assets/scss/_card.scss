@@ -189,92 +189,6 @@
     }
 }
 
-// food card
-.food-card {
-    width: rem(520);
-    padding: rem(40);
-    border-radius: rem(20);
-    border: 1px solid var.$main-tri-color;
-
-    &__img-wrap {
-        width: 100%;
-        height: rem(246);
-        margin-bottom: rem(20);
-        border-radius: rem(10);
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__content {
-        width: 100%;
-    }
-
-    &__text {
-        width: 100%;
-        margin-bottom: rem(40);
-    }
-
-    &__title {
-        font-size: rem(32);
-        font-weight: 700;
-        margin-bottom: rem(20);
-    }
-
-    &__desc {
-        font-size: rem(18);
-    }
-
-    &__recommend {
-        width: 100%;
-    }
-
-    &__recommend-title {
-        width: rem(146);
-        display: flex;
-        align-items: center;
-        gap: rem(6);
-        background-color: var.$point-color;
-        padding: rem(4) rem(12);
-        border-radius: rem(30);
-        color: var.$text-white;
-        margin-bottom: rem(12);
-
-        p {
-            font-size: rem(16);
-        }
-    }
-
-    &__recommend-img {
-        width: rem(22);
-        height: rem(22);
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__makgeolli {
-        font-size: rem(18);
-    }
-}
-
-@include media(var.$bp-mo){
-.type-card{
-            &__bg {
-            height: 100%;
-            padding: rem(214) rem(22) rem(26);
-            box-sizing: border-box;
-        }
-}
-}
-
 // best card
 .best {
     &-list {
@@ -345,5 +259,82 @@
         text-align: center;
         font-weight: bold;
         color: var.$text-white;
+    }
+}
+
+// food card
+.food-card {
+    // width: rem(520);
+    padding: rem(40);
+    border-radius: rem(20);
+    border: 1px solid var.$main-tri-color;
+    background-color: var.$text-white;
+
+    &__img-wrap {
+        width: 100%;
+        height: rem(246);
+        margin-bottom: rem(20);
+        border-radius: rem(10);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@include media(var.$bp-mo){
+.type-card{
+            &__bg {
+            height: 100%;
+            padding: rem(214) rem(22) rem(26);
+            box-sizing: border-box;
+        }
+}
+}
+
+// drink-card
+.drink-card {
+    padding: rem(40);
+    border-radius: rem(20);
+    border: 1px solid var.$main-tri-color;
+    background-color: var.$text-white;
+    align-items: start;
+
+    &__img {
+        width: 100%;
+        max-width: rem(310);
+        height: rem(300);
+        border-radius: rem(10);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .fs-italic {
+        font-family: "Playfair Display", serif;
+        color: var.$point-color;
+        font-weight: 700;
+    }
+
+    &__text {
+        h4 {
+            color: var.$point-color;
+        }
+
+        ul {
+            display: table;
+            margin-left: rem(31);
+        }
+
+        li {
+            list-style: disc;
+        }
     }
 }

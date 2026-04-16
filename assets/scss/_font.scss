@@ -1,7 +1,8 @@
 body {
     font-family: "Noto Serif", serif;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
     font-size: 1rem;
+    font-weight: 300;
     color: #26211d;
 }
 
@@ -33,6 +34,11 @@ body {
 
 .title-30 {
     font-size: 1.875rem;
+    font-family: "Playfair Display", serif;
+}
+
+.title-25 {
+    font-size: 1.5625rem;
     font-family: "Playfair Display", serif;
 }
 
@@ -126,13 +132,13 @@ body {
 
 // 자간
 .ls-8 {
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
 }
 
 .ls-m17 {
-    letter-spacing: -17%;
+    letter-spacing: -0.17em;
 }
 
 .ls-20 {
-    letter-spacing: 20%;
+    letter-spacing: 0.2em;
 }

@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Serif", serif;
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
   font-size: 1rem;
+  font-weight: 300;
   color: #26211d;
 }
 
@@ -16,7 +17,7 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-.title-50 {
+.title-44 {
   font-size: 2.75rem;
   font-family: "Playfair Display", serif;
 }
@@ -28,6 +29,16 @@ body {
 
 .title-32 {
   font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.title-30 {
+  font-size: 1.875rem;
+  font-family: "Playfair Display", serif;
+}
+
+.title-25 {
+  font-size: 1.5625rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -96,6 +107,7 @@ body {
 .sources {
   font-size: 0.75rem;
   font-family: "Inter", sans-serif;
+  text-transform: uppercase;
 }
 
 .num {
@@ -118,15 +130,15 @@ body {
 }
 
 .ls-8 {
-  letter-spacing: 8%;
+  letter-spacing: 0.08em;
 }
 
 .ls-m17 {
-  letter-spacing: -17%;
+  letter-spacing: -0.17em;
 }
 
 .ls-20 {
-  letter-spacing: 20%;
+  letter-spacing: 0.2em;
 }
 
 * {
@@ -252,12 +264,20 @@ fieldset {
   padding-top: 1.25rem;
 }
 
+.pt-18 {
+  padding-top: 1.125rem;
+}
+
 .pt-16 {
   padding-top: 1rem;
 }
 
 .pt-12 {
   padding-top: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 0.625rem;
 }
 
 .pt-8 {
@@ -776,11 +796,73 @@ fieldset {
     margin-top: 0.25rem;
   }
 }
+.best-list {
+  width: 100%;
+}
+.best-card {
+  width: 100%;
+  padding: 1.25rem;
+  border: 1px solid #594B3f;
+  border-radius: 1.25rem;
+  align-items: center;
+  background-color: #fff;
+}
+.best-card__img {
+  width: 100%;
+  max-width: 32.5rem;
+  overflow: hidden;
+}
+.best-card__img img {
+  display: block;
+  width: 100%;
+  border-radius: 0.625rem;
+  height: 21.875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.best-card__text {
+  flex: 1;
+}
+.best-card__rating {
+  width: 100%;
+  max-width: 13.4375rem;
+  justify-content: space-between;
+}
+.best-card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.1875rem;
+}
+.best-card__stars .star {
+  width: 1.3125rem;
+  height: 1.3125rem;
+  background-image: url(../images/star_line_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.best-card__stars .star.is-active {
+  background-image: url(../images/star_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.best .label {
+  padding: 0.375rem 0.75rem;
+  border-radius: 6.25rem;
+  background-color: #74724c;
+  max-width: 5.9375rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
 .food-card {
-  width: 32.5rem;
   padding: 2.5rem;
   border-radius: 1.25rem;
   border: 1px solid #594B3f;
+  background-color: #fff;
 }
 .food-card__img-wrap {
   width: 100%;
@@ -795,51 +877,6 @@ fieldset {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.food-card__content {
-  width: 100%;
-}
-.food-card__text {
-  width: 100%;
-  margin-bottom: 2.5rem;
-}
-.food-card__title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-.food-card__desc {
-  font-size: 1.125rem;
-}
-.food-card__recommend {
-  width: 100%;
-}
-.food-card__recommend-title {
-  width: 9.125rem;
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  background-color: #74724c;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1.875rem;
-  color: #fff;
-  margin-bottom: 0.75rem;
-}
-.food-card__recommend-title p {
-  font-size: 1rem;
-}
-.food-card__recommend-img {
-  width: 1.375rem;
-  height: 1.375rem;
-}
-.food-card__recommend-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.food-card__makgeolli {
-  font-size: 1.125rem;
-}
 
 @media (max-width: 402px) {
   .type-card__bg {
@@ -848,13 +885,48 @@ fieldset {
     box-sizing: border-box;
   }
 }
+.drink-card {
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #594B3f;
+  background-color: #fff;
+  align-items: start;
+}
+.drink-card__img {
+  width: 100%;
+  max-width: 19.375rem;
+  height: 18.75rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.drink-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.drink-card .fs-italic {
+  font-family: "Playfair Display", serif;
+  color: #74724c;
+  font-weight: 700;
+}
+.drink-card__text h4 {
+  color: #74724c;
+}
+.drink-card__text ul {
+  display: table;
+  margin-left: 1.9375rem;
+}
+.drink-card__text li {
+  list-style: disc;
+}
+
 .btn-prev,
 .btn-next {
   cursor: pointer;
 }
 .btn-prev rect,
 .btn-next rect {
-  fill: #74724c;
   transition: fill 0.2s ease;
 }
 .btn-prev:hover rect,
@@ -874,6 +946,20 @@ fieldset {
 }
 .btn-more:hover svg {
   transform: translateX(0.375rem);
+}
+
+.label-icon {
+  width: 100%;
+  max-width: 9.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #74724c;
+  border-radius: 1.875rem;
+  padding: 0.25rem 0.75rem;
+  margin-top: 2.5rem;
+  color: #fff;
 }
 
 .line a::before {
@@ -1089,10 +1175,16 @@ fieldset {
   padding-top: 0.75rem;
   margin-top: auto;
 }
+.brewery-card__info-btns > svg {
+  cursor: pointer;
+}
 .brewery-card__info-icons {
   display: flex;
   align-items: center;
   gap: 1.125rem;
+}
+.brewery-card__info-icons svg {
+  cursor: pointer;
 }
 .brewery-card__btn {
   display: flex;

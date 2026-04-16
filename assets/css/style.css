@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Serif", serif;
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
   font-size: 1rem;
+  font-weight: 300;
   color: #26211d;
 }
 
@@ -33,6 +34,11 @@ body {
 
 .title-30 {
   font-size: 1.875rem;
+  font-family: "Playfair Display", serif;
+}
+
+.title-25 {
+  font-size: 1.5625rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -124,15 +130,15 @@ body {
 }
 
 .ls-8 {
-  letter-spacing: 8%;
+  letter-spacing: 0.08em;
 }
 
 .ls-m17 {
-  letter-spacing: -17%;
+  letter-spacing: -0.17em;
 }
 
 .ls-20 {
-  letter-spacing: 20%;
+  letter-spacing: 0.2em;
 }
 
 * {
@@ -268,6 +274,10 @@ fieldset {
 
 .pt-12 {
   padding-top: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 0.625rem;
 }
 
 .pt-8 {
@@ -1222,78 +1232,6 @@ body {
     margin-top: 0.25rem;
   }
 }
-.food-card {
-  width: 32.5rem;
-  padding: 2.5rem;
-  border-radius: 1.25rem;
-  border: 1px solid #594B3f;
-}
-.food-card__img-wrap {
-  width: 100%;
-  height: 15.375rem;
-  margin-bottom: 1.25rem;
-  border-radius: 0.625rem;
-  overflow: hidden;
-}
-.food-card__img-wrap img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.food-card__content {
-  width: 100%;
-}
-.food-card__text {
-  width: 100%;
-  margin-bottom: 2.5rem;
-}
-.food-card__title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-.food-card__desc {
-  font-size: 1.125rem;
-}
-.food-card__recommend {
-  width: 100%;
-}
-.food-card__recommend-title {
-  width: 9.125rem;
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  background-color: #74724c;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1.875rem;
-  color: #fff;
-  margin-bottom: 0.75rem;
-}
-.food-card__recommend-title p {
-  font-size: 1rem;
-}
-.food-card__recommend-img {
-  width: 1.375rem;
-  height: 1.375rem;
-}
-.food-card__recommend-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.food-card__makgeolli {
-  font-size: 1.125rem;
-}
-
-@media (max-width: 402px) {
-  .type-card__bg {
-    height: 100%;
-    padding: 13.375rem 1.375rem 1.625rem;
-    box-sizing: border-box;
-  }
-}
 .best-list {
   width: 100%;
 }
@@ -1356,6 +1294,69 @@ body {
   color: #fff;
 }
 
+.food-card {
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #594B3f;
+  background-color: #fff;
+}
+.food-card__img-wrap {
+  width: 100%;
+  height: 15.375rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.food-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 402px) {
+  .type-card__bg {
+    height: 100%;
+    padding: 13.375rem 1.375rem 1.625rem;
+    box-sizing: border-box;
+  }
+}
+.drink-card {
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #594B3f;
+  background-color: #fff;
+  align-items: start;
+}
+.drink-card__img {
+  width: 100%;
+  max-width: 19.375rem;
+  height: 18.75rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.drink-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.drink-card .fs-italic {
+  font-family: "Playfair Display", serif;
+  color: #74724c;
+  font-weight: 700;
+}
+.drink-card__text h4 {
+  color: #74724c;
+}
+.drink-card__text ul {
+  display: table;
+  margin-left: 1.9375rem;
+}
+.drink-card__text li {
+  list-style: disc;
+}
+
 .btn-prev,
 .btn-next {
   cursor: pointer;
@@ -1381,4 +1382,18 @@ body {
 }
 .btn-more:hover svg {
   transform: translateX(0.375rem);
+}
+
+.label-icon {
+  width: 100%;
+  max-width: 9.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #74724c;
+  border-radius: 1.875rem;
+  padding: 0.25rem 0.75rem;
+  margin-top: 2.5rem;
+  color: #fff;
 }
