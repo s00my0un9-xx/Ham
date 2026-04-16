@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Serif", serif;
-  letter-spacing: -0.01em;
+  letter-spacing: -1%;
   font-size: 1rem;
   color: #26211d;
 }
@@ -33,11 +33,6 @@ body {
 
 .title-30 {
   font-size: 1.875rem;
-  font-family: "Playfair Display", serif;
-}
-
-.title-25 {
-  font-size: 1.5625rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -129,15 +124,15 @@ body {
 }
 
 .ls-8 {
-  letter-spacing: 0.08em;
+  letter-spacing: 8%;
 }
 
 .ls-m17 {
-  letter-spacing: -0.17em;
+  letter-spacing: -17%;
 }
 
 .ls-20 {
-  letter-spacing: 0.2em;
+  letter-spacing: 20%;
 }
 
 * {
@@ -273,10 +268,6 @@ fieldset {
 
 .pt-12 {
   padding-top: 0.75rem;
-}
-
-.pt-10 {
-  padding-top: 0.625rem;
 }
 
 .pt-8 {
@@ -460,8 +451,7 @@ fieldset {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .header__nav {
   width: 32.625rem;
@@ -520,8 +510,7 @@ fieldset {
 .header__mo-logo a > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .header__mo-nav {
   position: fixed;
@@ -568,10 +557,8 @@ fieldset {
 .footer__logo a > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: left center;
-     object-position: left center;
+  object-fit: contain;
+  object-position: left center;
 }
 .footer__content {
   display: flex;
@@ -745,10 +732,8 @@ fieldset {
 .type-card__img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  object-fit: contain;
+  object-position: center bottom;
 }
 .type-card__source {
   font-size: 0.75rem;
@@ -811,6 +796,76 @@ fieldset {
     margin-top: 0.25rem;
   }
 }
+.food-card {
+  width: 32.5rem;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #594B3f;
+}
+.food-card__img-wrap {
+  width: 100%;
+  height: 15.375rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.food-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food-card__content {
+  width: 100%;
+}
+.food-card__text {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.food-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.food-card__desc {
+  font-size: 1.125rem;
+}
+.food-card__recommend {
+  width: 100%;
+}
+.food-card__recommend-title {
+  width: 9.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #74724c;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1.875rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.food-card__recommend-title p {
+  font-size: 1rem;
+}
+.food-card__recommend-img {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.food-card__recommend-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food-card__makgeolli {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 402px) {
+  .type-card__bg {
+    height: 100%;
+    padding: 13.375rem 1.375rem 1.625rem;
+    box-sizing: border-box;
+  }
+}
 .best-list {
   width: 100%;
 }
@@ -832,8 +887,7 @@ fieldset {
   width: 100%;
   border-radius: 0.625rem;
   height: 21.875rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .best-card__text {
   flex: 1;
@@ -873,69 +927,6 @@ fieldset {
   color: #fff;
 }
 
-.food-card {
-  padding: 2.5rem;
-  border-radius: 1.25rem;
-  border: 1px solid #594B3f;
-  background-color: #fff;
-}
-.food-card__img-wrap {
-  width: 100%;
-  height: 15.375rem;
-  margin-bottom: 1.25rem;
-  border-radius: 0.625rem;
-  overflow: hidden;
-}
-.food-card__img-wrap img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media (max-width: 402px) {
-  .type-card__bg {
-    height: 100%;
-    padding: 13.375rem 1.375rem 1.625rem;
-    box-sizing: border-box;
-  }
-}
-.drink-card {
-  padding: 2.5rem;
-  border-radius: 1.25rem;
-  border: 1px solid #594B3f;
-  background-color: #fff;
-  align-items: start;
-}
-.drink-card__img {
-  width: 100%;
-  max-width: 19.375rem;
-  height: 18.75rem;
-  border-radius: 0.625rem;
-  overflow: hidden;
-}
-.drink-card__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.drink-card .fs-italic {
-  font-family: "Playfair Display", serif;
-  color: #74724c;
-  font-weight: 700;
-}
-.drink-card__text h4 {
-  color: #74724c;
-}
-.drink-card__text ul {
-  display: table;
-  margin-left: 1.9375rem;
-}
-.drink-card__text li {
-  list-style: disc;
-}
-
 .btn-prev,
 .btn-next {
   cursor: pointer;
@@ -961,20 +952,6 @@ fieldset {
 }
 .btn-more:hover svg {
   transform: translateX(0.375rem);
-}
-
-.label-icon {
-  width: 100%;
-  max-width: 9.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.375rem;
-  background-color: #74724c;
-  border-radius: 1.875rem;
-  padding: 0.25rem 0.75rem;
-  margin-top: 2.5rem;
-  color: #fff;
 }
 
 .line a::before {
@@ -1055,6 +1032,9 @@ fieldset {
   gap: 0.75rem;
   margin-top: 2.5rem;
 }
+.tab-buttons--mo {
+  display: none;
+}
 
 .tab-button {
   position: relative;
@@ -1103,6 +1083,11 @@ fieldset {
 .workshop__title {
   color: #26211d;
   margin-bottom: 2.5rem;
+}
+.workshop__grid-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .workshop__grid {
   display: grid;
@@ -1169,10 +1154,8 @@ fieldset {
   width: 100%;
   max-width: 30rem;
   height: 18.75rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  object-fit: cover;
+  object-position: center center;
   border-radius: 1.25rem;
   transition: transform 0.4s ease;
   display: block;
@@ -1299,6 +1282,12 @@ fieldset {
   color: #fff;
 }
 
+.festival__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
 .festival-card {
   background-color: #fff;
   border-radius: 0.75rem;
@@ -1314,8 +1303,7 @@ fieldset {
 .festival-card__img {
   width: 100%;
   height: 18.75rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 1.25rem;
   transition: transform 0.4s ease;
   display: block;
@@ -1410,7 +1398,6 @@ fieldset {
 }
 .festival-card--coming .festival-card__img {
   width: 100%;
-  max-width: 30rem;
   height: 18.75rem;
   border-radius: 1.25rem;
 }
@@ -1504,37 +1491,142 @@ fieldset {
 }
 
 @media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .workshop .container,
+  .festival .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .festival__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .festival-card__img {
+    max-width: 100%;
+  }
+  .festival-card--coming .festival-card__img, .festival-card--past .festival-card__img {
+    max-width: 100%;
+  }
+  .userkv__text-wrap {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .userkv__text-wrap h2 {
+    font-size: 2.375rem;
+  }
+  .userkv__text-wrap p {
+    font-size: 1.25rem;
+  }
   .workshop__title {
     margin-bottom: 1.75rem;
   }
   .workshop__grid {
+    display: contents;
+  }
+  .workshop__grid-group {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+  .workshop__grid-group .tab-panel.is-active {
+    display: contents;
+  }
+  .workshop__grid-group .tab-panel:not(.is-active) {
+    display: none;
   }
   .brewery-card {
     width: 100%;
     height: auto;
   }
-  .brewery-card__img-wrap {
-    height: 10.625rem;
+  .brewery-card__img {
+    height: auto;
+  }
+  .ta-title-50 {
+    font-size: 2rem;
+  }
+  .ta-title-32 {
+    font-size: 1.5rem;
+  }
+  .ta-body-18 {
+    font-size: 1rem;
+  }
+  .ta-body-16 {
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 402px) {
+  .container {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+  .workshop .container,
+  .festival .container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+  .festival__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .sec-py100 {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .userkv__text-wrap p {
+    font-size: 1.125rem;
+  }
+  .tab-buttons--pc {
+    display: none;
+  }
+  .tab-buttons--mo {
+    display: flex;
+  }
   .workshop__title {
     margin-bottom: 1.25rem;
   }
   .workshop__grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .workshop__grid-group {
+    display: block;
+  }
+  .workshop__grid-group .tab-panel.is-active {
+    display: block;
   }
   .brewery-card {
     width: 100%;
     height: auto;
   }
-  .brewery-card__img-wrap {
-    height: 12.5rem;
+  .brewery-card__img {
+    height: auto;
   }
   .brewery-card__content {
     padding: 1rem 1rem 0.875rem;
   }
+  .mo-title-50 {
+    font-size: 2rem;
+  }
+  .mo-title-32 {
+    font-size: 1.5rem;
+  }
+  .mo-body-18 {
+    font-size: 1rem;
+  }
+  .mo-body-16 {
+    font-size: 0.875rem;
+  }
 }
+
+/*# sourceMappingURL=experience-style.css.map */
