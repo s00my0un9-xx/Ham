@@ -90,6 +90,10 @@
     justify-content: center;
     gap: rem(12);
     margin-top: rem(40);
+
+    &--mo {
+        display: none;
+    }
 }
 
 .tab-button {
@@ -145,6 +149,12 @@
     &__title {
         color: $main-fourth-color;
         margin-bottom: rem(40);
+    }
+
+    &__grid-group {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
     }
 
     &__grid {
@@ -371,15 +381,22 @@
     }
 }
 
-.festival{
+.festival {
     background-color: $main-fourth-color;
 
-    .container{
+    .container {
         padding: 0;
     }
-    .festival__title{
+
+    .festival__title {
         color: $text-white;
     }
+}
+
+.festival__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(24);
 }
 
 .festival-card {
@@ -510,10 +527,9 @@
 
         .festival-card__img {
             width: 100%;
-            max-width: rem(480);
             height: rem(300);
             border-radius: rem(20);
-        }  
+        }
 
         .festival-card__location {
             color: $disable-main-color;
@@ -521,6 +537,8 @@
             svg path {
                 fill: $disable-main-color;
             }
+
+        
         }
 
         .festival-card__info {
@@ -645,14 +663,75 @@
 // Responsive — Tablet (768px)
 // =============================================
 @include media($bp-ta) {
+    .container {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: rem(32);
+        padding-left: rem(32);
+    }
+
+    .workshop .container,
+    .festival .container {
+        padding-right: rem(32);
+        padding-left: rem(32);
+    }
+
+    .festival__grid {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+    }
+
+    .festival-card {
+        &__img {
+            max-width: 100%;
+        }
+
+        &--coming,
+        &--past {
+            .festival-card__img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    // kv
+    .userkv {
+        &__text-wrap {
+            padding-top: rem(40);
+            padding-bottom: rem(40);
+
+            h2 {
+                font-size: rem(38);
+            }
+
+            p {
+                font-size: rem(20);
+            }
+        }
+    }
     .workshop {
         &__title {
             margin-bottom: rem(28);
         }
 
         &__grid {
+            display: contents;
+        }
+
+        &__grid-group {
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: rem(16);
+
+            .tab-panel.is-active {
+                display: contents;
+            }
+
+            .tab-panel:not(.is-active) {
+                display: none;
+            }
         }
     }
 
@@ -660,25 +739,89 @@
         width: 100%;
         height: auto;
 
-        &__img-wrap {
-            height: rem(170);
+        &__img {
+            height: auto;
         }
     }
+
+    // 폰트 반응형
+    .ta-title-50 {
+        font-size: rem(32); 
+    }
+    .ta-title-32 {
+         font-size: rem(24); 
+    }
+    .ta-body-18 { 
+        font-size: rem(16); 
+    }
+    .ta-body-16 {
+         font-size: rem(14);
+         }
 }
+
 
 
 // =============================================
 // Responsive — Mobile (402px)
 // =============================================
 @include media($bp-mo) {
+    .container {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: rem(20);
+        padding-left: rem(20);
+    }
+
+    .workshop .container,
+    .festival .container {
+        padding-right: rem(20);
+        padding-left: rem(20);
+    }
+
+    .festival__grid {
+        grid-template-columns: 1fr;
+        gap: rem(16);
+    }
+
+    .sec-py100 {
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+    }
+
+    .userkv {
+        &__text-wrap {
+            p {
+                font-size: rem(18);
+            }
+        }
+    }
+
+    .tab-buttons--pc {
+        display: none;
+    }
+
+    .tab-buttons--mo {
+        display: flex;
+    }
+
     .workshop {
         &__title {
             margin-bottom: rem(20);
         }
 
         &__grid {
+            display: grid;
             grid-template-columns: 1fr;
             gap: rem(16);
+        }
+
+        &__grid-group {
+            display: block;
+
+            .tab-panel.is-active {
+                display: block;
+            }
         }
     }
 
@@ -686,12 +829,27 @@
         width: 100%;
         height: auto;
 
-        &__img-wrap {
-            height: rem(200);
+        &__img {
+            height: auto;
         }
 
         &__content {
             padding: rem(16) rem(16) rem(14);
         }
     }
+
+    // 폰트 반응형
+    .mo-title-50 { 
+        font-size: rem(32); 
+    }
+    .mo-title-32 { 
+        font-size: rem(24); 
+    }
+    .mo-body-18 { 
+        font-size: rem(16); 
+    }
+    .mo-body-16 { 
+        font-size: rem(14); 
+    }
+
 }
