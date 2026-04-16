@@ -425,6 +425,10 @@ fieldset {
   background-color: transparent;
   color: #fff;
   z-index: 10;
+  transition: transform 0.3s ease;
+}
+.header.hide {
+  transform: translateY(-100%);
 }
 .header .scroll {
   background-color: #131313;
@@ -435,16 +439,28 @@ fieldset {
   align-items: center;
 }
 .header__logo {
-  width: 15rem;
+  width: 11.25rem;
+  height: 1.875rem;
 }
 .header__logo a {
-  width: 100%;
   display: block;
-}
-.header__logo a img {
   width: 100%;
+  height: 100%;
+}
+.header__logo a > img {
+  display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.header__nav {
+  width: 32.625rem;
+  height: 1.5625rem;
+}
+.header__menu-list {
+  width: 100%;
+  height: 100%;
 }
 .header__menu a {
   display: block;
@@ -492,7 +508,7 @@ fieldset {
   display: block;
   width: 100%;
 }
-.header__mo-logo a img {
+.header__mo-logo a > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -540,7 +556,7 @@ fieldset {
   width: 100%;
   height: 100%;
 }
-.footer__logo a img {
+.footer__logo a > img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -926,7 +942,6 @@ fieldset {
 }
 .btn-prev rect,
 .btn-next rect {
-  fill: #74724c;
   transition: fill 0.2s ease;
 }
 .btn-prev:hover rect,
@@ -1161,10 +1176,16 @@ fieldset {
   padding-top: 0.75rem;
   margin-top: auto;
 }
+.brewery-card__info-btns > svg {
+  cursor: pointer;
+}
 .brewery-card__info-icons {
   display: flex;
   align-items: center;
   gap: 1.125rem;
+}
+.brewery-card__info-icons svg {
+  cursor: pointer;
 }
 .brewery-card__btn {
   display: flex;

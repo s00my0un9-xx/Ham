@@ -10,9 +10,14 @@
     background-color: transparent;
     color: var.$text-white;
     z-index: 10;
+    transition: transform .3s ease;
 
+    &.hide {
+        transform: translateY(-100%);
+    }
+    
     .scroll {
-        background-color: #131313;
+        background-color: var.$text-black;
     }
 
     // pc
@@ -225,7 +230,6 @@
 
 @media(max-width:768px) {
     .header {
-        // background-color: var.$point-color;
         overflow: hidden;
 
         .pc {

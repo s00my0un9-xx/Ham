@@ -425,6 +425,10 @@ fieldset {
   background-color: transparent;
   color: #fff;
   z-index: 10;
+  transition: transform 0.3s ease;
+}
+.header.hide {
+  transform: translateY(-100%);
 }
 .header .scroll {
   background-color: #131313;
@@ -938,7 +942,6 @@ fieldset {
 }
 .btn-prev rect,
 .btn-next rect {
-  fill: #74724c;
   transition: fill 0.2s ease;
 }
 .btn-prev:hover rect,
@@ -1089,6 +1092,9 @@ fieldset {
   opacity: 0;
   transition: opacity 0.3s;
 }
+.best .btn-prev rect, .best .btn-next rect {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 .best-premium.best-card-list {
   display: none;
 }
@@ -1098,6 +1104,41 @@ fieldset {
 }
 .best-card__img .sources {
   color: #a79f90;
+}
+
+.pairing {
+  width: 100%;
+  background-color: #26211d;
+}
+.pairing .title-50 {
+  color: #fff;
+}
+.pairing-tab-wrap {
+  justify-content: space-between;
+}
+.pairing-tab {
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pairing-tab li a {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  color: rgba(167, 159, 144, 0.4);
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+.pairing-tab li.pairing-on a {
+  color: #f6eedf;
+  font-weight: 700;
+  border-bottom-color: #f6eedf;
+}
+.pairing .btn-mo {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 @media (min-width: 1025px) {
@@ -1157,8 +1198,11 @@ fieldset {
   .best-card__text .pt-60 {
     padding-top: 2.5rem;
   }
-  .best-classic {
+  .best-classic, .best-premium {
     gap: 1.25rem;
+  }
+  .pairing .btn-mo {
+    opacity: 1;
   }
 }
 @media (max-width: 768px) {
@@ -1182,6 +1226,30 @@ fieldset {
   .guide__list .num {
     font-size: 1.875rem;
   }
+  .best__title-wrap .title-50 {
+    font-size: 2rem;
+  }
+  .best-tab {
+    font-size: 1.125rem;
+  }
+  .best-list {
+    padding-top: 2.5rem;
+  }
+  .best .btn-prev svg, .best .btn-next svg {
+    width: 2.25rem;
+  }
+  .best-card__img img {
+    height: 18.75rem;
+  }
+  .best-card .label {
+    font-size: 1.125rem;
+  }
+  .best-card__text h3 {
+    font-size: 1.5rem;
+  }
+  .best-classic, .best-premium {
+    gap: 0.625rem;
+  }
 }
 @media (max-width: 402px) {
   .userkv__text-wrap p {
@@ -1195,6 +1263,27 @@ fieldset {
   }
   .guide__list .num {
     font-size: 1.875rem;
+  }
+  .best-tab {
+    font-size: 1.375rem;
+  }
+  .best-list {
+    padding-top: 1.25rem;
+  }
+  .best-card__img img {
+    height: 12.5rem;
+  }
+  .best-card .label {
+    font-size: 1rem;
+  }
+  .best-card__text .body-18 {
+    font-size: 0.9375rem;
+  }
+  .best-card__text .pt-60 {
+    padding-top: 1.875rem;
+  }
+  .best-classic, .best-premium {
+    gap: 0.625rem;
   }
 }
 .header.makgeolli {
@@ -1296,42 +1385,24 @@ fieldset {
   }
 }
 @media (max-width: 1024px) {
-  .makgeolli-header-bg {
-    height: 3.375rem;
-  }
-  .beganmak {
-    background-color: #26211d;
-    color: #f6eedf;
-  }
   .beganmak__content {
+    flex-direction: column-reverse;
     width: 100%;
     height: 100%;
-    gap: 3.75rem;
-    justify-content: space-between;
-    flex-direction: column-reverse;
   }
   .beganmak__img-area {
     width: 100%;
   }
-  .beganmak__img-area .type-card__source {
-    text-align: right;
-  }
-  .beganmak__img {
-    width: 100%;
-    height: 18.75rem;
-    border-radius: 0 3.75rem 0 3.75rem;
-    overflow: hidden;
-  }
-  .beganmak__img img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   .beganmak__text-area {
     width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .makgeolli-header-bg {
+    height: 3.375rem;
+  }
+  .aboutmak__title {
+    font-size: 2rem;
+    padding-bottom: 2.5rem;
   }
 }

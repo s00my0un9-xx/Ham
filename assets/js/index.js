@@ -46,22 +46,6 @@ $(document).ready(function () {
 
     $('.type-premium').hide();
 
-    // aboutmak slide
-    $(window).on("scroll", function () {
-        if ($(window).width() > 1024) {
-            var section = $(".aboutmak");
-            var imgArea = $(".aboutmak__img-area");
-            var textArea = $(".aboutmak__text-area");
-
-            var triggerPoint = section.offset().top;
-
-            if ($(window).scrollTop() > triggerPoint) {
-                imgArea.stop().animate({ width: "57%" }, 800);
-                textArea.delay(1000).stop().animate({ opacity: 1 }, 800);
-            }
-        }
-    });
-
 });
 
 // type slide
@@ -91,7 +75,7 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
 // gsap
 gsap.registerPlugin(ScrollTrigger);
 
-// layer gsap
+// layer scroll
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 769px)", () => {
@@ -153,20 +137,14 @@ ScrollTrigger.matchMedia({
         gsap.timeline({
             scrollTrigger: {
                 trigger: ".aboutmak",
-                start: "-42px -80px",
-                end: "+=80",
+                start: "top -40px",
+                end: "+=800",
                 pin: true,
-                scrub: 1,
+                scrub: false,
                 markers: true,
-                toggleActions: "play none none reverse",
-
-                onEnter: () => gsap.to(".header.makgeolli", { autoAlpha: 0, duration: 0.3 }),
-                onLeave: () => gsap.to(".header.makgeolli", { autoAlpha: 1, duration: 0.3 }),
-                onEnterBack: () => gsap.to(".header.makgeolli", { autoAlpha: 0, duration: 0.3 }),
-                onLeaveBack: () => gsap.to(".header.makgeolli", { autoAlpha: 1, duration: 0.3 }),
             }
         })
-            .to(".aboutmak__img-area", { width: "57%", duration: 1 })
-            .to(".aboutmak__text-area", { opacity: 1, duration: 1 }, "-=0.5");
+            .to(".aboutmak__img-area", { width: "57%", duration: 1, ease: "power2.inOut" })
+            .to(".aboutmak__text-area", { opacity: 1, duration: 1, ease: "power2.inOut" });
     }
 });

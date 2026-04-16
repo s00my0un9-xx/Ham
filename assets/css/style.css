@@ -425,6 +425,10 @@ fieldset {
   background-color: transparent;
   color: #fff;
   z-index: 10;
+  transition: transform 0.3s ease;
+}
+.header.hide {
+  transform: translateY(-100%);
 }
 .header .scroll {
   background-color: #131313;
