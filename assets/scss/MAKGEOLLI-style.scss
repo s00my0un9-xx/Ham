@@ -23,6 +23,7 @@
     background-color: var.$main-fourth-color;
     color: var.$text-beige;
 
+
     &__content {
         flex-direction: column;
         width: 100%;
@@ -160,6 +161,31 @@
         &__title {
             font-size: rem(32);
             padding-bottom: rem(40);
+        }
+
+        &__img {
+            height: rem(300);
+        }
+
+        &__content {
+            gap: rem(40);
+        }
+
+        &__text-area {
+            gap: rem(20);
+        }
+
+        &__story-subtitle {
+            font-size: rem(14);
+            padding-bottom: rem(2);
+        }
+
+        &____story-title {
+            font-size: rem(26);
+        }
+
+        &__desc {
+            font-size: 1rem;
         }
     }
 }

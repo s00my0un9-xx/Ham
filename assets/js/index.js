@@ -137,14 +137,13 @@ ScrollTrigger.matchMedia({
         gsap.timeline({
             scrollTrigger: {
                 trigger: ".aboutmak",
-                start: "top -40px",
-                end: "+=800",
+                start: "top top",
+                end: "bottom bottom",
                 pin: true,
                 scrub: false,
-                markers: true,
             }
         })
-            .to(".aboutmak__img-area", { width: "57%", duration: 1, ease: "power2.inOut" })
-            .to(".aboutmak__text-area", { opacity: 1, duration: 1, ease: "power2.inOut" });
+            .to(".aboutmak__img-area", { width: "57%", duration: .8, ease: "power2.inOut" })
+            .to(".aboutmak__text-area", { opacity: 1, duration: .8, ease: "power2.inOut" });
     }
 });
