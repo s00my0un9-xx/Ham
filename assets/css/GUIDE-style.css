@@ -1164,6 +1164,12 @@ fieldset {
 .pairing .food-card {
   width: calc((100% - 32px) / 3);
 }
+.pairing .food-card__text .pt-20 {
+  height: 8.75rem;
+}
+.pairing .food-card__text .pt-12 {
+  height: 3.75rem;
+}
 .pairing .drink-card {
   width: calc((100% - 16px) / 2);
 }
@@ -1182,6 +1188,9 @@ fieldset {
 }
 
 @media (max-width: 1200px) {
+  .pairing .food-card {
+    padding: 1.25rem;
+  }
   .pairing .drink-card {
     padding: 1.25rem;
   }

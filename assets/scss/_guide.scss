@@ -219,7 +219,7 @@
         }
     }
 
-    .btn-mo {
+    & .btn-mo {
         opacity: 0;
         transition: opacity 0.3s;
     }
@@ -236,6 +236,16 @@
     .food-card {
         width: calc((100% - 32px) / 3);
         // height: rem(591);
+
+        &__text {
+            .pt-20 {
+                height: rem(140);
+            }
+
+            .pt-12 {
+                height: rem(60);
+            }
+        }
     }
 
     .drink-card {
@@ -262,6 +272,11 @@
 // breakpoint
 @media(max-width:1200px) {
     .pairing {
+        .food-card {
+            padding: rem(20);
+        }
+
+
         .drink-card {
             padding: rem(20);
 
@@ -401,7 +416,7 @@
             }
         }
 
-        .btn-mo {
+        & .btn-mo {
             opacity: 1;
         }
 

@@ -81,6 +81,11 @@ $(function(){
 
         $('.pairing-list > div').hide();
         $('.pairing-list > div').eq(idx).show();
+
+        // 보인 직후 업데이트
+        setTimeout(() => {
+            updatePairingSwipers();}, 0);
+        
     })
 })
 
@@ -90,6 +95,12 @@ let foodSwiper = null;
 function initFoodSwiper() {
   if (foodSwiper) return;
 
+   if (foodSwiper) return;
+  const container = document.querySelector('.pairing-food');
+  if (!container) return;
+  const nextBtn = container.querySelector('.pairing-next');
+  const prevBtn = container.querySelector('.pairing-prev');
+
   foodSwiper = new Swiper('.pairing-food', {
     spaceBetween: 16,
     slidesPerView: 1,
@@ -97,6 +108,9 @@ function initFoodSwiper() {
       nextEl: ".pairing-next",
       prevEl: ".pairing-prev",
     },
+    observer: true,
+    observeParents: true,
+
     breakpoints: {
     1025: {
       slidesPerView: 3,
@@ -111,7 +125,7 @@ function initFoodSwiper() {
       grid: { rows: 1 },
     },
   },
-  });
+})
 }
 
 function destroyFoodSwiper() {
@@ -145,6 +159,9 @@ function initDrinkSwiper() {
             nextEl: ".pairing-next",
             prevEl: ".pairing-prev",
         },
+        observer: true,
+        observeParents: true,
+
         breakpoints: {
             1025: {
                 slidesPerView: 2,
@@ -161,8 +178,6 @@ function initDrinkSwiper() {
         }
     })
 }
-
-// initDrinkSwiper();
 
 function destroyDrinkSwiper() {
     if(drinkSwiper) {
