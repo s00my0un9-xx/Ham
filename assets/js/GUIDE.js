@@ -97,9 +97,9 @@ function initFoodSwiper() {
 
    if (foodSwiper) return;
   const container = document.querySelector('.pairing-food');
-  if (!container) return;
-  const nextBtn = container.querySelector('.pairing-next');
-  const prevBtn = container.querySelector('.pairing-prev');
+//   if (!container) return;
+//   const nextBtn = container.querySelector('.pairing-next');
+//   const prevBtn = container.querySelector('.pairing-prev');
 
   foodSwiper = new Swiper('.pairing-food', {
     spaceBetween: 16,
