@@ -84,8 +84,15 @@ $(function(){
 
         // 보인 직후 업데이트
         setTimeout(() => {
-            updatePairingSwipers();}, 0);
-        
+            if (foodSwiper) {
+                foodSwiper.update();
+                foodSwiper.navigation.update();
+            }
+            if (drinkSwiper) {
+                drinkSwiper.update();
+                drinkSwiper.navigation.update();
+            }
+        }, 0);
     })
 })
 

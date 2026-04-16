@@ -1123,12 +1123,11 @@ fieldset {
 .pairing {
   width: 100%;
   background-color: #26211d;
+  position: relative;
+  overflow: hidden;
 }
 .pairing .title-50 {
   color: #fff;
-}
-.pairing-tab-wrap {
-  justify-content: space-between;
 }
 .pairing-tab {
   gap: 1.5rem;
@@ -1150,28 +1149,37 @@ fieldset {
   font-weight: 700;
   border-bottom-color: #f6eedf;
 }
+.pairing-drink {
+  display: none;
+}
+.pairing .pairing-food,
+.pairing .pairing-drink {
+  position: relative;
+  overflow: visible !important;
+}
 .pairing .btn-mo {
   opacity: 0;
   transition: opacity 0.3s;
+  position: absolute;
+  top: -6.375rem;
+  right: 0;
+  z-index: 8;
+}
+.pairing .pairing-food .btn-mo,
+.pairing .pairing-drink .btn-mo {
+  position: absolute;
+  top: -6.375rem;
+  right: 0;
 }
 .pairing .drink-card-list {
   flex-wrap: wrap;
   gap: 1rem;
-}
-.pairing-drink {
-  display: none;
-}
-.pairing .food-card {
-  width: calc((100% - 32px) / 3);
 }
 .pairing .food-card__text .pt-20 {
   height: 8.75rem;
 }
 .pairing .food-card__text .pt-12 {
   height: 3.75rem;
-}
-.pairing .drink-card {
-  width: calc((100% - 16px) / 2);
 }
 .pairing .drink-card__img {
   width: 50%;
@@ -1226,6 +1234,12 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+  }
+  .food-card {
+    width: calc((100% - 32px) / 3);
+  }
+  .drink-card {
+    width: calc((100% - 16px) / 2);
   }
 }
 @media (max-width: 1024px) {
@@ -1304,9 +1318,21 @@ fieldset {
   .pairing .food-card__text .body-18 {
     font-size: 1rem;
   }
+  .pairing .food-card {
+    width: auto;
+  }
+  .pairing .drink-card {
+    width: auto;
+  }
   .pairing .drink-card-list {
     flex-wrap: initial;
     gap: 0;
+  }
+  .pairing .drink-card__text h4 {
+    font-size: 1.375rem;
+  }
+  .pairing .label-icon {
+    margin-top: 1.25rem;
   }
 }
 @media (max-width: 768px) {
@@ -1354,6 +1380,38 @@ fieldset {
   .best-classic, .best-premium {
     gap: 0.625rem;
   }
+  .pairing__title-wrap .title-50 {
+    font-size: 2rem;
+  }
+  .pairing-tab {
+    font-size: 1.125rem;
+  }
+  .pairing-list {
+    padding-top: 2.5rem;
+  }
+  .pairing .pairing-prev svg, .pairing .pairing-next svg {
+    width: 2.25rem;
+  }
+  .pairing .pairing-food .btn-mo,
+  .pairing .pairing-drink .btn-mo {
+    top: -4.875rem;
+  }
+  .pairing .food-card__text h3 {
+    font-size: 1.5rem;
+    margin-top: 1.125rem;
+  }
+  .pairing .food-card__text .body-18 {
+    font-size: 1rem;
+  }
+  .pairing .food-card {
+    width: auto;
+  }
+  .pairing .drink-card__text .pt-10 {
+    font-size: 1rem;
+  }
+  .pairing .label-icon {
+    margin-top: 1.25rem;
+  }
 }
 @media (max-width: 402px) {
   .userkv__text-wrap p {
@@ -1388,6 +1446,9 @@ fieldset {
   }
   .best-classic, .best-premium {
     gap: 0.625rem;
+  }
+  .pairing .drink-card__text h4 {
+    height: 3.75rem;
   }
 }
 .header.makgeolli {

@@ -184,6 +184,8 @@
 .pairing {
     width: 100%;
     background-color: $main-fourth-color;
+    position: relative;
+    overflow: hidden;
 
     .title-50 {
         color: $text-white;
@@ -191,7 +193,7 @@
 
     // tab
     &-tab-wrap {
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
     &-tab {
@@ -219,9 +221,30 @@
         }
     }
 
-    & .btn-mo {
+    &-drink {
+        display: none;
+    }
+
+    .pairing-food,
+    .pairing-drink {
+        position: relative;
+        overflow: visible !important;
+    }
+
+    .btn-mo {
         opacity: 0;
         transition: opacity 0.3s;
+        position: absolute;
+        top: rem(-102);
+        right: 0;
+        z-index: 8;
+    }
+
+    .pairing-food .btn-mo,
+    .pairing-drink .btn-mo {
+        position: absolute;
+        top: rem(-102);
+        right: 0;
     }
 
     .drink-card-list {
@@ -229,12 +252,9 @@
         gap: rem(16);
     }
 
-    &-drink {
-        display: none;
-    }
 
     .food-card {
-        width: calc((100% - 32px) / 3);
+        // width: calc((100% - 32px) / 3);
         // height: rem(591);
 
         &__text {
@@ -249,7 +269,7 @@
     }
 
     .drink-card {
-        width: calc((100% - 16px) / 2);
+        // width: calc((100% - 16px) / 2);
         // width: rem(788);
 
         &__img {
@@ -324,6 +344,14 @@
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
+    }
+
+    .food-card {
+        width: calc((100% - 32px) / 3);
+    }
+
+    .drink-card {
+        width: calc((100% - 16px) / 2);
     }
 
 }
@@ -416,7 +444,7 @@
             }
         }
 
-        & .btn-mo {
+        .btn-mo {
             opacity: 1;
         }
 
@@ -450,11 +478,27 @@
             }
         }
 
+        .food-card {
+            width: auto;
+        }
+
         .drink-card {
+            width: auto;
+            
             &-list {
                 flex-wrap: initial;
                 gap: 0;
             }
+
+            &__text {
+                h4 {
+                    font-size: rem(22);
+                }
+            }
+        }
+
+        .label-icon {
+            margin-top: rem(20);
         }
     }
 }
@@ -539,6 +583,63 @@
         }
 
     }
+
+    // pairing
+    .pairing {
+        &__title-wrap {
+            .title-50 {
+                font-size: rem(32);
+            }
+        }
+
+        &-tab {
+            font-size: rem(18);
+        }
+
+        &-list {
+            padding-top: rem(40);
+        }
+
+        .pairing-prev, .pairing-next {
+            svg {
+                width: rem(36);
+            }
+        }
+
+        .pairing-food .btn-mo,
+        .pairing-drink .btn-mo {
+            top: rem(-78);
+        }
+
+        .food-card {
+            &__text {
+                h3 {
+                    font-size: rem(24);
+                    margin-top: rem(18);
+                }
+
+                .body-18 {
+                    font-size: rem(16);
+                }
+            }
+        }
+
+        .food-card {
+            width: auto;
+        }
+
+        .drink-card {
+            &__text {
+                .pt-10 {
+                    font-size: rem(16);
+                }
+            }
+        }
+
+        .label-icon {
+            margin-top: rem(20);
+        }
+    }
 }
 
 @media(max-width:402px) {
@@ -603,6 +704,16 @@
         &-classic, &-premium {
             gap: rem(10);
         }
+    }
 
+    // pairing
+    .pairing {
+        .drink-card {
+            &__text {
+                h4 {
+                    height: rem(60);
+                }
+            }
+        }
     }
 }
