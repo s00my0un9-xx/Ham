@@ -46,29 +46,36 @@ $(document).ready(function () {
 
     $('.type-premium').hide();
 
-    // aboutmak slide
-    $(window).on("scroll", function () {
-        var section = $(".aboutmak");
-        var imgArea = $(".aboutmak__img-area");
-        var textArea = $(".aboutmak__text-area");
-
-        var triggerPoint = section.offset().top;
-
-        if ($(window).scrollTop() > triggerPoint) {
-            imgArea.stop().animate({ width: "57%" }, 1000);
-
-            textArea.delay(1000).stop().animate(
-                { opacity: 1 },
-                800
-            );
-        }
-    });
-
 });
 
-// layer gsap
+// type slide
+document.querySelectorAll(".type .swiper").forEach((element) => {
+    new Swiper(element, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        centeredSlides: false,
+        navigation: {
+            nextEl: ".btn-next",
+            prevEl: ".btn-prev",
+        },
+        breakpoints: {
+            403: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            769: {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+            },
+        },
+    });
+});
+
+
+// gsap
 gsap.registerPlugin(ScrollTrigger);
 
+// layer scroll
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 769px)", () => {
@@ -124,26 +131,20 @@ mm.add("(max-width: 768px)", () => {
         })
 })
 
-// type slide
-document.querySelectorAll(".type .swiper").forEach((element) => {
-    new Swiper(element, {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        centeredSlides: false,
-        navigation: {
-            nextEl: ".btn-next",
-            prevEl: ".btn-prev",
-        },
-        breakpoints: {
-            403: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            769: {
-                slidesPerView: 'auto',
-                spaceBetween: 16,
-            },
-        },
-    });
+// aboutmak scroll
+ScrollTrigger.matchMedia({
+    "(min-width: 1025px)": function () {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".aboutmak",
+                start: "top -40px",
+                end: "+=800",
+                pin: true,
+                scrub: false,
+                markers: true,
+            }
+        })
+            .to(".aboutmak__img-area", { width: "57%", duration: 1, ease: "power2.inOut" })
+            .to(".aboutmak__text-area", { opacity: 1, duration: 1, ease: "power2.inOut" });
+    }
 });
-

@@ -77,6 +77,64 @@
     }
 }
 
+.tab-panel {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: rem(12);
+    margin-top: rem(40);
+}
+
+.tab-button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: $text-gray;
+    font-family: inherit;
+    font-size: rem(28);
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: rem(-6);
+        transform: translateX(-50%) scaleX(0);
+        width: 100%;
+        height: rem(2);
+        background-color: $point-color;
+        transition: transform 0.2s ease;
+        transform-origin: center;
+        opacity: 0;
+    }
+
+    &:hover {
+        color: $point-color;
+    }
+
+    &:hover::after {
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
+    }
+
+    &.is-active {
+        color: $point-color;
+
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+            opacity: 1;
+        }
+    }
+}
+
 .workshop {
     background-color: $main-primary-color;
 
@@ -162,12 +220,15 @@
 
     // 이미지
     &__img {
-        width: rem(480);
+        width: 100%;
+        max-width: rem(480);
         height: rem(300);
         object-fit: cover;
+        object-position: center center;
         border-radius: rem(20);
         transition: transform 0.4s ease;
         display: block;
+        margin: 0 auto;
     }
 
     &:hover &__img {
@@ -209,7 +270,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        gap: rem(6);
+        gap: rem(8);
     }
 
     &__name {
@@ -228,7 +289,7 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: rem(6);
+        gap: rem(8);
         padding-top: rem(10);
         flex: 1;
 
@@ -237,6 +298,14 @@
             gap: rem(8);
             color: $main-fourth-color;
             line-height: 1.5;
+            overflow: hidden;
+
+            span:not(.label) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
         }
 
         .label {
@@ -255,8 +324,15 @@
         padding-top: rem(12);
         margin-top: auto;
 
-        > svg {
+        > svg,
+        svg {
             cursor: pointer;
+        }
+
+        > svg {
+            &:hover rect {
+                fill: $main-tri-color
+            }
         }
     }
 
@@ -267,6 +343,10 @@
 
         svg {
             cursor: pointer;
+
+            &:hover path {
+                fill: $main-tri-color;
+            }
         }
     }
 
@@ -279,14 +359,285 @@
         cursor: pointer;
 
         &:hover {
-            // background-color: $main-primary-color;
-            // border-color: $main-tri-color;
+            background-color: $main-tri-color; 
+            border-color: $main-tri-color;
         }
 
         svg {
+            cursor: pointer;
             background-color: $point-color;
             display: block;
         }
+    }
+}
+
+.festival{
+    background-color: $main-fourth-color;
+
+    .container{
+        padding: 0;
+    }
+    .festival__title{
+        color: $text-white;
+    }
+}
+
+.festival-card {
+    background-color: $text-white;
+    border-radius: rem(12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__img-wrap {
+        width: 100%;
+        padding: rem(20) rem(20) 0;
+        flex-shrink: 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: rem(300);
+        object-fit: cover;
+        border-radius: rem(20);
+        transition: transform 0.4s ease;
+        display: block;
+        position: relative;
+    }
+
+    &__festival-overlay-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: $text-black;
+        white-space: nowrap;
+    }
+
+    &__content {
+        padding: rem(20) rem(20) rem(16);
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        flex: 1;
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        letter-spacing: 0.03em;
+        color: $text-black;
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+    }
+
+    &__info-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        padding-top: rem(10);
+        flex: 1;
+
+        li {
+            display: flex;
+            gap: rem(8);
+            color: $main-fourth-color;
+            line-height: 1.5;
+            overflow: hidden;
+
+            span:not(.label) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
+        }
+
+        .label {
+            min-width: rem(48);
+            color: $main-tri-color;
+            flex-shrink: 0;
+        }
+    }
+
+    &__info-btns {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        padding-top: rem(12);
+        margin-top: auto;
+
+        svg {
+            cursor: pointer;
+
+            path, rect {
+                fill: $main-fourth-color;
+            }
+
+            &:hover path,
+            &:hover rect {
+                fill: $point-color;
+        }
+        }
+    }
+
+    &--coming {
+        pointer-events: none;
+        cursor: default;
+
+        .festival-card__img-wrap {
+            position: relative;
+            padding: rem(20) rem(20) 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(#fff, 0.6);
+                border-radius: rem(20);
+            }
+        }
+
+        .festival-card__img {
+            width: 100%;
+            max-width: rem(480);
+            height: rem(300);
+            border-radius: rem(20);
+        }  
+
+        .festival-card__location {
+            color: $disable-main-color;
+
+            svg path {
+                fill: $disable-main-color;
+            }
+        }
+
+        .festival-card__info {
+            h3 {
+                color: $disable-main-color;
+            }
+        }
+
+        .festival-card__info-list {
+            li {
+                color: $disable-main-color;
+            }
+
+            .label {
+                color: $disable-main-color;
+            }
+        }
+
+        .festival-card__info-btns {
+            svg {
+                cursor: default;
+
+                path, rect {
+                    fill: $disable-main-color;
+                }
+
+                &:hover path,
+                &:hover rect {
+                    fill: $disable-main-color;
+                }
+            }
+        }
+
+        .festival-card__festival-overlay-text {
+            color: $text-black;
+            z-index: 1;
+        }
+    }
+
+    &--past {
+        pointer-events: none;
+        cursor: default;
+        background-color: #53524A;
+
+        .festival-card__img-wrap {
+            position: relative;
+            padding: rem(20) rem(20) 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: rgba(83, 82, 74, 0.6);
+            }
+        }
+
+        .festival-card__img {
+            width: 100%;
+            max-width: rem(480);
+            height: rem(300);
+            border-radius: rem(20);
+            filter: brightness(0.5);
+        }
+
+        .festival-card__location {
+            color: $disable-sub-color;
+
+            svg path {
+                fill: $disable-sub-color;
+            }
+        }
+
+        .festival-card__info {
+            h3 {
+                color: $disable-sub-color;
+            }
+        }
+
+        .festival-card__info-list {
+            li {
+                color: $disable-sub-color;
+            }
+
+            .label {
+                color: $disable-sub-color;
+            }
+        }
+
+        .festival-card__info-btns {
+            svg {
+                cursor: default;
+
+                path, rect {
+                    fill: $disable-sub-color;
+                }
+
+                &:hover path,
+                &:hover rect {
+                    fill: $disable-sub-color;
+                }
+            }
+        }
+
+        .festival-card__festival-overlay-text {
+            color: $text-white;
+             z-index: 1;
+        }
+    }
+}
+
+.workshop__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    > button{
+        font-size: rem(28);
     }
 }
 
@@ -314,6 +665,7 @@
         }
     }
 }
+
 
 // =============================================
 // Responsive — Mobile (402px)
