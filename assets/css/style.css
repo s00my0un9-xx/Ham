@@ -936,7 +936,7 @@ body {
     height: 0.75rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .kv h2 {
     font-size: 2.375rem;
   }
@@ -1048,7 +1048,7 @@ body {
     box-sizing: border-box;
   }
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .kv h2 {
     font-size: 2.375rem;
     text-align: center;
@@ -1196,7 +1196,7 @@ body {
   word-break: keep-all;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .type-card__bg {
     height: 100%;
     padding: 14.375rem 1.375rem 1.625rem;
@@ -1330,7 +1330,7 @@ body {
      object-fit: cover;
 }
 
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .type-card__bg {
     height: 100%;
     padding: 13.375rem 1.375rem 1.625rem;

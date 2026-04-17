@@ -759,7 +759,7 @@ fieldset {
   word-break: keep-all;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .type-card__bg {
     height: 100%;
     padding: 14.375rem 1.375rem 1.625rem;
@@ -893,7 +893,7 @@ fieldset {
      object-fit: cover;
 }
 
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .type-card__bg {
     height: 100%;
     padding: 13.375rem 1.375rem 1.625rem;

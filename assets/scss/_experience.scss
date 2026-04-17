@@ -281,6 +281,7 @@
         display: flex;
         flex-direction: column;
         gap: rem(8);
+        flex: 1;
     }
 
     &__name {
@@ -339,9 +340,16 @@
             cursor: pointer;
         }
 
-        > svg {
-            &:hover rect {
-                fill: $main-tri-color
+        > a {
+            display: block;
+            line-height: 0;
+
+            svg {
+                pointer-events: none;
+            }
+
+            &:hover svg rect {
+                fill: $main-tri-color;
             }
         }
     }
@@ -410,6 +418,7 @@
         width: 100%;
         padding: rem(20) rem(20) 0;
         flex-shrink: 0;
+        position: relative;
     }
 
     &__img {
@@ -420,6 +429,13 @@
         transition: transform 0.4s ease;
         display: block;
         position: relative;
+    }
+
+    &__img-source {
+        font-family: 'Inter', sans-serif;
+        color: #717171;
+        text-align: center;
+        padding: rem(6) 0 rem(4);
     }
 
     &__festival-overlay-text {
@@ -817,10 +833,14 @@
         }
 
         &__grid-group {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: rem(16);
 
             .tab-panel.is-active {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                gap: rem(16);
             }
         }
     }
