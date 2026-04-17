@@ -78,146 +78,57 @@ gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
 
-mm.add("(min-width: 1681px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: ".layer",
-        start: "top 5%",
-        end: "+=2000",
-        scrub: 1,
-        pin: true,
-        // markers: true,
-        }
-    })
+mm.add({
+  desktop: "(min-width: 1025px)",
+  tablet: "(min-width: 769px) and (max-width: 1024px)",
+  mobile: "(max-width: 768px)"
+}, (context) => {
 
-    // clear 등장
-    tl.to(".layer__clear", {
-        y: () => window.innerHeight * 2,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
+  let yClear, yCloudy, end;
 
-    // clear 사라짐
-    .to(".layer__clear", {
-        opacity: 0,
-    })
+  if (context.conditions.desktop) {
+    yClear = window.innerHeight * 0.3;
+    yCloudy = window.innerHeight * 0.8;
+    end = "+=1800";
+  }
 
-    // coludy 등장
-    .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.75,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
+  if (context.conditions.tablet) {
+    yClear = window.innerHeight * 0.2;
+    yCloudy = window.innerHeight * 0.75;
+    end = "+=1500";
+  }
 
-    .to(".layer__cloudy", {
-        opacity: 0,
-    })
-})
+  if (context.conditions.mobile) {
+    yClear = window.innerHeight * 0.25;
+    yCloudy = window.innerHeight * 0.75;
+    end = "+=1200";
+  }
 
-mm.add("(min-width: 1025px) and (max-width: 1680px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: ".layer",
-        start: "top 5%",
-        end: "+=1500",
-        scrub: 1,
-        pin: true,
-        // markers: true,
-        }
-    })
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".layer",
+      start: "top top",
+      end: end,
+      scrub: 1,
+      pin: true,
+    }
+  });
 
-    // clear 등장
-    tl.to(".layer__clear", {
-        y: () => window.innerHeight * 0.3,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
+  tl.to(".layer__clear", {
+    y: yClear,
+    opacity: 1,
+  })
+  .to({}, { duration: 1 })
+  .to(".layer__clear", {
+    opacity: 0,
+  })
+  .to(".layer__cloudy", {
+    y: yCloudy,
+    opacity: 1,
+  })
+  .to({}, { duration: 1 })
+  .to(".layer__cloudy", {
+    opacity: 0,
+  });
 
-    // clear 사라짐
-    .to(".layer__clear", {
-        opacity: 0,
-    })
-
-    // coludy 등장
-    .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.8,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
-
-    .to(".layer__cloudy", {
-        opacity: 0,
-    })
-})
-
-mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: ".layer",
-        start: "top 5%",
-        end: "+=2000",
-        scrub: 1,
-        pin: true,
-        // markers: true,
-        }
-    })
-
-    // clear 등장
-    tl.to(".layer__clear", {
-        y: () => window.innerHeight * 0.2,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
-
-    // clear 사라짐
-    .to(".layer__clear", {
-        opacity: 0,
-    })
-
-    // coludy 등장
-    .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.8,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
-
-    .to(".layer__cloudy", {
-        opacity: 0,
-    })
-})
-
-mm.add("(max-width: 768px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: ".layer",
-        start: "top 5%",
-        end: "+=2000",
-        scrub: 1,
-        pin: true,
-        // markers: true,
-        }
-    })
-
-    // clear 등장
-    tl.to(".layer__clear", {
-        y: () => window.innerHeight * 0.3,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
-
-    // clear 사라짐
-    .to(".layer__clear", {
-        opacity: 0,
-    })
-
-    // coludy 등장
-    .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.75,
-        opacity: 1,
-    })
-    .to({}, { duration: 1 })
-
-    .to(".layer__cloudy", {
-        opacity: 0,
-    })
-})
+});
