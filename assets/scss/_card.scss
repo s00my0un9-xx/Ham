@@ -207,7 +207,7 @@
         &__img {
             width: 100%;
             max-width: rem(520);
-            overflow: hidden;
+            // overflow: hidden;
             
             img {
                 display: block;
@@ -306,7 +306,8 @@
     &__img {
         width: 100%;
         max-width: rem(310);
-        height: rem(300);
+        height: rem(367);
+        
         border-radius: rem(10);
         overflow: hidden;
 

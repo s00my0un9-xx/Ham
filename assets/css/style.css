@@ -1268,7 +1268,6 @@ body {
 .best-card__img {
   width: 100%;
   max-width: 32.5rem;
-  overflow: hidden;
 }
 .best-card__img img {
   display: block;
@@ -1353,7 +1352,7 @@ body {
 .drink-card__img {
   width: 100%;
   max-width: 19.375rem;
-  height: 18.75rem;
+  height: 22.9375rem;
   border-radius: 0.625rem;
   overflow: hidden;
 }

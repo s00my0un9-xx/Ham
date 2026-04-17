@@ -614,8 +614,11 @@
 
         &-card {
             gap: rem(10);
+            height: rem(703);
 
             &__img {
+                // height: rem(300);
+                
                 img {
                     height: rem(300);
                 }
@@ -628,6 +631,11 @@
             &__text {
                 h3 {
                     font-size: rem(24);
+                    // height: rem(72);
+                }
+
+                .pt-16 {
+                    // height: rem(112);
                 }
             }
         }
@@ -737,6 +745,8 @@
         }
 
         &-card {
+            height: rem(607);
+            
             &__img {
                 img {
                     height: rem(200);
@@ -779,15 +789,9 @@
             }
 
             .pt-12 {
-                height: auto;
+                height: rem(56);
             }
 
-        }
-
-        .drink-card {
-            &__text {
-
-            }
         }
     }
 
