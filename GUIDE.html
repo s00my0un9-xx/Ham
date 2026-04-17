@@ -162,9 +162,9 @@
                             <li class="type-on"><a href="">Classic</a></li>
                             <li><a href="">Premium</a></li>
                         </ul>
-                        <div class="btn-mo">
+                        <!-- <div class="btn-mo">
                             <div class="d-flex gap-12">
-                                <div class="btn-prev">
+                                <button class="swiper-button-prev best-prev">
                                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="44" y="44" width="44" height="44" rx="22" transform="rotate(-180 44 44)" fill="#74724C"/>
                                         <g clip-path="url(#clip0_950_544)">
@@ -176,8 +176,8 @@
                                         </clipPath>
                                         </defs>
                                     </svg>
-                                </div>
-                                <div class="btn-next">
+                                </button>
+                                <button class="swiper-button-next best-next">
                                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="44" height="44" rx="22" fill="#74724C"/>
                                         <g clip-path="url(#clip0_950_547)">
@@ -189,483 +189,553 @@
                                         </clipPath>
                                         </defs>
                                     </svg>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="best-list pt-60">
+                        <!-- classic -->
+                        <div class="best-classic">
+                            <div class="btn-mo">
+                                <div class="d-flex gap-12">
+                                    <button class="swiper-button-prev best-classic-prev">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="44" y="44" width="44" height="44" rx="22" transform="rotate(-180 44 44)" fill="#74724C"/>
+                                            <g clip-path="url(#clip0_950_544)">
+                                            <path d="M26.4774 33.4777C26.8118 33.1432 26.9997 32.6896 26.9997 32.2166C26.9997 31.7436 26.8118 31.2899 26.4774 30.9554L17.6481 22.1261L26.4774 13.2968C26.7921 12.9587 26.9634 12.5118 26.9553 12.05C26.9471 11.5882 26.7602 11.1476 26.4338 10.8208C26.1074 10.4941 25.667 10.3066 25.2052 10.298C24.7434 10.2894 24.2963 10.4602 23.9579 10.7745L13.8661 20.8636C13.5316 21.1981 13.3438 21.6517 13.3438 22.1247C13.3438 22.5977 13.5316 23.0513 13.8661 23.3858L23.9551 33.4777C24.2896 33.8121 24.7433 34 25.2163 34C25.6893 34 26.1429 33.8121 26.4774 33.4777Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_950_544">
+                                            <rect width="23.7023" height="13.6559" fill="white" transform="translate(13.3438 34) rotate(-90)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                    <button class="swiper-button-next best-classic-next">
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="44" height="44" rx="22" fill="#74724C"/>
+                                            <g clip-path="url(#clip0_950_547)">
+                                            <path d="M17.5226 10.5223C17.1882 10.8568 17.0003 11.3104 17.0003 11.7834C17.0003 12.2564 17.1882 12.7101 17.5226 13.0446L26.3519 21.8739L17.5226 30.7032C17.2079 31.0413 17.0366 31.4882 17.0447 31.95C17.0529 32.4118 17.2398 32.8524 17.5662 33.1792C17.8926 33.506 18.333 33.6934 18.7948 33.702C19.2566 33.7106 19.7037 33.5398 20.0421 33.2255L30.1339 23.1364C30.4684 22.8019 30.6562 22.3483 30.6562 21.8753C30.6562 21.4023 30.4684 20.9487 30.1339 20.6142L20.0449 10.5223C19.7104 10.1879 19.2567 10 18.7837 10C18.3107 10 17.8571 10.1879 17.5226 10.5223Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_950_547">
+                                            <rect width="23.7023" height="13.6559" fill="white" transform="translate(30.6562 10) rotate(90)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
+                            <div class="best-classic-swiper swiper">
+                                <ul class="best-classic-card-list swiper-wrapper">
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img01.png" alt="느린마을 막걸리">
+                                            <p class="sources pt-2">©Baesangmyun Brewery</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Neulin maeul makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                Neulinma-eul makgeolli is a uniquely crafted rice wine whose flavor evolves with aging, 
+                                                allowing you to enjoy it according to your personal taste.
+                                            </p>
+                                            <p class="fw-bold pt-60">6% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img02.png" alt="장수생막걸리">
+                                            <p class="sources pt-2">©SEOULJANGSOO</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-6">Jangsu Fresh Makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                With its refreshing carbonation and clean finish, Jangsu Fresh Makgeolli is one of Korea’s
+                                                most popular and easy-to-enjoy rice wines.
+                                            </p>
+                                            <p class="fw-bold pt-60">6% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img03.png" alt="지평생막걸리">
+                                            <p class="sources pt-2">©JIPYEONGBREWERY</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Jiphyeon Fresh makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                Light in alcohol yet rich in harmony, Jipyeong Fresh Makgeolli blends subtle sweetness
+                                                with a crisp, clean finish.
+                                            </p>
+                                            <p class="fw-bold pt-60">5% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img04.png" alt="국순당생막걸리">
+                                            <p class="sources pt-2">©KOOGSOONDANG BREWERY</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Kooksoondang Fresh makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                With its gentle, easy-drinking profile, Guksundang Fresh Makgeolli pairs beautifully with 
+                                                hearty, oil-rich foods.
+                                            </p>
+                                            <p class="fw-bold pt-60">6% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img05.png" alt="달빛유자막걸리">
+                                            <p class="sources pt-2">©FOODIERAMI NAVER BLOG</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Dalbichyuja makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                Dalbityuja Makgeolli features a bright citrus aroma of yuja, offering a refreshing and
+                                                naturally vibrant taste without aspartame.
+                                            </p>
+                                            <p class="fw-bold pt-60">6% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="best-list pt-60 swiper">
-                            <ul class="best-card-list swiper-wrapper">
-                                <li class="best-classic best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img01.png" alt="느린마을 막걸리">
-                                        <p class="sources pt-2">©Baesangmyun Brewery</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Neulin maeul makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            Neulinma-eul makgeolli is a uniquely crafted rice wine whose flavor evolves with aging, 
-                                            allowing you to enjoy it according to your personal taste.
-                                        </p>
-                                        <p class="fw-bold pt-60">6% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-classic best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img02.png" alt="장수생막걸리">
-                                        <p class="sources pt-2">©SEOULJANGSOO</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-6">Jangsu Fresh Makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            With its refreshing carbonation and clean finish, Jangsu Fresh Makgeolli is one of Korea’s
-                                            most popular and easy-to-enjoy rice wines.
-                                        </p>
-                                        <p class="fw-bold pt-60">6% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-classic best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img03.png" alt="지평생막걸리">
-                                        <p class="sources pt-2">©JIPYEONGBREWERY</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Jiphyeon Fresh makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            Light in alcohol yet rich in harmony, Jipyeong Fresh Makgeolli blends subtle sweetness
-                                            with a crisp, clean finish.
-                                        </p>
-                                        <p class="fw-bold pt-60">5% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-classic best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img04.png" alt="국순당생막걸리">
-                                        <p class="sources pt-2">©KOOGSOONDANG BREWERY</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Kooksoondang Fresh makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            With its gentle, easy-drinking profile, Guksundang Fresh Makgeolli pairs beautifully with 
-                                            hearty, oil-rich foods.
-                                        </p>
-                                        <p class="fw-bold pt-60">6% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-classic best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img05.png" alt="달빛유자막걸리">
-                                        <p class="sources pt-2">©FOODIERAMI NAVER BLOG</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Dalbichyuja makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            Dalbityuja Makgeolli features a bright citrus aroma of yuja, offering a refreshing and
-                                            naturally vibrant taste without aspartame.
-                                        </p>
-                                        <p class="fw-bold pt-60">6% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-premium best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img06.png" alt="담은">
-                                        <p class="sources pt-2">©sooldamhwaa</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Dameun</h3>
-                                        <p class="body-18 pt-16">
-                                            Dameun Makgeolli highlights the rich natural sweetness of rice, offering an exceptionally
-                                            smooth texture that almost feels like drinking milk, with minimal carbonation.
-                                        </p>
-                                        <p class="fw-bold pt-60">6.5% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-premium best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img07.png" alt="오희 스파클링막걸리">
-                                        <p class="sources pt-2">©sooldamhwaa</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-6">Ohi Sparkling Makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            Ohi Sparkling Makgeolli combines champagne-like effervescence with the bright, tangy
-                                            notes of omija, creating a refreshingly vibrant finish. 
-                                        </p>
-                                        <p class="fw-bold pt-60">8.5% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-premium best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img08.jpg" alt="문삼이공 잣">
-                                        <p class="sources pt-2">©mamasfarm</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Moon320 pine nut</h3>
-                                        <p class="body-18 pt-16">
-                                            Moon320 Pine Nut Makgeolli offers a harmonious blend of sweet, tangy, and nutty flavors,
-                                            highlighted by the rich aroma of pine nuts.
-                                        </p>
-                                        <p class="fw-bold pt-60">12% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-premium best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img09.jpg" alt="포그막10">
-                                        <p class="sources pt-2">©DALSEONG JUJO</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Fogmag 10</h3>
-                                        <p class="body-18 pt-16">
-                                            With its vibrant sweet-and-sour bouquet and creamy, yogurt-like body, Fogmag 10
-                                            leaves a smooth, nutty finish.
-                                        </p>
-                                        <p class="fw-bold pt-60">10% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="best-premium best-card swiper-slide d-flex gap-40">
-                                    <div class="best-card__img">
-                                        <img src="./assets/images/best_img10.png" alt="해창막걸리 9도">
-                                        <p class="sources pt-2">©sooldamhwa</p>
-                                    </div>
-                                    <div class="best-card__text">
-                                        <p class="label body-20">Best</p>
-                                        <h3 class="title-30 pt-8">Haechang Makgeolli</h3>
-                                        <p class="body-18 pt-16">
-                                            Haechang Makgeolli offers a refreshing sweetness and bright acidity reminiscent of Korean 
-                                            melon, finishing with the nutty richness of rice.
-                                        </p>
-                                        <p class="fw-bold pt-60">9% ABV</p>
-                                        <ul class="best-card__rating-list pt-18">
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sweetness</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Sparkling</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                            <li class="best-card__rating d-flex gap-16">
-                                                <span class="best-card__taste body-16 fw-bold">Acidity</span>
-                                                <div class="best-card__stars">
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star is-active"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="best-premium">
+                            <div class="btn-mo">
+                                <div class="d-flex gap-12">
+                                    <button class="swiper-button-prev best-premium-prev">
+                                        <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="44" y="44" width="44" height="44" rx="22" transform="rotate(-180 44 44)" fill="#74724C"/>
+                                            <g clip-path="url(#clip0_950_544)">
+                                            <path d="M26.4774 33.4777C26.8118 33.1432 26.9997 32.6896 26.9997 32.2166C26.9997 31.7436 26.8118 31.2899 26.4774 30.9554L17.6481 22.1261L26.4774 13.2968C26.7921 12.9587 26.9634 12.5118 26.9553 12.05C26.9471 11.5882 26.7602 11.1476 26.4338 10.8208C26.1074 10.4941 25.667 10.3066 25.2052 10.298C24.7434 10.2894 24.2963 10.4602 23.9579 10.7745L13.8661 20.8636C13.5316 21.1981 13.3438 21.6517 13.3438 22.1247C13.3438 22.5977 13.5316 23.0513 13.8661 23.3858L23.9551 33.4777C24.2896 33.8121 24.7433 34 25.2163 34C25.6893 34 26.1429 33.8121 26.4774 33.4777Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_950_544">
+                                            <rect width="23.7023" height="13.6559" fill="white" transform="translate(13.3438 34) rotate(-90)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                    <button class="swiper-button-next best-premium-next">
+                                        <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="44" height="44" rx="22" fill="#74724C"/>
+                                            <g clip-path="url(#clip0_950_547)">
+                                            <path d="M17.5226 10.5223C17.1882 10.8568 17.0003 11.3104 17.0003 11.7834C17.0003 12.2564 17.1882 12.7101 17.5226 13.0446L26.3519 21.8739L17.5226 30.7032C17.2079 31.0413 17.0366 31.4882 17.0447 31.95C17.0529 32.4118 17.2398 32.8524 17.5662 33.1792C17.8926 33.506 18.333 33.6934 18.7948 33.702C19.2566 33.7106 19.7037 33.5398 20.0421 33.2255L30.1339 23.1364C30.4684 22.8019 30.6562 22.3483 30.6562 21.8753C30.6562 21.4023 30.4684 20.9487 30.1339 20.6142L20.0449 10.5223C19.7104 10.1879 19.2567 10 18.7837 10C18.3107 10 17.8571 10.1879 17.5226 10.5223Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_950_547">
+                                            <rect width="23.7023" height="13.6559" fill="white" transform="translate(30.6562 10) rotate(90)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="best-premium-swiper swiper">
+                                <ul class="best-premium-card-list swiper-wrapper">
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img06.png" alt="담은">
+                                            <p class="sources pt-2">©sooldamhwaa</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Dameun</h3>
+                                            <p class="body-18 pt-16">
+                                                Dameun Makgeolli highlights the rich natural sweetness of rice, offering an exceptionally
+                                                smooth texture that almost feels like drinking milk, with minimal carbonation.
+                                            </p>
+                                            <p class="fw-bold pt-60">6.5% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img07.png" alt="오희 스파클링막걸리">
+                                            <p class="sources pt-2">©sooldamhwaa</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-6">Ohi Sparkling Makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                Ohi Sparkling Makgeolli combines champagne-like effervescence with the bright, tangy
+                                                notes of omija, creating a refreshingly vibrant finish. 
+                                            </p>
+                                            <p class="fw-bold pt-60">8.5% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img08.jpg" alt="문삼이공 잣">
+                                            <p class="sources pt-2">©mamasfarm</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Moon320 pine nut</h3>
+                                            <p class="body-18 pt-16">
+                                                Moon320 Pine Nut Makgeolli offers a harmonious blend of sweet, tangy, and nutty flavors,
+                                                highlighted by the rich aroma of pine nuts.
+                                            </p>
+                                            <p class="fw-bold pt-60">12% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img09.jpg" alt="포그막10">
+                                            <p class="sources pt-2">©DALSEONG JUJO</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Fogmag 10</h3>
+                                            <p class="body-18 pt-16">
+                                                With its vibrant sweet-and-sour bouquet and creamy, yogurt-like body, Fogmag 10
+                                                leaves a smooth, nutty finish.
+                                            </p>
+                                            <p class="fw-bold pt-60">10% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="best-card swiper-slide d-flex gap-40">
+                                        <div class="best-card__img">
+                                            <img src="./assets/images/best_img10.png" alt="해창막걸리 9도">
+                                            <p class="sources pt-2">©sooldamhwa</p>
+                                        </div>
+                                        <div class="best-card__text">
+                                            <p class="label body-20">Best</p>
+                                            <h3 class="title-30 pt-8">Haechang Makgeolli</h3>
+                                            <p class="body-18 pt-16">
+                                                Haechang Makgeolli offers a refreshing sweetness and bright acidity reminiscent of Korean 
+                                                melon, finishing with the nutty richness of rice.
+                                            </p>
+                                            <p class="fw-bold pt-60">9% ABV</p>
+                                            <ul class="best-card__rating-list pt-18">
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sweetness</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Sparkling</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="best-card__rating d-flex gap-16">
+                                                    <span class="best-card__taste body-16 fw-bold">Acidity</span>
+                                                    <div class="best-card__stars">
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star is-active"></div>
+                                                        <div class="star"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
         </section>
@@ -676,7 +746,7 @@
                 <div class="pairing__title-wrap">
                     <h2 class="title-50">pairing</h2>
                 </div>
-                <div class="pairing-tab-wrap d-flex pt-30">
+                <div class="pairing-tab-wrap pt-30">
                         <ul class="pairing-tab body-22 d-flex gap-16">
                             <li class="pairing-on"><a href="javascript:void(0)">Food</a></li>
                             <li><a href="javascript:void(0)">Drink</a></li>
@@ -684,10 +754,10 @@
                 </div>
                 <div class="pairing-list pt-60">
                         <!-- food -->
-                        <div class="pairing-food swiper">
+                        <div class="pairing-food">
                             <div class="btn-mo">
                                 <div class="d-flex gap-12">
-                                    <div class="btn-prev pairing-prev">
+                                    <button class="swiper-button-prev pairing-food-prev">
                                         <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="36" y="36" width="36" height="36" rx="18" transform="rotate(-180 36 36)" fill="#F6EEDF"/>
                                         <g clip-path="url(#clip0_1101_34)">
@@ -699,8 +769,8 @@
                                         </clipPath>
                                         </defs>
                                         </svg>
-                                    </div>
-                                    <div class="btn-next pairing-next">
+                                    </button>
+                                    <button class="swiper-button-next pairing-food-next">
                                     <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="36" height="36" rx="18" fill="#F6EEDF"/>
                                         <g clip-path="url(#clip0_1101_37)">
@@ -712,131 +782,133 @@
                                         </clipPath>
                                         </defs>
                                         </svg>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                            <ul class="food-card-list swiper-wrapper">
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img1.png" alt="Buchimgae">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Buchimgae</h3>
-                                        <p class="body-18 pt-20">
-                                            A crispy Korean pancake that pairs perfectly with makgeolli, a beloved combination Koreans crave on rainy days.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                            <div class="food-card-swiper swiper">
+                                <ul class="food-card-list swiper-wrapper">
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img1.png" alt="Buchimgae">
                                         </div>
-                                        <p class="body-18 pt-12">Jangsu, Haechang</p>
-                                    </div>
-                                </li>
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img2.png" alt="Tteokbokki">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Tteokbokki</h3>
-                                        <p class="body-18 pt-20">
-                                            Chewy rice cakes in a sweet and spicy sauce, a flavorful street food favorite that pairs surprisingly well with makgeolli.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Buchimgae</h3>
+                                            <p class="body-18 pt-20">
+                                                A crispy Korean pancake that pairs perfectly with makgeolli, a beloved combination Koreans crave on rainy days.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Jangsu, Haechang</p>
                                         </div>
-                                        <p class="body-18 pt-12">Jiphyeon , Dalbityuja, Dameun</p>
-                                    </div>
-                                </li>
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img3.png" alt="Bossam">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Bossam</h3>
-                                        <p class="body-18 pt-20">
-                                            Succulent boiled pork served with crisp greens and condiments, a classic Korean pairing that complements the smooth depth of makgeolli.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                                    </li>
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img2.png" alt="Tteokbokki">
                                         </div>
-                                        <p class="body-18 pt-12">Kooksoondang , Neulin maeul, Jangsu</p>
-                                    </div>
-                                </li>
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img4.png" alt="Clam soup">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Clam soup</h3>
-                                        <p class="body-18 pt-20">
-                                            A delicate clam broth simmered with fresh seafood, offering a soothing and savory contrast to the mellow sweetness of makgeolli.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Tteokbokki</h3>
+                                            <p class="body-18 pt-20">
+                                                Chewy rice cakes in a sweet and spicy sauce, a flavorful street food favorite that pairs surprisingly well with makgeolli.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Jiphyeon , Dalbityuja, Dameun</p>
                                         </div>
-                                        <p class="body-18 pt-12">Ohi</p>
-                                    </div>
-                                </li>
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img5.png" alt="Cracker">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Cracker</h3>
-                                        <p class="body-18 pt-20">
-                                            Light and crispy crackers that offer a simple, subtle bite—perfect for letting the smooth, milky flavor of makgeolli shine.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                                    </li>
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img3.png" alt="Bossam">
                                         </div>
-                                        <p class="body-18 pt-12">Fogmag 10</p>
-                                    </div>
-                                </li>
-                                <li class="food-card swiper-slide">
-                                    <div class="food-card__img-wrap">
-                                        <img src="./assets/images/food_img6.png" alt="Pizza">
-                                    </div>
-                                    <div class="food-card__text">
-                                        <h3 class="title-30">Pizza</h3>
-                                        <p class="body-18 pt-20">
-                                            A cheesy, savory pizza whose rich flavors create an unexpectedly delicious harmony with the smooth, slightly sweet taste of makgeolli.
-                                        </p>
-                                        <div class="label-icon">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
-                                                <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
-                                            </svg>
-                                            <p class="body-16">Recommend</p>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Bossam</h3>
+                                            <p class="body-18 pt-20">
+                                                Succulent boiled pork served with crisp greens and condiments, a classic Korean pairing that complements the smooth depth of makgeolli.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Kooksoondang , Neulin maeul, Jangsu</p>
                                         </div>
-                                        <p class="body-18 pt-12">Ohi, Dalbityuja</p>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img4.png" alt="Clam soup">
+                                        </div>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Clam soup</h3>
+                                            <p class="body-18 pt-20">
+                                                A delicate clam broth simmered with fresh seafood, offering a soothing and savory contrast to the mellow sweetness of makgeolli.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Ohi</p>
+                                        </div>
+                                    </li>
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img5.png" alt="Cracker">
+                                        </div>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Cracker</h3>
+                                            <p class="body-18 pt-20">
+                                                Light and crispy crackers that offer a simple, subtle bite—perfect for letting the smooth, milky flavor of makgeolli shine.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Fogmag 10</p>
+                                        </div>
+                                    </li>
+                                    <li class="food-card swiper-slide">
+                                        <div class="food-card__img-wrap">
+                                            <img src="./assets/images/food_img6.png" alt="Pizza">
+                                        </div>
+                                        <div class="food-card__text">
+                                            <h3 class="title-30">Pizza</h3>
+                                            <p class="body-18 pt-20">
+                                                A cheesy, savory pizza whose rich flavors create an unexpectedly delicious harmony with the smooth, slightly sweet taste of makgeolli.
+                                            </p>
+                                            <div class="label-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.22256 18H0V10.4824H2.22256V18Z" fill="white"/>
+                                                    <path d="M7.86643 0C8.07496 0 8.28144 0.0579044 8.44607 0.177022C8.71748 0.372907 8.86211 0.66952 8.84566 0.984375L8.58327 6.23548H17.2094C17.6978 6.52401 18 7.01206 18 7.51765C17.9998 7.95417 17.8016 8.36749 17.4615 8.65588L16.8613 9.15882L17.242 9.83051C17.3677 10.052 17.4338 10.301 17.4324 10.5535C17.4323 10.9901 17.234 11.4059 16.8939 11.6917L16.2936 12.1947L16.6744 12.8664C16.8 13.0878 16.8662 13.3369 16.8647 13.5893C16.8647 14.0261 16.6665 14.4417 16.3262 14.7276L15.726 15.2305L16.1067 15.9022C16.2323 16.1236 16.2968 16.3728 16.2954 16.6252C16.2954 17.218 15.934 17.7531 15.3744 17.9967H3.97866V10.3963L6.70884 0.853676C6.77931 0.609392 6.93058 0.394036 7.13929 0.23989C7.34815 0.0856729 7.60343 0.00175443 7.86643 0Z" fill="white"/>
+                                                </svg>
+                                                <p class="body-16">Recommend</p>
+                                            </div>
+                                            <p class="body-18 pt-12">Ohi, Dalbityuja</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- drink -->
-                        <div class="pairing-drink swiper">
+                        <div class="pairing-drink">
                             <div class="btn-mo">
                                 <div class="d-flex gap-12">
-                                    <div class="btn-prev pairing-prev">
+                                    <button class="swiper-button-prev pairing-drink-prev">
                                         <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="36" y="36" width="36" height="36" rx="18" transform="rotate(-180 36 36)" fill="#F6EEDF"/>
                                         <g clip-path="url(#clip0_1101_34)">
@@ -848,8 +920,8 @@
                                         </clipPath>
                                         </defs>
                                         </svg>
-                                    </div>
-                                    <div class="btn-next pairing-next">
+                                    </button>
+                                    <button class="swiper-button-next pairing-drink-next">
                                     <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="36" height="36" rx="18" fill="#F6EEDF"/>
                                         <g clip-path="url(#clip0_1101_37)">
@@ -861,140 +933,142 @@
                                         </clipPath>
                                         </defs>
                                         </svg>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                            <ul class="drink-card-list swiper-wrapper">
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img01.png" alt="Makgeolli Watermelon Punch">
+                            <div class="drink-card-swiper swiper">
+                                <ul class="drink-card-list swiper-wrapper">
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img01.png" alt="Makgeolli Watermelon Punch">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Makgeolli Watermelon Punch</h4>
+                                                <p class="body-18 pt-10">
+                                                    Enjoy our refreshing fruit-filled makgeolli punch!
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>100ml Makgeolli</li>
+                                                    <li>2 slices of watermelon</li>
+                                                    <li>1/2 kiwi</li>
+                                                    <li>50ml cider</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Makgeolli Watermelon Punch</h4>
-                                            <p class="body-18 pt-10">
-                                                Enjoy our refreshing fruit-filled makgeolli punch!
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>100ml Makgeolli</li>
-                                                <li>2 slices of watermelon</li>
-                                                <li>1/2 kiwi</li>
-                                                <li>50ml cider</li>
-                                            </ul>
+                                    </li>
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img02.png" alt="Mojito Makgeolli">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Mojito Makgeolli</h4>
+                                                <p class="body-18 pt-10">
+                                                    A crisp makgeolli mojito with mint, citrus, and a hint of tropical rum.
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>
+                                                        8-10 crushed apple mints
+                                                    </li>
+                                                    <li>
+                                                    Half a lemon (juice only)
+                                                    </li>
+                                                    <li>
+                                                        60ml Malibu rum
+                                                    </li>
+                                                    <li>
+                                                        150ml clear makgeolli
+                                                    </li>
+                                                    <li>
+                                                        200ml cider
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img02.png" alt="Mojito Makgeolli">
+                                    </li>
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img03.png" alt="Makgeolli Shake">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Makgeolli Shake</h4>
+                                                <p class="body-18 pt-10">
+                                                    A sweet and creamy makgeolli cocktail with a milkshake vibe.
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>2 cups makgeolli</li>
+                                                    <li>2 cups milk</li>
+                                                    <li>1 cup condensed milk</li>
+                                                    <li>1 ice cube</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Mojito Makgeolli</h4>
-                                            <p class="body-18 pt-10">
-                                                A crisp makgeolli mojito with mint, citrus, and a hint of tropical rum.
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>
-                                                    8-10 crushed apple mints
-                                                </li>
-                                                <li>
-                                                Half a lemon (juice only)
-                                                </li>
-                                                <li>
-                                                    60ml Malibu rum
-                                                </li>
-                                                <li>
-                                                    150ml clear makgeolli
-                                                </li>
-                                                <li>
-                                                    200ml cider
-                                                </li>
-                                            </ul>
+                                    </li>
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img04.png" alt="Latte Makgeolli">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Latte Makgeolli</h4>
+                                                <p class="body-18 pt-10">
+                                                    A creamy makgeolli cocktail with a bold espresso twist.
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>100ml Makgeolli</li>
+                                                    <li>Espresso (to taste)</li>
+                                                    <li>100ml Milk</li>
+                                                    <li>3-4 tablespoons sugar</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img03.png" alt="Makgeolli Shake">
+                                    </li>
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img05.png" alt="Makgeolli Highball">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Makgeolli Highball</h4>
+                                                <p class="body-18 pt-10">
+                                                    A sparkling makgeolli with a bright hint of lemon.
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>150ml Makgeolli</li>
+                                                    <li>100ml sparkling water</li>
+                                                    <li>As needed ice</li>
+                                                    <li>Lemon slices</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Makgeolli Shake</h4>
-                                            <p class="body-18 pt-10">
-                                                A sweet and creamy makgeolli cocktail with a milkshake vibe.
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>2 cups makgeolli</li>
-                                                <li>2 cups milk</li>
-                                                <li>1 cup condensed milk</li>
-                                                <li>1 ice cube</li>
-                                            </ul>
+                                    </li>
+                                    <li class="drink-card swiper-slide">
+                                        <div class="d-flex gap-20">
+                                            <div class="drink-card__img">
+                                                <img src="./assets/images/drink_img06.png" alt="Wine Makgeolli">
+                                            </div>
+                                            <div class="drink-card__text">
+                                                <h4 class="title-25">Wine Makgeolli</h4>
+                                                <p class="body-18 pt-10">
+                                                    A rich blend of red wine and makgeolli with a smooth, fruity finish.
+                                                </p>
+                                                <p class="fs-italic body-18 pt-40">Ingredient</p>
+                                                <ul class="pt-10">
+                                                    <li>100ml Makgeolli</li>
+                                                    <li>80ml Red Wine</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img04.png" alt="Latte Makgeolli">
-                                        </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Latte Makgeolli</h4>
-                                            <p class="body-18 pt-10">
-                                                A creamy makgeolli cocktail with a bold espresso twist.
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>100ml Makgeolli</li>
-                                                <li>Espresso (to taste)</li>
-                                                <li>100ml Milk</li>
-                                                <li>3-4 tablespoons sugar</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img05.png" alt="Makgeolli Highball">
-                                        </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Makgeolli Highball</h4>
-                                            <p class="body-18 pt-10">
-                                                A sparkling makgeolli with a bright hint of lemon.
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>150ml Makgeolli</li>
-                                                <li>100ml sparkling water</li>
-                                                <li>As needed ice</li>
-                                                <li>Lemon slices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="drink-card swiper-slide">
-                                    <div class="d-flex gap-20">
-                                        <div class="drink-card__img">
-                                            <img src="./assets/images/drink_img06.png" alt="Wine Makgeolli">
-                                        </div>
-                                        <div class="drink-card__text">
-                                            <h4 class="title-25">Wine Makgeolli</h4>
-                                            <p class="body-18 pt-10">
-                                                A rich blend of red wine and makgeolli with a smooth, fruity finish.
-                                            </p>
-                                            <p class="fs-italic body-18 pt-40">Ingredient</p>
-                                            <ul class="pt-10">
-                                                <li>100ml Makgeolli</li>
-                                                <li>80ml Red Wine</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -1033,6 +1107,7 @@
     <!-- swiper -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/component.js"></script>
+    <script src="./assets/js/header.js"></script>
     <script src="./assets/js/GUIDE.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script>

@@ -155,24 +155,46 @@
         }
     }
 
+    &-classic, &-premium {
+        position: relative;
+    }
+
+    &-card {
+        gap: rem(10);
+    }
+
     .btn-mo {
         opacity: 0;
         transition: opacity 0.3s;
-    }
+        position: absolute;
+        top: rem(-102);
+        right: 0;
+        z-index: 8;
 
-    .btn-prev, .btn-next {
-        rect {
-            box-shadow: 0 0 5px rgba(0,0,0,.5);
+        & > div {
+            position: relative;
         }
     }
 
-    &-premium.best-card-list {
+    .swiper-button-prev, .swiper-button-next {
+        position: static;
+        margin-top: 0;
+        background-color: transparent;
+        width: rem(36);
+        height: rem(36);
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    &-premium {
         display: none;
     }
 
-    &-card-list {
+    &-classic-card-list, &-premium-card-list {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
     }
 
     &-card__img .sources {
@@ -228,7 +250,6 @@
     .pairing-food,
     .pairing-drink {
         position: relative;
-        overflow: visible !important;
     }
 
     .btn-mo {
@@ -238,13 +259,29 @@
         top: rem(-102);
         right: 0;
         z-index: 8;
+
+        & > div {
+            position: relative;
+        }
     }
 
     .pairing-food .btn-mo,
     .pairing-drink .btn-mo {
         position: absolute;
-        top: rem(-102);
+        top: rem(-100);
         right: 0;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        position: static;
+        background-color: transparent;
+        width: rem(36);
+        height: rem(36);
+        margin-top: 0;
+
+        & > svg {
+            width: 100%;
+        }
     }
 
     .drink-card-list {
@@ -333,17 +370,18 @@
 }
 
 @media (min-width: 1025px) {
-    .best-card-list {
+    // best
+    .best-classic-card-list, .best-premium-card-list {
         display: flex;
         flex-direction: column; /* 기존 구조 유지 */
-        gap: 20px;
+        gap: rem(16);
     }
 
     // pairing
     .food-card-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: rem(16);
     }
 
     .food-card {
@@ -412,7 +450,7 @@
         .btn-mo {
             opacity: 1;
         }
-    
+
         &-card-list {
             flex-direction: row;
             gap: rem(0);
@@ -480,6 +518,16 @@
 
         .food-card {
             width: auto;
+            &__text {
+                .pt-20 {
+                    height: rem(108);
+                    padding-top: rem(8);
+                }
+
+                .pt-12 {
+                    height: auto;
+                }
+            }
         }
 
         .drink-card {
@@ -554,6 +602,10 @@
             padding-top: rem(40);
         }
 
+        .btn-mo {
+            top: rem(-80);
+        }        
+
         .btn-prev, .btn-next {
             svg {
                 width: rem(36);
@@ -600,11 +652,7 @@
             padding-top: rem(40);
         }
 
-        .pairing-prev, .pairing-next {
-            svg {
-                width: rem(36);
-            }
-        }
+
 
         .pairing-food .btn-mo,
         .pairing-drink .btn-mo {
@@ -612,6 +660,10 @@
         }
 
         .food-card {
+            &__img-wrap {
+                height: rem(200);
+            }
+
             &__text {
                 h3 {
                     font-size: rem(24);
@@ -626,6 +678,15 @@
 
         .food-card {
             width: auto;
+
+            .pt-20 {
+                height: rem(118);
+            }
+
+            .pt-12 {
+                height: rem(56);
+            }
+
         }
 
         .drink-card {
@@ -679,6 +740,10 @@
             padding-top: rem(20);
         }
 
+        .btn-mo {
+            top: rem(-60);
+        }   
+
         &-card {
             &__img {
                 img {
@@ -708,12 +773,35 @@
 
     // pairing
     .pairing {
+        &-tab {
+            font-size: rem(22);
+        }
+
+        &-list {
+            padding-top: rem(20);
+        }
+
+        .pairing-food .btn-mo,
+        .pairing-drink .btn-mo {
+            top: rem(-60);
+        }         
+
+        .food-card {
+            .pt-20 {
+                height: rem(100);
+            }
+
+            .pt-12 {
+                height: auto;
+            }
+
+        }
+
         .drink-card {
             &__text {
-                h4 {
-                    height: rem(60);
-                }
+
             }
         }
     }
+
 }

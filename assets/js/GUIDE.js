@@ -1,3 +1,4 @@
+// best
 $(function(){
     // best tab
     $('.best-tab li').on('click', function (e) {
@@ -23,39 +24,71 @@ $(function(){
     $('.best-premium').hide();
 });
 
-// mo best slide
-let swiper = null;
-const container = document.querySelector('.best-list .swiper-wrapper');
-
+//best slide
+// classic
+let classicSwiper = null;
 
 // Swiper 생성 함수
-function initSwiper(){
-    if (swiper) return;
+function initClassicSwiper(){
+    if (classicSwiper) return;
+
+    const container = document.querySelector('.best-classic-swiper');
     
-    swiper = new Swiper('.best-list', {
+    classicSwiper = new Swiper('.best-classic-swiper', {
         slidesPerView : 1,
-        spaceBetween : 20,
+        spaceBetween : 16,
         navigation: {
-            nextEl: '.best-next',
-            prevEl: '.best-prev',
-        }
+            nextEl: '.best-classic-next',
+            prevEl: '.best-classic-prev',
+        },
+        observer: true,
+        observeParents: true,
     });
 }
 
 // swiper 제거
-function destroySwiper(){
-    if (swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
+function destroyClassicSwiper(){
+    if (classicSwiper) {
+        classicSwiper.destroy(true, true);
+        classicSwiper = null;
+    }
+}
+
+// premium
+let premiumSwiper = null;
+
+// Swiper 생성 함수
+function initPremiumSwiper(){
+    if (premiumSwiper) return;
+    
+    premiumSwiper = new Swiper('.best-premium-swiper', {
+        slidesPerView : 1,
+        spaceBetween : 16,
+        navigation: {
+            nextEl: '.best-premium-next',
+            prevEl: '.best-premium-prev',
+        },
+        observer: true,
+        observeParents: true,
+    });
+}
+
+// swiper 제거
+function destroyPremiumSwiper(){
+    if (premiumSwiper) {
+        premiumSwiper.destroy(true, true);
+        premiumSwiper = null;
     }
 }
 
 // 반응형
-function handleSwiper(){
+function handleBestSwiper(){
     if (window.innerWidth <= 1024) {
-        initSwiper();
+        initClassicSwiper();
+        initPremiumSwiper();
     } else {
-        destroySwiper();
+        destroyClassicSwiper();
+        destroyPremiumSwiper();
     }
 }
 
@@ -66,10 +99,13 @@ function updateSwiper(){
 }
 
 // 최초 실행
-handleSwiper();
-
+handleBestSwiper();
 // 리사이즈 대응
-window.addEventListener('resize', handleSwiper);
+window.addEventListener('resize', handleBestSwiper);
+
+
+
+// pairing section
 
 // pairing tab
 $(function(){
@@ -97,23 +133,21 @@ $(function(){
 })
 
 // pairing slide
+
+// food
 let foodSwiper = null;
 
 function initFoodSwiper() {
   if (foodSwiper) return;
 
-   if (foodSwiper) return;
-  const container = document.querySelector('.pairing-food');
-//   if (!container) return;
-//   const nextBtn = container.querySelector('.pairing-next');
-//   const prevBtn = container.querySelector('.pairing-prev');
+  const container = document.querySelector('.food-card-swiper');
 
-  foodSwiper = new Swiper('.pairing-food', {
+  foodSwiper = new Swiper('.food-card-swiper', {
     spaceBetween: 16,
     slidesPerView: 1,
     navigation: {
-      nextEl: ".pairing-next",
-      prevEl: ".pairing-prev",
+      nextEl: ".pairing-food-next",
+      prevEl: ".pairing-food-prev",
     },
     observer: true,
     observeParents: true,
@@ -142,16 +176,7 @@ function destroyFoodSwiper() {
   }
 }
 
-function handleFoodSwiper() {
-  if (window.innerWidth <= 1024) {
-    initFoodSwiper();
-  } else {
-    destroyFoodSwiper();
-  }
-}
 
-handleFoodSwiper();
-window.addEventListener('resize', handleFoodSwiper);
 
 // drink
 let drinkSwiper = null;
@@ -159,12 +184,12 @@ let drinkSwiper = null;
 function initDrinkSwiper() {
     if (drinkSwiper) return;
 
-    drinkSwiper = new Swiper('.pairing-drink', {
+    drinkSwiper = new Swiper('.drink-card-swiper', {
         spaceBetween: 16,
         slidesPerView: 2,
         navigation : {
-            nextEl: ".pairing-next",
-            prevEl: ".pairing-prev",
+            nextEl: ".pairing-drink-next",
+            prevEl: ".pairing-drink-prev",
         },
         observer: true,
         observeParents: true,
@@ -193,13 +218,16 @@ function destroyDrinkSwiper() {
     }
 }
 
-function handleDrinkSwiper() {
-    if (window.innerWidth <= 1024) {
-        initDrinkSwiper();
-    } else {
-        destroyDrinkSwiper();
-    }
+
+function handlePairingSwiper() {
+  if (window.innerWidth <= 1024) {
+    initFoodSwiper();
+    initDrinkSwiper()
+  } else {
+    destroyFoodSwiper();
+    destroyDrinkSwiper()
+  }
 }
 
-handleDrinkSwiper();
-window.addEventListener('resize', handleDrinkSwiper);
+handlePairingSwiper();
+window.addEventListener('resize', handlePairingSwiper);
