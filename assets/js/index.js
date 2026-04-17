@@ -76,57 +76,94 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
 // layer scroll
 gsap.registerPlugin(ScrollTrigger);
 
-const mm = gsap.matchMedia();
-
-mm.add("(min-width: 769px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".layer",
-            start: "top 9%",
-            end: "center center",
-            // markers: true,
-            scrub: 1,
-            pin: ".layer__inner",
-        }
-    })
-
-    tl.to(".layer__clear", {
-        y: 200,
-        opacity: 1,
-        duration: 0.9,
-    })
-        .to(".layer__clear", {
-            opacity: 0,
-        })
-        .to(".layer__cloudy", {
-            y: 715,
-            opacity: 1,
-            duration: 0.8,
-        })
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".layer",
+        start: "top 5%",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+    }
 })
 
-mm.add("(max-width: 768px)", () => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".layer",
-            start: "top top",
-            end: "center center",
-            scrub: 1,
-            pin: ".layer__inner",
-        }
-    })
-
-    tl.to(".layer__clear", {
-        y: 200,
-        opacity: 1,
-        duration: 0.9,
-    })
-        .to(".layer__clear", {
-            opacity: 0,
-        })
-        .to(".layer__cloudy", {
-            y: 715,
-            opacity: 1,
-            duration: 0.8,
-        })
+// clear 등장
+tl.to(".layer__clear", {
+    y: 180,
+    opacity: 1,
 })
+.to({}, { duration: 1 })
+// clear 사라짐
+.to(".layer__clear", {
+    opacity: 0,
+})
+// coludy 등장
+.to(".layer__cloudy", {
+    y: 570,
+    opacity: 1,
+})
+
+// 이미지 이동
+.to(".layer__img", {
+    y: -150,
+}, "<")
+
+
+// const mm = gsap.matchMedia();
+
+// mm.add("(min-width: 769px)", () => {
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: ".layer",
+//             start: "top 5%",
+//             // end: "80% end",
+//             end: "+=1500",
+//             markers: true,
+//             scrub: 1,
+//             pin: true,
+//         }
+//     })
+
+//     tl.to(".layer__clear", {
+//         y: 180,
+//         opacity: 1,
+//         // duration: 0.9,
+//     })
+//         .to(".layer__clear", {
+//             opacity: 0,
+//         })
+//         .to(".layer__cloudy", {
+//             y: 180,
+//             opacity: 1,
+//             // duration: 0.8,
+//         })
+//         to(".layer__img", {
+//             y: -180,
+//         }, "<")
+// })
+
+// mm.add("(max-width: 768px)", () => {
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: ".layer",
+//             start: "top top",
+//             end: "center center",
+//             scrub: 1,
+//             pin: ".layer__inner",
+//         }
+//     })
+
+//     tl.to(".layer__clear", {
+//         y: 200,
+//         opacity: 1,
+//         duration: 0.9,
+//     })
+//         .to(".layer__clear", {
+//             opacity: 0,
+//         })
+//         .to(".layer__cloudy", {
+//             y: 715,
+//             opacity: 1,
+//             duration: 0.8,
+//         })
+// })

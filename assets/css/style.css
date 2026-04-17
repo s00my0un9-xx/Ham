@@ -741,20 +741,23 @@ body {
 
 .layer {
   width: 100%;
-  height: 160vh;
+  height: auto;
   position: relative;
   background-color: #1B1715;
+  overflow: hidden;
 }
 .layer__inner {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  z-index: 2;
 }
 .layer__img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: 0;
+}
+.layer__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -896,6 +899,7 @@ body {
 }
 .experience__text-wrap {
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
