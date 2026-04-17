@@ -1167,27 +1167,25 @@ fieldset {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 1.25rem 1.25rem;
 }
 .brewery-card__img-wrap {
   width: 100%;
-  padding: 1.25rem 1.25rem 0;
   flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.25rem 1.25rem;
 }
 .brewery-card__img {
   width: 100%;
-  max-width: 30rem;
-  height: 18.75rem;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-  border-radius: 1.25rem;
   transition: transform 0.4s ease;
-  display: block;
-  margin: 0 auto;
+  border-radius: 1.25rem;
 }
 .brewery-card:hover .brewery-card__img {
-  transform: scale(1.04);
+  transform: scale(1.1);
 }
 .brewery-card__source {
   font-family: "Inter", sans-serif;
@@ -1327,25 +1325,25 @@ fieldset {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 1.25rem 1.25rem;
 }
 .festival-card__img-wrap {
   width: 100%;
-  padding: 1.25rem 1.25rem 0;
   flex-shrink: 0;
+  overflow: hidden;
   position: relative;
+  border-radius: 1.25rem 1.25rem;
 }
 .festival-card__img {
   width: 100%;
-  height: 18.75rem;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1.25rem;
   transition: transform 0.4s ease;
-  display: block;
-  position: relative;
+  border-radius: 1.25rem;
 }
 .festival-card:hover .festival-card__img {
-  transform: scale(1.04);
+  transform: scale(1.1);
 }
 .festival-card__img-source {
   font-family: "Inter", sans-serif;
@@ -1365,7 +1363,7 @@ fieldset {
   padding: 1.25rem 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.625rem;
   flex: 1;
 }
 .festival-card__location {
@@ -1382,6 +1380,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 .festival-card__info-list {
   list-style: none;
@@ -1416,13 +1415,19 @@ fieldset {
   padding-top: 0.75rem;
   margin-top: auto;
 }
+.festival-card__info-btns > a:last-child {
+  margin-left: auto;
+}
 .festival-card__info-btns svg {
   cursor: pointer;
 }
-.festival-card__info-btns svg path, .festival-card__info-btns svg rect {
+.festival-card__info-btns svg:not(.festival-card__arrow-btn) path, .festival-card__info-btns svg:not(.festival-card__arrow-btn) rect {
   fill: #26211d;
 }
-.festival-card__info-btns svg:hover path, .festival-card__info-btns svg:hover rect {
+.festival-card__info-btns svg:not(.festival-card__arrow-btn):hover path, .festival-card__info-btns svg:not(.festival-card__arrow-btn):hover rect {
+  fill: #74724c;
+}
+.festival-card__info-btns svg.festival-card__arrow-btn:hover rect {
   fill: #74724c;
 }
 .festival-card--coming {
@@ -1431,7 +1436,6 @@ fieldset {
 }
 .festival-card--coming .festival-card__img-wrap {
   position: relative;
-  padding: 1.25rem 1.25rem 0;
 }
 .festival-card--coming .festival-card__img-wrap::after {
   content: "";
@@ -1480,7 +1484,6 @@ fieldset {
 }
 .festival-card--past .festival-card__img-wrap {
   position: relative;
-  padding: 1.25rem 1.25rem 0;
 }
 .festival-card--past .festival-card__img-wrap::after {
   content: "";
@@ -1591,6 +1594,17 @@ fieldset {
   }
   .brewery-card__img {
     height: auto;
+  }
+  .brewery-card__location svg,
+  .festival-card__location svg {
+    width: 0.625rem;
+    height: 0.75rem;
+  }
+  .brewery-card__info-btns > a svg,
+  .festival-card__arrow-btn,
+  .brewery-card__info-btns svg[viewBox="0 0 44 44"] {
+    width: 2.25rem;
+    height: 2.25rem;
   }
   .ta-title-50 {
     font-size: 2rem;
