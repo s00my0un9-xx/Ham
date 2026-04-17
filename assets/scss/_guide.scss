@@ -42,9 +42,9 @@
     &__sub-content {
         width: 100%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 18%;
+        left: 0;
+        // transform: translate(-50%, -50%);
         z-index: 2;
         display: flex;
         flex-direction: column;
@@ -157,10 +157,6 @@
 
     &-classic, &-premium {
         position: relative;
-    }
-
-    &-card {
-        gap: rem(10);
     }
 
     .btn-mo {
@@ -566,6 +562,10 @@
                 font-size: rem(20);
             }
         }
+
+        &__sub-content {
+            top: 30%;
+        }
     }
 
     // guide
@@ -599,11 +599,11 @@
         }
 
         &-list {
-            padding-top: rem(40);
+            padding-top: rem(20);
         }
 
         .btn-mo {
-            top: rem(-80);
+            top: rem(-52);
         }        
 
         .btn-prev, .btn-next {
@@ -613,6 +613,8 @@
         }
 
         &-card {
+            gap: rem(10);
+
             &__img {
                 img {
                     height: rem(300);
@@ -649,14 +651,12 @@
         }
 
         &-list {
-            padding-top: rem(40);
+            padding-top: rem(20);
         }
-
-
 
         .pairing-food .btn-mo,
         .pairing-drink .btn-mo {
-            top: rem(-78);
+            top: rem(-52);
         }
 
         .food-card {
@@ -736,14 +736,6 @@
             font-size: rem(22);
         }
 
-        &-list {
-            padding-top: rem(20);
-        }
-
-        .btn-mo {
-            top: rem(-60);
-        }   
-
         &-card {
             &__img {
                 img {
@@ -779,12 +771,7 @@
 
         &-list {
             padding-top: rem(20);
-        }
-
-        .pairing-food .btn-mo,
-        .pairing-drink .btn-mo {
-            top: rem(-60);
-        }         
+        }        
 
         .food-card {
             .pt-20 {

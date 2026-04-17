@@ -703,6 +703,11 @@ fieldset {
   list-style: disc;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -747,6 +752,7 @@ fieldset {
 .header__menu-list {
   width: 100%;
   height: 100%;
+  justify-content: end;
 }
 .header__menu a {
   display: block;
@@ -1013,9 +1019,8 @@ fieldset {
 .userkv__sub-content {
   width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 18%;
+  left: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1104,9 +1109,6 @@ fieldset {
 }
 .best-classic, .best-premium {
   position: relative;
-}
-.best-card {
-  gap: 0.625rem;
 }
 .best .btn-mo {
   opacity: 0;
@@ -1384,6 +1386,9 @@ fieldset {
   .userkv__text-wrap p {
     font-size: 1.25rem;
   }
+  .userkv__sub-content {
+    top: 30%;
+  }
   .guide h2 {
     font-size: 2rem;
     padding-bottom: 2.5rem;
@@ -1401,13 +1406,16 @@ fieldset {
     font-size: 1.125rem;
   }
   .best-list {
-    padding-top: 2.5rem;
+    padding-top: 1.25rem;
   }
   .best .btn-mo {
-    top: -5rem;
+    top: -3.25rem;
   }
   .best .btn-prev svg, .best .btn-next svg {
     width: 2.25rem;
+  }
+  .best-card {
+    gap: 0.625rem;
   }
   .best-card__img img {
     height: 18.75rem;
@@ -1428,11 +1436,11 @@ fieldset {
     font-size: 1.125rem;
   }
   .pairing-list {
-    padding-top: 2.5rem;
+    padding-top: 1.25rem;
   }
   .pairing .pairing-food .btn-mo,
   .pairing .pairing-drink .btn-mo {
-    top: -4.875rem;
+    top: -3.25rem;
   }
   .pairing .food-card__img-wrap {
     height: 12.5rem;
@@ -1476,12 +1484,6 @@ fieldset {
   .best-tab {
     font-size: 1.375rem;
   }
-  .best-list {
-    padding-top: 1.25rem;
-  }
-  .best .btn-mo {
-    top: -3.75rem;
-  }
   .best-card__img img {
     height: 12.5rem;
   }
@@ -1502,10 +1504,6 @@ fieldset {
   }
   .pairing-list {
     padding-top: 1.25rem;
-  }
-  .pairing .pairing-food .btn-mo,
-  .pairing .pairing-drink .btn-mo {
-    top: -3.75rem;
   }
   .pairing .food-card .pt-20 {
     height: 6.25rem;

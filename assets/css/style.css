@@ -426,6 +426,11 @@ fieldset {
     padding-bottom: 3.75rem;
   }
 }
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -470,6 +475,7 @@ fieldset {
 .header__menu-list {
   width: 100%;
   height: 100%;
+  justify-content: end;
 }
 .header__menu a {
   display: block;

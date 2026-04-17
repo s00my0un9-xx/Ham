@@ -426,6 +426,11 @@ fieldset {
     padding-bottom: 3.75rem;
   }
 }
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -470,6 +475,7 @@ fieldset {
 .header__menu-list {
   width: 100%;
   height: 100%;
+  justify-content: end;
 }
 .header__menu a {
   display: block;
@@ -1013,9 +1019,8 @@ fieldset {
 .userkv__sub-content {
   width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 18%;
+  left: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1102,19 +1107,35 @@ fieldset {
   font-weight: 700;
   border-bottom-color: #74724c;
 }
+.best-classic, .best-premium {
+  position: relative;
+}
 .best .btn-mo {
   opacity: 0;
   transition: opacity 0.3s;
+  position: absolute;
+  top: -6.375rem;
+  right: 0;
+  z-index: 8;
 }
-.best .btn-prev rect, .best .btn-next rect {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.best .btn-mo > div {
+  position: relative;
 }
-.best-premium.best-card-list {
+.best .swiper-button-prev, .best .swiper-button-next {
+  position: static;
+  margin-top: 0;
+  background-color: transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.best .swiper-slide {
+  width: 100%;
+}
+.best-premium {
   display: none;
 }
-.best-card-list {
+.best-classic-card-list, .best-premium-card-list {
   display: flex;
-  flex-direction: column;
 }
 .best-card__img .sources {
   color: #a79f90;
@@ -1155,7 +1176,6 @@ fieldset {
 .pairing .pairing-food,
 .pairing .pairing-drink {
   position: relative;
-  overflow: visible !important;
 }
 .pairing .btn-mo {
   opacity: 0;
@@ -1165,11 +1185,24 @@ fieldset {
   right: 0;
   z-index: 8;
 }
+.pairing .btn-mo > div {
+  position: relative;
+}
 .pairing .pairing-food .btn-mo,
 .pairing .pairing-drink .btn-mo {
   position: absolute;
-  top: -6.375rem;
+  top: -6.25rem;
   right: 0;
+}
+.pairing .swiper-button-prev, .pairing .swiper-button-next {
+  position: static;
+  background-color: transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0;
+}
+.pairing .swiper-button-prev > svg, .pairing .swiper-button-next > svg {
+  width: 100%;
 }
 .pairing .drink-card-list {
   flex-wrap: wrap;
@@ -1225,15 +1258,15 @@ fieldset {
   }
 }
 @media (min-width: 1025px) {
-  .best-card-list {
+  .best-classic-card-list, .best-premium-card-list {
     display: flex;
     flex-direction: column; /* 기존 구조 유지 */
-    gap: 20px;
+    gap: 1rem;
   }
   .food-card-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1rem;
   }
   .food-card {
     width: calc((100% - 32px) / 3);
@@ -1321,6 +1354,13 @@ fieldset {
   .pairing .food-card {
     width: auto;
   }
+  .pairing .food-card__text .pt-20 {
+    height: 6.75rem;
+    padding-top: 0.5rem;
+  }
+  .pairing .food-card__text .pt-12 {
+    height: auto;
+  }
   .pairing .drink-card {
     width: auto;
   }
@@ -1346,6 +1386,9 @@ fieldset {
   .userkv__text-wrap p {
     font-size: 1.25rem;
   }
+  .userkv__sub-content {
+    top: 30%;
+  }
   .guide h2 {
     font-size: 2rem;
     padding-bottom: 2.5rem;
@@ -1363,10 +1406,16 @@ fieldset {
     font-size: 1.125rem;
   }
   .best-list {
-    padding-top: 2.5rem;
+    padding-top: 1.25rem;
+  }
+  .best .btn-mo {
+    top: -3.25rem;
   }
   .best .btn-prev svg, .best .btn-next svg {
     width: 2.25rem;
+  }
+  .best-card {
+    gap: 0.625rem;
   }
   .best-card__img img {
     height: 18.75rem;
@@ -1387,14 +1436,14 @@ fieldset {
     font-size: 1.125rem;
   }
   .pairing-list {
-    padding-top: 2.5rem;
-  }
-  .pairing .pairing-prev svg, .pairing .pairing-next svg {
-    width: 2.25rem;
+    padding-top: 1.25rem;
   }
   .pairing .pairing-food .btn-mo,
   .pairing .pairing-drink .btn-mo {
-    top: -4.875rem;
+    top: -3.25rem;
+  }
+  .pairing .food-card__img-wrap {
+    height: 12.5rem;
   }
   .pairing .food-card__text h3 {
     font-size: 1.5rem;
@@ -1405,6 +1454,12 @@ fieldset {
   }
   .pairing .food-card {
     width: auto;
+  }
+  .pairing .food-card .pt-20 {
+    height: 7.375rem;
+  }
+  .pairing .food-card .pt-12 {
+    height: 3.5rem;
   }
   .pairing .drink-card__text .pt-10 {
     font-size: 1rem;
@@ -1429,9 +1484,6 @@ fieldset {
   .best-tab {
     font-size: 1.375rem;
   }
-  .best-list {
-    padding-top: 1.25rem;
-  }
   .best-card__img img {
     height: 12.5rem;
   }
@@ -1447,8 +1499,17 @@ fieldset {
   .best-classic, .best-premium {
     gap: 0.625rem;
   }
-  .pairing .drink-card__text h4 {
-    height: 3.75rem;
+  .pairing-tab {
+    font-size: 1.375rem;
+  }
+  .pairing-list {
+    padding-top: 1.25rem;
+  }
+  .pairing .food-card .pt-20 {
+    height: 6.25rem;
+  }
+  .pairing .food-card .pt-12 {
+    height: auto;
   }
 }
 .header.makgeolli {

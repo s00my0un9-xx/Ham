@@ -1,6 +1,11 @@
 @use 'var';
 @use 'mixin' as *;
 
+button {
+    border: 0;
+    background-color: transparent;
+}
+
 // header
 .header {
     width: 100%;
@@ -53,6 +58,8 @@
     &__menu-list {
         width: 100%;
         height: 100%;
+
+        justify-content: end;
     }
     
     &__menu a {
