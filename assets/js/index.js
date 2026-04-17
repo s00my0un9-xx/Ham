@@ -104,7 +104,7 @@ mm.add("(min-width: 1681px)", () => {
 
     // coludy 등장
     .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.8,
+        y: () => window.innerHeight * 0.75,
         opacity: 1,
     })
     .to({}, { duration: 1 })
@@ -114,7 +114,7 @@ mm.add("(min-width: 1681px)", () => {
     })
 })
 
-mm.add("(min-width: 1025px)", () => {
+mm.add("(min-width: 1025px) and (max-width: 1680px)", () => {
     const tl = gsap.timeline({
         scrollTrigger: {
         trigger: ".layer",
@@ -150,7 +150,7 @@ mm.add("(min-width: 1025px)", () => {
     })
 })
 
-mm.add("(min-width: 769px)", () => {
+mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
     const tl = gsap.timeline({
         scrollTrigger: {
         trigger: ".layer",
@@ -164,7 +164,7 @@ mm.add("(min-width: 769px)", () => {
 
     // clear 등장
     tl.to(".layer__clear", {
-        y: () => window.innerHeight * 0.25,
+        y: () => window.innerHeight * 0.2,
         opacity: 1,
     })
     .to({}, { duration: 1 })
@@ -200,7 +200,7 @@ mm.add("(max-width: 768px)", () => {
 
     // clear 등장
     tl.to(".layer__clear", {
-        y: () => window.innerHeight * 0.25,
+        y: () => window.innerHeight * 0.3,
         opacity: 1,
     })
     .to({}, { duration: 1 })
@@ -212,7 +212,7 @@ mm.add("(max-width: 768px)", () => {
 
     // coludy 등장
     .to(".layer__cloudy", {
-        y: () => window.innerHeight * 0.8,
+        y: () => window.innerHeight * 0.75,
         opacity: 1,
     })
     .to({}, { duration: 1 })
