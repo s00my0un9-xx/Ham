@@ -1326,7 +1326,7 @@ button {
 
 .festival-card {
   background-color: #fff;
-  border-radius: 0.75rem;
+  border-radius: 1.25rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
