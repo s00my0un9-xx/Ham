@@ -76,99 +76,148 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
 // layer scroll
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-    scrollTrigger: {
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 1681px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
         trigger: ".layer",
         start: "top 5%",
         end: "+=2000",
         scrub: 1,
         pin: true,
         // markers: true,
-    }
+        }
+    })
+
+    // clear 등장
+    tl.to(".layer__clear", {
+        y: () => window.innerHeight * 2,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    // clear 사라짐
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+
+    // coludy 등장
+    .to(".layer__cloudy", {
+        y: () => window.innerHeight * 0.8,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    .to(".layer__cloudy", {
+        opacity: 0,
+    })
 })
 
-// clear 등장
-tl.to(".layer__clear", {
-    y: 180,
-    opacity: 1,
+mm.add("(min-width: 1025px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: ".layer",
+        start: "top 5%",
+        end: "+=1500",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        }
+    })
+
+    // clear 등장
+    tl.to(".layer__clear", {
+        y: () => window.innerHeight * 0.3,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    // clear 사라짐
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+
+    // coludy 등장
+    .to(".layer__cloudy", {
+        y: () => window.innerHeight * 0.8,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    .to(".layer__cloudy", {
+        opacity: 0,
+    })
 })
-.to({}, { duration: 1 })
-// clear 사라짐
-.to(".layer__clear", {
-    opacity: 0,
+
+mm.add("(min-width: 769px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: ".layer",
+        start: "top 5%",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        }
+    })
+
+    // clear 등장
+    tl.to(".layer__clear", {
+        y: () => window.innerHeight * 0.25,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    // clear 사라짐
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+
+    // coludy 등장
+    .to(".layer__cloudy", {
+        y: () => window.innerHeight * 0.8,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    .to(".layer__cloudy", {
+        opacity: 0,
+    })
 })
-// coludy 등장
-.to(".layer__cloudy", {
-    y: 750,
-    opacity: 1,
+
+mm.add("(max-width: 768px)", () => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: ".layer",
+        start: "top 5%",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+        }
+    })
+
+    // clear 등장
+    tl.to(".layer__clear", {
+        y: () => window.innerHeight * 0.25,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    // clear 사라짐
+    .to(".layer__clear", {
+        opacity: 0,
+    })
+
+    // coludy 등장
+    .to(".layer__cloudy", {
+        y: () => window.innerHeight * 0.8,
+        opacity: 1,
+    })
+    .to({}, { duration: 1 })
+
+    .to(".layer__cloudy", {
+        opacity: 0,
+    })
 })
-.to({}, { duration: 1 })
-
-.to(".layer__cloudy", {
-    opacity: 0,
-})
-
-// 이미지 이동
-// .to(".layer__img", {
-//     y: -150,
-// }, "<")
-
-
-// const mm = gsap.matchMedia();
-
-// mm.add("(min-width: 769px)", () => {
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: ".layer",
-//             start: "top 5%",
-//             // end: "80% end",
-//             end: "+=1500",
-//             markers: true,
-//             scrub: 1,
-//             pin: true,
-//         }
-//     })
-
-//     tl.to(".layer__clear", {
-//         y: 180,
-//         opacity: 1,
-//         // duration: 0.9,
-//     })
-//         .to(".layer__clear", {
-//             opacity: 0,
-//         })
-//         .to(".layer__cloudy", {
-//             y: 180,
-//             opacity: 1,
-//             // duration: 0.8,
-//         })
-//         to(".layer__img", {
-//             y: -180,
-//         }, "<")
-// })
-
-// mm.add("(max-width: 768px)", () => {
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: ".layer",
-//             start: "top top",
-//             end: "center center",
-//             scrub: 1,
-//             pin: ".layer__inner",
-//         }
-//     })
-
-//     tl.to(".layer__clear", {
-//         y: 200,
-//         opacity: 1,
-//         duration: 0.9,
-//     })
-//         .to(".layer__clear", {
-//             opacity: 0,
-//         })
-//         .to(".layer__cloudy", {
-//             y: 715,
-//             opacity: 1,
-//             duration: 0.8,
-//         })
-// })
