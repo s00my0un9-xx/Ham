@@ -1196,6 +1196,7 @@ button {
   font-family: "Inter", sans-serif;
   color: #717171;
   text-align: center;
+  padding-bottom: 1.875rem;
 }
 .brewery-card__content {
   padding: 1.25rem 1.25rem 1rem;
@@ -1353,6 +1354,7 @@ button {
   font-family: "Inter", sans-serif;
   color: #717171;
   text-align: center;
+  padding-bottom: 1.875rem;
 }
 .festival-card__festival-overlay-text {
   position: absolute;
