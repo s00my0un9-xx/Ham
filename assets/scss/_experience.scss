@@ -220,29 +220,28 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
+    padding: rem(20) rem(20);
     // 이미지 박스
     &__img-wrap {
         width: 100%;
-        padding: rem(20) rem(20) 0;
         flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+        border-radius: rem(20) rem(20);
     }
 
     // 이미지
     &__img {
-        width: 100%;
-        max-width: rem(480);
-        height: rem(300);
-        object-fit: cover;
-        object-position: center center;
-        border-radius: rem(20);
-        transition: transform 0.4s ease;
-        display: block;
-        margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            border-radius: rem(20);
     }
 
+    // hover
     &:hover &__img {
-        transform: scale(1.04);
+        transform: scale(1.1);
     }
 
     // 출처
@@ -250,7 +249,7 @@
         font-family: "Inter", sans-serif;
         color: $text-gray;
         text-align: center;
-        padding: rem(6) 0 rem(4);
+        padding-bottom: rem(30);
     }
 
     // 콘텐츠 박스
@@ -409,37 +408,37 @@
 
 .festival-card {
     background-color: $text-white;
-    border-radius: rem(12);
+    border-radius: rem(20);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding: rem(20) rem(20);
 
     &__img-wrap {
         width: 100%;
-        padding: rem(20) rem(20) 0;
         flex-shrink: 0;
+        overflow: hidden;
         position: relative;
+        border-radius: rem(20) rem(20);
     }
 
     &__img {
-        width: 100%;
-        height: rem(300);
-        object-fit: cover;
-        border-radius: rem(20);
-        transition: transform 0.4s ease;
-        display: block;
-        position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            border-radius: rem(20);
     }
 
     &:hover &__img {
-        transform: scale(1.04);
+        transform: scale(1.1);
     }
 
     &__img-source {
         font-family: 'Inter', sans-serif;
         color: #717171;
         text-align: center;
-        padding: rem(6) 0 rem(4);
+        padding-bottom: rem(30);
     }
 
     &__festival-overlay-text {
@@ -455,7 +454,7 @@
         padding: rem(20) rem(20) rem(16);
         display: flex;
         flex-direction: column;
-        gap: rem(12);
+        gap: rem(10);
         flex: 1;
     }
 
@@ -475,6 +474,7 @@
         display: flex;
         flex-direction: column;
         gap: rem(8);
+        flex: 1;
     }
 
     &__info-list {
@@ -514,17 +514,29 @@
         padding-top: rem(12);
         margin-top: auto;
 
+        > a:last-child {
+            margin-left: auto;
+        }
+
         svg {
             cursor: pointer;
 
-            path, rect {
-                fill: $main-fourth-color;
+            &:not(.festival-card__arrow-btn) {
+                path, rect {
+                    fill: $main-fourth-color;
+                }
+
+                &:hover path,
+                &:hover rect {
+                    fill: $point-color;
+                }
             }
 
-            &:hover path,
-            &:hover rect {
-                fill: $point-color;
-        }
+            &.festival-card__arrow-btn {
+                &:hover rect {
+                    fill: $point-color;
+                }
+            }
         }
     }
 
@@ -534,7 +546,6 @@
 
         .festival-card__img-wrap {
             position: relative;
-            padding: rem(20) rem(20) 0;
 
             &::after {
                 content: '';
@@ -605,7 +616,6 @@
 
         .festival-card__img-wrap {
             position: relative;
-            padding: rem(20) rem(20) 0;
 
             &::after {
                 content: '';
@@ -679,9 +689,6 @@
     }
 }
 
-// =============================================
-// Responsive — Tablet (768px)
-// =============================================
 @include media($bp-ta) {
     .container {
         width: 100%;
@@ -764,15 +771,30 @@
         }
     }
 
+    // 카드 SVG 반응형
+    .brewery-card__location svg,
+    .festival-card__location svg {
+        width: rem(10);
+        height: rem(12);
+    }
+
+
+    .brewery-card__info-btns > a svg,
+    .festival-card__arrow-btn,
+    .brewery-card__info-btns svg[viewBox="0 0 44 44"] {
+        width: rem(36);
+        height: rem(36);
+    }
+
     // 폰트 반응형
     .ta-title-50 {
-        font-size: rem(32); 
+        font-size: rem(32);
     }
     .ta-title-32 {
-         font-size: rem(24); 
+         font-size: rem(24);
     }
-    .ta-body-18 { 
-        font-size: rem(16); 
+    .ta-body-18 {
+        font-size: rem(16);
     }
     .ta-body-16 {
          font-size: rem(14);
@@ -863,17 +885,17 @@
     }
 
     // 폰트 반응형
-    .mo-title-50 { 
-        font-size: rem(32); 
+    .mo-title-50 {
+        font-size: rem(32);
     }
-    .mo-title-32 { 
-        font-size: rem(24); 
+    .mo-title-32 {
+        font-size: rem(24);
     }
-    .mo-body-18 { 
-        font-size: rem(16); 
+    .mo-body-18 {
+        font-size: rem(16);
     }
-    .mo-body-16 { 
-        font-size: rem(14); 
+    .mo-body-16 {
+        font-size: rem(14);
     }
 
 }
