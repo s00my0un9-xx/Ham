@@ -151,7 +151,8 @@ body{
     &__cloudy {
         bottom: 0;
         right: 0;
-        transform: translateY(530%);
+        transform: translateY(500%);
+        text-align: right;
     }
 
     .cloudy__text {

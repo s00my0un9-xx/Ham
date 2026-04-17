@@ -99,14 +99,19 @@ tl.to(".layer__clear", {
 })
 // coludy 등장
 .to(".layer__cloudy", {
-    y: 570,
+    y: 750,
     opacity: 1,
+})
+.to({}, { duration: 1 })
+
+.to(".layer__cloudy", {
+    opacity: 0,
 })
 
 // 이미지 이동
-.to(".layer__img", {
-    y: -150,
-}, "<")
+// .to(".layer__img", {
+//     y: -150,
+// }, "<")
 
 
 // const mm = gsap.matchMedia();
