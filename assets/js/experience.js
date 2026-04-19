@@ -17,6 +17,7 @@ $(function(){
             $('#' + id.trim()).addClass('is-active');
         });
         window.scrollTo(0, scrollY);
+        if (typeof AOS !== 'undefined') AOS.refresh();
     }
 
     // MO 탭 적용 (1개 패널만 표시)
@@ -28,19 +29,20 @@ $(function(){
         $('.tab-panel').removeClass('is-active');
         $('#' + target).addClass('is-active');
         window.scrollTo(0, scrollY);
+        if (typeof AOS !== 'undefined') AOS.refresh();
     }
 
     // PC 탭 클릭
     $('.tab-buttons--pc .tab-button').on('click', function(){
         var firstTab = $(this).data('tabs').split(',')[0].trim();
-        history.pushState({ tab: firstTab, mode: 'pc' }, '', '#' + firstTab);
+        history.pushState({ tab: firstTab, mode: 'pc' }, '', '?tab=' + firstTab);
         applyPcTab($(this));
     });
 
     // MO 탭 클릭
     $('.tab-buttons--mo .tab-button').on('click', function(){
         var target = $(this).data('tab');
-        history.pushState({ tab: target, mode: 'mo' }, '', '#' + target);
+        history.pushState({ tab: target, mode: 'mo' }, '', '?tab=' + target);
         applyMoTab($(this));
     });
 

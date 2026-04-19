@@ -1014,13 +1014,12 @@ button {
   height: 100%;
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .userkv__sub-content {
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1282,7 +1281,7 @@ button {
 .brewery-card__info-icons {
   display: flex;
   align-items: center;
-  gap: 1.125rem;
+  gap: 0.625rem;
 }
 .brewery-card__info-icons svg {
   cursor: pointer;
