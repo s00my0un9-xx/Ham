@@ -698,6 +698,8 @@
         }
 
         .drink-card {
+            height: rem(544);
+            
             &__text {
                 .pt-10 {
                     font-size: rem(16);

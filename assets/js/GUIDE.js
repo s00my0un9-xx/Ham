@@ -157,7 +157,7 @@ function initFoodSwiper() {
       slidesPerView: 3,
       grid: { rows: 2 },
     },
-    542: {
+    581: {
       slidesPerView: 2,
       grid: { rows: 1 },
     },
@@ -199,7 +199,7 @@ function initDrinkSwiper() {
                 slidesPerView: 2,
                 grid: { rows: 3 },
             },
-            542: {
+            581: {
                 slidesPerView: 2,
                 grid: { rows: 1 },
             },
