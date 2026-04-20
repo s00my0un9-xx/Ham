@@ -1468,6 +1468,11 @@ button {
     margin-top: 1.25rem;
   }
 }
+@media (max-width: 514px) {
+  .userkv__sub-content {
+    top: 27%;
+  }
+}
 @media (max-width: 402px) {
   .userkv__text-wrap p {
     font-size: 1.125rem;

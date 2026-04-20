@@ -711,6 +711,14 @@
     }
 }
 
+@media(max-width: 514px) {
+    .userkv {
+        &__sub-content {
+            top: 27%;
+        }
+    }
+}
+
 @media(max-width:402px) {
     // kv
     .userkv {

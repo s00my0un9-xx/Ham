@@ -35,7 +35,7 @@ function initClassicSwiper(){
     const container = document.querySelector('.best-classic-swiper');
     
     classicSwiper = new Swiper('.best-classic-swiper', {
-        slidesPerView : 1,
+        slidesPerView : 1.1,
         spaceBetween : 16,
         navigation: {
             nextEl: '.best-classic-next',
@@ -62,7 +62,7 @@ function initPremiumSwiper(){
     if (premiumSwiper) return;
     
     premiumSwiper = new Swiper('.best-premium-swiper', {
-        slidesPerView : 1,
+        slidesPerView : 1.1,
         spaceBetween : 16,
         navigation: {
             nextEl: '.best-premium-next',
@@ -162,7 +162,7 @@ function initFoodSwiper() {
       grid: { rows: 1 },
     },
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.1,
       grid: { rows: 1 },
     },
   },
@@ -204,7 +204,7 @@ function initDrinkSwiper() {
                 grid: { rows: 1 },
             },
             0: {
-                slidesPerView: 1,
+                slidesPerView: 1.1,
                 grid: { rows: 1 },
             },
         }
