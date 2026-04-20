@@ -1520,6 +1520,10 @@ button {
     height: 3.5rem;
   }
 }
+html {
+  overflow-x: hidden;
+}
+
 .header.makgeolli {
   background-color: #131313;
 }

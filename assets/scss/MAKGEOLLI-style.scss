@@ -8,6 +8,10 @@
 @use 'icon';
 @use 'guide';
 
+html {
+    overflow-x: hidden;
+}
+
 .header.makgeolli {
     background-color: var.$text-black;
 }
