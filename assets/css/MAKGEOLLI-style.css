@@ -1317,6 +1317,7 @@ button {
   }
   .best-card {
     flex-direction: column;
+    height: 48.375rem;
   }
   .best-card__img {
     max-width: 100%;
@@ -1474,6 +1475,12 @@ button {
 @media (max-width: 514px) {
   .userkv__sub-content {
     top: 21%;
+  }
+  .best-card {
+    height: 41.875rem;
+  }
+  .best-card__img img {
+    height: 12.5rem;
   }
 }
 @media (max-width: 402px) {

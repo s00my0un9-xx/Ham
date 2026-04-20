@@ -454,6 +454,7 @@
 
         &-card {
             flex-direction: column;
+            height: rem(774);
             
             &__img {
                 max-width: 100%;
@@ -717,6 +718,17 @@
     .userkv {
         &__sub-content {
             top: 21%;
+        }
+    }
+
+    .best {
+        &-card {
+            height: rem(670);
+            &__img {
+                img {
+                    height: rem(200);
+                }
+            }
         }
     }
 }
