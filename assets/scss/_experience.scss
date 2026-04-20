@@ -239,8 +239,16 @@
     }
 
     // hover
-    &:hover &__img {
+    &__img-wrap:hover &__img {
         transform: scale(1.1);
+    }
+
+    &__img-wrap {
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     // 출처
@@ -429,8 +437,16 @@
             border-radius: rem(20);
     }
 
-    &:hover &__img {
+    &__img-wrap:hover &__img {
         transform: scale(1.1);
+    }
+
+    &__img-wrap {
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__img-source {
