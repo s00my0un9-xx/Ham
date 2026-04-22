@@ -5,9 +5,10 @@ $(function(){
         let num = $(window).scrollTop();
 
         if(num > menuScroll){
+            $('.header').css("opacity", 1)
             $('.header').css("background-color", "#131313")
         } else {
-            $('.header').css("background-color", "")
+            $('.header').css("opacity", 0)
         }
     })
 
