@@ -1627,7 +1627,7 @@ button {
   }
   .brewery-card__source,
   .festival-card__img-source {
-    padding-bottom: 0.75rem;
+    padding-bottom: 0rem;
   }
 }
 @media (max-width: 600px) {
@@ -1702,6 +1702,6 @@ button {
   }
   .brewery-card__source,
   .festival-card__img-source {
-    padding-bottom: 0.75rem;
+    padding-bottom: 0rem;
   }
 }
