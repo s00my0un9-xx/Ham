@@ -1625,6 +1625,10 @@ button {
   .ta-body-16 {
     font-size: 0.875rem;
   }
+  .brewery-card__source,
+  .festival-card__img-source {
+    padding-bottom: 1.25rem;
+  }
 }
 @media (max-width: 600px) {
   .container {
@@ -1695,5 +1699,9 @@ button {
   }
   .mo-body-16 {
     font-size: 0.875rem;
+  }
+  .brewery-card__source,
+  .festival-card__img-source {
+    padding-bottom: 1.25rem;
   }
 }
