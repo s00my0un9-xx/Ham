@@ -814,6 +814,10 @@
     .ta-body-16 {
          font-size: rem(14);
          }
+    .brewery-card__source,
+    .festival-card__img-source {
+        padding-bottom: rem(20);
+    }
 }
 
 
@@ -913,4 +917,8 @@
         font-size: rem(14);
     }
 
+    .brewery-card__source,
+    .festival-card__img-source {
+        padding-bottom: rem(20);
+    }
 }
