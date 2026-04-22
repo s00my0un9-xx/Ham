@@ -90,10 +90,10 @@ body{
 // layer
 .layer {
     width: 100%;
-    // height: 200vh;
+    height: 200vh;
     height: auto;
     position: relative;
-    background-color: #1B1715;
+    background: radial-gradient(circle,#74706E 2%,#211E1C 38%, #1B1816);
     overflow: hidden;
 
     &__inner {
@@ -105,10 +105,10 @@ body{
 
     &__img {
         position: absolute;
-        // top: 0;
-        // left: 0;
-        // width: 100%;
-        // height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         inset: 0;
         z-index: 0;
        
@@ -116,8 +116,8 @@ body{
         img {
             width: 100%;
             height: 100%;
-            // object-fit: contain;
-            object-fit: cover;
+            object-fit: contain;
+            // object-fit: cover;
             object-position: center;
         }
     }
@@ -503,7 +503,7 @@ body{
             height: 100%;
 
             &__bg {
-                height: 100%;
+                height: rem(430);
                 box-sizing: border-box;
             }
         }
@@ -534,7 +534,14 @@ body{
 
         .swiper-slide {
             width: 100%;
-            height: rem(420);
+        }
+    }
+
+    .layer {
+        &__img {
+            img {
+                object-fit: cover;
+            }
         }
     }
 
@@ -570,6 +577,16 @@ body{
             svg {
                 width: rem(6);
                 height: rem(12);
+            }
+        }
+    }
+}
+
+@media(max-width:471px){
+    .type {
+        &-card {
+            &__bg {
+                height: auto;
             }
         }
     }

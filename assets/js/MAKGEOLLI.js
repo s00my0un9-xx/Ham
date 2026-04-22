@@ -10,8 +10,8 @@ ScrollTrigger.matchMedia({
                 scrub: false,
             }
         })
-            .to(".aboutmak__img-area", { width: "57%", duration: .8, ease: "power2.inOut" })
-            .to(".aboutmak__text-area", { opacity: 1, duration: .8, ease: "power2.inOut" });
+            .to(".aboutmak__img-area", { width: "57%", duration: .7, ease: "power2.inOut" })
+            .to(".aboutmak__text-area", { opacity: 1, duration: .1, ease: "power2.inOut" });
     }
 });
 

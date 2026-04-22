@@ -285,16 +285,6 @@
     }
 }
 
-@include media(var.$bp-mo){
-.type-card{
-            &__bg {
-            height: 100%;
-            padding: rem(214) rem(22) rem(26);
-            box-sizing: border-box;
-        }
-}
-}
-
 // drink-card
 .drink-card {
     padding: rem(40);

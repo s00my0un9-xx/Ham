@@ -59,14 +59,22 @@ document.querySelectorAll(".type .swiper").forEach((element) => {
             prevEl: ".btn-prev",
         },
         breakpoints: {
-            403: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+            471: {
                 slidesPerView: 2,
                 spaceBetween: 16,
             },
             769: {
-                slidesPerView: 'auto',
+                slidesPerView: "auto",
                 spaceBetween: 16,
             },
+            // 769: {
+            //     slidesPerView: 2.3,
+            //     spaceBetween: 16,
+            // },
         },
     });
 });

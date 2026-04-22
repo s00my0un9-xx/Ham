@@ -898,13 +898,6 @@ button {
      object-fit: cover;
 }
 
-@media (max-width: 600px) {
-  .type-card__bg {
-    height: 100%;
-    padding: 13.375rem 1.375rem 1.625rem;
-    box-sizing: border-box;
-  }
-}
 .drink-card {
   padding: 2.5rem;
   border-radius: 1.25rem;
