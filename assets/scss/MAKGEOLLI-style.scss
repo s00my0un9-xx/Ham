@@ -8,7 +8,7 @@
 @use 'icon';
 @use 'guide';
 
-html {
+html, body {
     overflow-x: hidden;
 }
 
@@ -75,6 +75,7 @@ html {
 .beganmak {
     background-color: var.$main-fourth-color;
     color: var.$text-beige;
+    overflow-x: hidden;
 
     &__content {
         width: 100%;

@@ -1523,7 +1523,7 @@ button {
     height: 3.5rem;
   }
 }
-html {
+html, body {
   overflow-x: hidden;
 }
 
@@ -1579,6 +1579,7 @@ html {
 .beganmak {
   background-color: #26211d;
   color: #f6eedf;
+  overflow-x: hidden;
 }
 .beganmak__content {
   width: 100%;
